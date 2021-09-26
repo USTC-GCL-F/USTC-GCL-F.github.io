@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0092)http://vis.uky.edu/~gravity/Research/ResidentialReconstruction/ResidentialReconstruction.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Atlas Refinement with Bounded Packing Efficiency</title>
+<link href="../projects.css" rel="stylesheet" type="text/css">
+</script>
+
+<script type="text/javascript"
+	src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/javascript" src="../jquery-1.11.0.min.js">
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+		<div class="fix_top">
+			<div>
+				<a href="javascript:;" data-value="#sec_title">Title</a>
+				<a href="javascript:;" data-value="#sec_Abstract">Abstract</a>
+				<a href="javascript:;" data-value="#sec_Downloads">Downloads</a>
+				<!-- <a href="javascript:;" data-value="#sec_Summary">Summary</a> -->
+				<a href="javascript:;" data-value="#sec_Bibtex">Bibtex</a>
+			</div>
+		</div>
+		
+        <div id="content"> 
+          	
+          <!-- Title & Authors-->
+          <br><br>
+       	  <p class="title" id = "sec_title" name="score_m">Atlas Refinement with Bounded Packing Efficiency</p>
+       	  <p>&nbsp;</p>
+          
+          <p class="authors">
+		  Hao-Yu Liu&nbsp&nbsp&nbsp&nbsp
+		   <a href="http://staff.ustc.edu.cn/~fuxm/", target="_blank">Xiao-Ming Fu</a>&nbsp&nbsp&nbsp
+		  <a href="https://chunyangye.github.io/" target="_blank" onClick="stc(this, 44)">Chunyang Ye</a> &nbsp&nbsp&nbsp&nbsp
+		  <a href="http://home.ustc.edu.cn/~kfckfckf/", target="_blank">Shuangming Chai</a>&nbsp&nbsp&nbsp
+		  <a href="http://staff.ustc.edu.cn/~lgliu/", target="_blank">Ligang Liu</a>&nbsp&nbsp&nbsp&nbsp
+          <br><br>
+          <a href="http://en.ustc.edu.cn/", target="_blank">University of Science and Technology of China</a> &nbsp&nbsp
+		  <br><br>
+          <em>ACM Transactions on Graphics (SIGGRAPH)</em> 38(4), 2019.</p>
+		  <br>
+       	  <div align="center">
+          <img src="AAAtlas.png" width="920" alt="Figure 1">
+          </div>
+          <p class="figure"><strong>Figure 1:</strong>  Refining input parameterized charts to obtain packing efficiency that is greater than or equal to the given bounds. Compared to the inputs that have low packing eff iciency and are not bijective, our method significantly improves the packing efficiency and ensures the bijection. We set the packing efficiency bounds as 80% for these two models. PE, BL, CN, Ed, and E2 represent the packing efficiency, the boundary length, the number of charts, the symmetric Dirichlet distortion metric with respect to the input 3D surface, and the symmetric Dirichlet distortion metric with respect to the input atlas, respectively.</p>
+
+		<br><p class="subtitle" id = "sec_Abstract" name="score_m"><strong>Abstract</strong></p>
+		<hr />
+		<br>
+		<p class="text">
+		We present a novel algorithm to refine an input atlas with bounded packing efficiency. Central to this method is the use of the axis-aligned structure that converts the general polygon packing problem to a rectangle packing problem, which is easier to achieve high packing efficiency. Given a parameterized mesh with no flipped triangles, we propose a new angle-driven deformation strategy to transform it into a set of axis-aligned charts, which can be decomposed into rectangles by the motorcycle graph algorithm. Since motorcycle graphs are not unique, we select the one balancing the trade-off between the packing efficiency and chart boundary length, while maintaining bounded packing efficiency. The axis-aligned chart often contains greater distortion than the input, so we try to reduce the distortion while bounding the packing efficiency and retaining bijection. We demonstrate the efficacy of our method on a data set containing over five thousand complex models. For all models, our method is able to produce packed atlases with bounded packing efficiency; for example, when the packing efficiency bound is set to 80%, we elongate the boundary length by an average of 78.7% and increase the distortion by an average of 0.0533%. Compared to state-of-the-art methods, our method is much faster and achieves greater packing efficiency.
+		</p>
+		<br><br><p class="subtitle" id = "sec_Downloads" name="score_m"><strong>Downloads</strong></p>
+		<hr />
+		<p class="centertext">
+		<a href="http://rec.ustc.edu.cn/share/30966f70-785c-11e9-b9d5-979f349c9dc1", target="_blank">Paper</a>, <a href="http://rec.ustc.edu.cn/share/bfea16e0-9706-11e9-89b4-4506398097b4", target="_blank">Code</a>, <a href="http://rec.ustc.edu.cn/share/07417140-80eb-11e9-a736-7d3bc2279044", target="_blank">Data set (16GB)</a>, <a href="http://rec.ustc.edu.cn/share/08751820-c861-11e9-a919-7379f0f69e90", target="_blank">Slide,  <a href="http://rec.ustc.edu.cn/share/1932f4f0-80eb-11e9-8af9-01d846a86645", target="_blank">Video</a>, <a href="http://rec.ustc.edu.cn/share/f91865f0-80ea-11e9-afb9-171ae0a5ecb6", target="_blank">Supp</a>.
+		</p>
+		<br>
+		<!-- <div align="center">
+          <img src="pipeline.png" width="920" alt="Figure 2">
+         </div>
+		 <p class="figure"><strong>Figure 2:</strong>The iteration process of our method. Here, we use \(M^p_n\) and \(M^r_n\) to represent the parameterized mesh and the reference triangles at the \(n^\text{th}\) iteration, respectively. Since \(M^p_{n+1}\) does not satisfy the condition of the while loop of Algorithm 1, our method exits it and starts solving (5). The texture mapping is shown in (e1) using the convergence parameterization \(M^p_\text{c}\) (e2).</p>  -->
+
+		<br><p class="subtitle" id = "sec_Bibtex" name="score_m"><strong>Bibtex</strong></p>
+		<hr />
+		<p class="text">
+		@article {Liu_AAAtlas_2019,<br>
+		title = {Atlas Refinement with Bounded Packing Efficiency},<br>
+		author = {Hao-Yu Liu and Xiao-Ming Fu and Chunyang Ye and Shuangming Chai and Ligang Liu},<br>
+		journal = {ACM Transactions on Graphics (SIGGRAPH)},<br>
+		volume = {38},<br>
+		number = {4},<br>
+		year = {2019},<br>
+		}
+		</p>
+		</div>
+</div>
+
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;">
+<div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;">
+</div>
+</div>
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;">
+<div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Math-italic, sans-serif;">
+</div>
+</div>
+<script>
+	$(document).ready(function(){
+		var score_flag = true;
+		$(".fix_top a:first").css({"text-decoration" : "underline"});
+		$(".fix_top a").click(function(){
+			score_flag = false;
+			var aa = $(this).attr("data-value");
+			var hh = $(aa).position().top -  80;
+			$("html,body").animate({scrollTop: hh}, 'slow', function(){
+				score_flag = true;
+			});
+			$(".fix_top a").css({"text-decoration" : "none"});
+			$(this).css({"text-decoration" : "underline"});
+		});
+		$(window).scroll(function () {
+			if(score_flag){
+				var num = 0;
+				var score = $(this).scrollTop();
+				var aa = $("p[name='score_m']");
+				for(var i = 0; i < aa.length; i++){
+					var pheight = $(aa[i]).position().top - 200;
+					if(score > pheight){
+						num = i;
+					}
+				}
+				$(".fix_top a").css({"text-decoration" : "none"});
+				$(".fix_top a:eq("+num+")").css({"text-decoration" : "underline"});
+			}
+		});
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0092)http://vis.uky.edu/~gravity/Research/ResidentialReconstruction/ResidentialReconstruction.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Date Set for Parameterizations</title>
+<link href="../projects.css" rel="stylesheet" type="text/css">
+</script>
+
+<script type="text/javascript"
+	src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/javascript" src="../jquery-1.11.0.min.js">
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+		<div class="fix_top">
+			<div>
+				<a href="javascript:;" data-value="#sec_data">Data set</a>
+				<a href="javascript:;" data-value="#sec_d1">D1</a>
+				<a href="javascript:;" data-value="#sec_d2">D2</a>
+				<a href="javascript:;" data-value="#sec_d3">D3</a>
+				<a href="javascript:;" data-value="#sec_ref">Reference</a>
+			</div>
+		</div>
+		
+        <div id="content"> 
+          	
+          <!-- Title & Authors-->
+          <br><br>
+       	  <p class="title" id = "sec_data" name="score_m">Data Set for Parameterizations</p>
+       	  <p>&nbsp;</p>
+          
+         <p class="text">
+		 This large testing benchmark contains 20712 meshes. It starts from well cut meshes \(D_1\), continues with moderately bad ones \(D_2\), and ends with extremely challenging examples \(D_3\). 
+		 If you use our data set, please cite <a href="#PP">[1]</a> and <a href="#SCut">[2]</a>.
+		</p>
+		<br><br>
+
+		<br><p class="subtitle" id = "sec_d1" name="score_m"><strong>\(D_1\)</strong> (<a href="https://www.dropbox.com/s/xsnmxqv9797y4x5/D1.7z?dl=0", target="_blank">Download</a>)</p>
+		<hr />
+		<br>
+		<div align="center">
+        <img src="D1_show.png" width="920" alt="Figure 1">
+        </div>
+        <p class="figure"><strong>Figure 1:</strong> Gallery of some selected models from \(D_1\), which containts 10273 models. Since nearly half the models are very large, we use a program to subdivide the small sized meshes. Here we only provide the small sized meshes which are cut by our sphere-based method <a href="#SCut">[2]</a>. If you want to test your parameterization method on these large-scale models, please <a href="subdivide_mesh.rar", target="_blank">download the code</a> to generate them. 
+		</p>
+		<div align="center">
+        <img src="D1.png" width="920" alt="Figure 2">
+        </div>
+        <p class="figure"><strong>Figure 2:</strong> Efficiency comparisons using two models from \(D_1\). We select the scalable locally injective maps (SLIM) [Rabinovich et al. 2017], the approximate Killing vector field method (AKVF) [Claici et al. 2017], and the composite majorization method (CM) [Shtengel et al. 2017] as the competitors.
+		</p>
+		  
+		<br><p class="subtitle" id = "sec_d2" name="score_m"><strong>\(D_2\)</strong> (<a href="https://www.dropbox.com/s/ucudanm9y1uwjte/D2.7z?dl=0", target="_blank">Download</a>)</p>
+		<hr />
+		<br>
+		<div align="center">
+        <img src="D2_show.png" width="920" alt="Figure 3">
+        </div>
+        <p class="figure"><strong>Figure 3:</strong> Gallery of some selected models from \(D_2\), which containts 6189 models. 
+		</p>
+		<div align="center">
+        <img src="D2.png" width="920" alt="Figure 4">
+        </div>
+        <p class="figure"><strong>Figure 4:</strong> Efficiency comparisons using two models from \(D_2\).
+		</p>
+		
+		<br><p class="subtitle" id = "sec_d3" name="score_m"><strong>\(D_3\)</strong> (<a href="https://www.dropbox.com/s/we2k8hwv4cixxyr/D3.7z?dl=0", target="_blank">Download</a>)</p>
+		<hr />
+		<br>
+		<div align="center">
+        <img src="D3_show.png" width="920" alt="Figure 5">
+        </div>
+        <p class="figure"><strong>Figure 5:</strong> Gallery of some selected models from \(D_3\), which containts 4250 models. 
+		</p>
+		<div align="center">
+        <img src="D3.png" width="920" alt="Figure 6">
+        </div>
+        <p class="figure"><strong>Figure 6:</strong> Efficiency comparisons using two models from \(D_3\).
+		</p>
+		
+		<p class="subtitle" id = "sec_ref" name="score_m"><strong>Reference</strong></p>
+		<hr />
+		<p class="text">
+		<a name = "PP" ></a> [1]: Ligang Liu, Chunyang Ye, Ruiqi Ni, Xiao-Ming Fu. Progressive Parameterizations. ACM Transactions on Graphics (SIGGRAPH) 37(4), 2018. [<a href="../../bibtex.html#PP" target="_blank">Bibtex</a>].
+		<br>
+		<a name = "SCut" ></a> [2]: Shuangming Chai, Xiao-Ming Fu, Xin Hu, Yang Yang, Ligang Liu. Sphere-based Cut Construction for Planar Parameterizations. Computer & Graphics (SMI 2018). [<a href="../../bibtex.html#SCut" target="_blank">Bibtex</a>].
+		</p
+		<br>
+		<br>
+		<br>
+		<br>
+		</div>
+</div>
+
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;">
+<div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;">
+</div>
+</div>
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;">
+<div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Math-italic, sans-serif;">
+</div>
+</div>
+<script>
+	$(document).ready(function(){
+		var score_flag = true;
+		$(".fix_top a:first").css({"text-decoration" : "underline"});
+		$(".fix_top a").click(function(){
+			score_flag = false;
+			var aa = $(this).attr("data-value");
+			var hh = $(aa).position().top -  80;
+			$("html,body").animate({scrollTop: hh}, 'slow', function(){
+				score_flag = true;
+			});
+			$(".fix_top a").css({"text-decoration" : "none"});
+			$(this).css({"text-decoration" : "underline"});
+		});
+		$(window).scroll(function () {
+			if(score_flag){
+				var num = 0;
+				var score = $(this).scrollTop();
+				var aa = $("p[name='score_m']");
+				for(var i = 0; i < aa.length; i++){
+					var pheight = $(aa[i]).position().top - 200;
+					if(score > pheight){
+						num = i;
+					}
+				}
+				$(".fix_top a").css({"text-decoration" : "none"});
+				$(".fix_top a:eq("+num+")").css({"text-decoration" : "underline"});
+			}
+		});
+	});
+</script>
+
+</body>
+</html>

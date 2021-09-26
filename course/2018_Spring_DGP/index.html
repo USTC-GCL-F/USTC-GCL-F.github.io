@@ -1,0 +1,188 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0092)http://vis.uky.edu/~gravity/Research/ResidentialReconstruction/ResidentialReconstruction.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Digital Geometry Processing</title>
+<link href="../course.css" rel="stylesheet" type="text/css">
+
+</script>
+<script type="text/javascript"
+	src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/javascript" src="../jquery-1.11.0.min.js">
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+		<div class="fix_top">
+			<div>
+				<a href="javascript:;" data-value="#sec_intro">Introduction</a>
+				<a href="javascript:;" data-value="#sec_Slides">Slides</a>
+				<a href="javascript:;" data-value="#sec_Coding">Coding</a>
+				<a href="javascript:;" data-value="#sec_Paper">Paper Reading</a>
+			</div>
+		</div>
+        <div id="content"> 
+          	
+          <!-- Title & Authors-->
+          <br><br>
+       	  <p class="title" id = "sec_title" name="score_m">Digital Geometry Processing</p>
+       	  <p>&nbsp;</p>
+          
+          <p class="authors">
+          <a href="http://staff.ustc.edu.cn/~fuxm/", target="_blank">Xiao-Ming Fu</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <!-- <br><br> -->
+          <a href="http://en.ustc.edu.cn/", target="_blank">University of Science and Technology of China</a>
+		  <br><br>
+		<br><p class="subtitle" id = "sec_intro" name="score_m"><strong>Introduction</strong></p>
+		<hr />
+		<br>
+		<p class="text">
+		This course provides an introduction to digital geometry processing, a subfield of computer graphics. This course will cover basic mathematical foundations for studying 3D surfaces from a discrete differential geometric standpoint and present the full geometry processing pipeline, including mesh representation, mesh smoothing, parameterization, remeshing, decimation and surface deformation.
+		</p>
+		<br><br><p class="subtitle" id = "sec_Slides" name="score_m"><strong>Slides</strong></p>
+		<hr />
+		<p class="text">
+		0. <a href="Slides/0_introduction.pdf", target="_blank">Introduction</a>
+		<br>
+		1. <a href="Slides/1_Mesh.pdf", target="_blank">Representation</a>
+		<br>
+		2. <a href="Slides/2_Differential_Geometry.pdf", target="_blank">Discrete_Differential_Geometry</a>
+		<br>
+		3. <a href="Slides/3_Smoothing.pdf", target="_blank">Smoothing</a>
+		<br>
+		4. <a href="Slides/4_parameterizations.pdf", target="_blank">Parameterizations</a>
+		<br>
+		5. <a href="Slides/5_deformation.pdf", target="_blank">Deformation</a>
+		<br>
+		6. <a href="Slides/6_Mappings.pdf", target="_blank">Mappings</a>
+		<br>
+		7. <a href="Slides/7_Spherical Parametrization.pdf", target="_blank">Spherical Parameterizations</a>
+		<br>
+		8. <a href="Slides/8_Surface Mapping.pdf", target="_blank">Surface Mappings</a>
+		<br>
+		9. <a href="Slides/9_Morphing.pdf", target="_blank">Morphing</a>
+		<br>
+		10. <a href="Slides/10_PolyCube.pdf", target="_blank">PolyCube</a>
+		<br>
+		11. <a href="Slides/11_Directional Fields.pdf", target="_blank">Directional Fields</a>
+		<br>
+		12. <a href="Slides/12_Delaunay Triangulations.pdf", target="_blank">Delaunay Triangulations</a>
+		<br>
+		13. <a href="Slides/13_Voronoi Diagrams.pdf", target="_blank">Voronoi Diagrams</a>
+		<br>
+		14. <a href="Slides/14_Remeshing.pdf", target="_blank">Remeshing</a>
+		<br>
+		15. <a href="Slides/15_Barycentric coordinate.pdf", target="_blank">Coordinates</a>
+		</p>
+		
+		<br><p class="subtitle" id = "sec_Coding" name="score_m"><strong>Coding</strong></p>
+		<hr />
+		<br>
+		<p class="text">
+		<strong>Basic training</strong> <br>
+		Implementation: Shortest path (Dijkstra’s algorithm) and minimal spanning tree on the triangular mesh <br>
+		Reference: <a href="http://www.cs.ubc.ca/~sheffa/papers/SMI02.pdf", target="_blank">Spanning Tree Seams for Reducing Parameterization Distortion of Triangulated Surfaces</a> <br>
+		Deadline: 24:00 2018/3/18
+		</p>
+		<br>
+		<p class="text">
+		<strong>Mesh Smoothing</strong> <br>
+		Implementation: <a href="http://courses.cs.tau.ac.il/~dcor/articles/2003/Bilateral-Mesh-Denoising.pdf", target="_blank">Bilateral mesh denoising</a> <br>
+		Deadline: 24:00 2018/4/1
+		</p>
+		<br>
+		<p class="text">
+		<strong>Mesh Parameterization</strong> <br>
+		Implementation: <a href="http://www.cs.jhu.edu/~misha/Fall09/Levy02.pdf", target="_blank">Least Squares Conformal Maps for Automatic Texture Atlas Generation </a> <br>
+		Deadline: 24:00 2018/4/15
+		</p>
+		<br>
+		<p class="text">
+		<strong>Mesh Deformation 1</strong> <br>
+		Implementation: <a href="https://igl.ethz.ch/projects/ARAP/arap_web.pdf", target="_blank">As-Rigid-As-Possible Surface Modeling</a> <br>
+		Deadline: 24:00 2018/4/29
+		</p>
+		<br>
+		<p class="text">
+		<strong>Mesh Deformation 2</strong> <br>
+		Implementation: <a href="https://pdfs.semanticscholar.org/aff0/330cb894430eb64a4e1eb2bb9dae7a73855f.pdf", target="_blank">Free-Form Deformation of Solid Geometric Models</a> <br>
+		Deadline: 24:00 2018/5/13
+		</p>
+		<br>
+		<p class="text">
+		<strong>Mesh Simplification</strong> <br>
+		Implementation: <a href="https://people.eecs.berkeley.edu/~jrs/meshpapers/GarlandHeckbert2.pdf", target="_blank">Surface Simplification Using Quadric Error Metrics</a> <br>
+		Deadline: 24:00 2018/5/27
+		</p>
+		<br>
+		<p class="text">
+		<strong>Mesh Interpolation</strong> <br>
+		Implementation: <a href="hhttp://www.cs.tau.ac.il/~dcor/online_papers/papers/arap.pdf", target="_blank">As-Rigid-As-Possible Shape Interpolation</a> <br>
+		Deadline: 24:00 2018/6/10
+		</p>
+		<br>
+		<p class="text">
+		<strong>Remeshing</strong> <br>
+		Implementation: <a href="https://www.graphics.rwth-aachen.de/media/papers/remeshing1.pdf", target="_blank">A Remeshing Approach to Multiresolution Modeling</a> <br>
+		Deadline: 24:00 2018/6/24
+		</p>
+		<br><p class="subtitle" id = "sec_Paper" name="score_m"><strong>Paper Reading</strong></p>
+		<hr />
+		<br>
+		<p class="text">
+		<strong>Specified paper</strong>: <a href="http://onlinelibrary.wiley.com/doi/10.1111/cgf.12802/full", target="_blank">A Survey of Surface Reconstruction from Point Clouds</a> <br>
+		Deadline: 24:00 2018/6/24<br>
+		<br>
+		</p>
+		<br><br>
+		<br><br>
+		</div>
+</div>
+
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;">
+<div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;">
+</div>
+</div>
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;">
+<div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Math-italic, sans-serif;">
+</div>
+</div>
+<script>
+	$(document).ready(function(){
+		var score_flag = true;
+		$(".fix_top a:first").css({"text-decoration" : "underline"});
+		$(".fix_top a").click(function(){
+			score_flag = false;
+			var aa = $(this).attr("data-value");
+			var hh = $(aa).position().top -  80;
+			$("html,body").animate({scrollTop: hh}, 'slow', function(){
+				score_flag = true;
+			});
+			$(".fix_top a").css({"text-decoration" : "none"});
+			$(this).css({"text-decoration" : "underline"});
+		});
+		$(window).scroll(function () {
+			if(score_flag){
+				var num = 0;
+				var score = $(this).scrollTop();
+				var aa = $("p[name='score_m']");
+				for(var i = 0; i < aa.length; i++){
+					var pheight = $(aa[i]).position().top - 170;
+					if(score > pheight){
+						num = i;
+					}
+				}
+				$(".fix_top a").css({"text-decoration" : "none"});
+				$(".fix_top a:eq("+num+")").css({"text-decoration" : "underline"});
+			}
+		});
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0092)http://vis.uky.edu/~gravity/Research/ResidentialReconstruction/ResidentialReconstruction.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Digital Geometry Processing</title>
+<link href="../course.css" rel="stylesheet" type="text/css">
+
+</script>
+<script type="text/javascript"
+	src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/javascript" src="../jquery-1.11.0.min.js">
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+		<div class="fix_top">
+			<div>
+				<a href="javascript:;" data-value="#sec_intro">Introduction</a>
+				<a href="javascript:;" data-value="#sec_Slides">Slides</a>
+				<a href="javascript:;" data-value="#sec_Coding">Coding</a>
+				<!-- <a href="javascript:;" data-value="#sec_Paper">Paper Reading</a> -->
+			</div>
+		</div>
+        <div id="content"> 
+          	
+          <!-- Title & Authors-->
+          <br><br>
+       	  <p class="title" id = "sec_title" name="score_m">Digital Geometry Processing</p>
+       	  <p>&nbsp;</p>
+          
+          <p class="authors">
+          <a href="http://staff.ustc.edu.cn/~fuxm/", target="_blank">Xiao-Ming Fu</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <!-- <br><br> -->
+          <a href="http://en.ustc.edu.cn/", target="_blank">University of Science and Technology of China</a>
+		  <br><br>
+		<br><p class="subtitle" id = "sec_intro" name="score_m"><strong>Introduction</strong></p>
+		<hr />
+		<br>
+		<p class="text">
+		This course provides an introduction to digital geometry processing, a subfield of computer graphics. This course will cover basic mathematical foundations for studying 3D surfaces from a discrete differential geometric standpoint and present the full geometry processing pipeline, including mesh representation, mesh smoothing, parameterization, remeshing, decimation and surface deformation.
+		</p>
+		<br><br><p class="subtitle" id = "sec_Slides" name="score_m"><strong>Slides</strong></p>
+		<hr />
+		<p class="text">
+		<!-- <a href="https://rec.ustc.edu.cn/share/49c5fe30-c679-11ea-9996-65c18839ba05", target="_blank">All slides</a> -->
+		<br>
+		1. <a href="https://rec.ustc.edu.cn/share/821957a0-7fc6-11eb-93ef-cd24ff8b4a6c", target="_blank">Representation</a>
+		<br>
+		2. <a href="https://rec.ustc.edu.cn/share/7d74be60-8237-11eb-a05e-7d5e1102a370", target="_blank">Discrete Differential Geometry</a>
+		<br>
+		3. <a href="https://rec.ustc.edu.cn/share/e3123240-87b1-11eb-a014-cb2da674e4ca", target="_blank">Smoothing</a>
+		<br>
+		4. <a href="http://rec.ustc.edu.cn/share/d500ef30-44b3-11e9-8d59-db072e616ece", target="_blank">Parameterizations</a>
+		<!--<br>
+		5. <a href="http://rec.ustc.edu.cn/share/341be360-4a0d-11e9-b543-ad999f7cf679", target="_blank">Deformation</a>
+		<br>
+		6. <a href="http://rec.ustc.edu.cn/share/de3b1840-4f8b-11e9-a7e8-f9f6b91ba6d5", target="_blank">Coordinates</a>
+		<br>
+		7. <a href="http://rec.ustc.edu.cn/share/c8a56180-5514-11e9-bb32-4d1a292de0ed", target="_blank">Mappings</a>
+		<br>
+		8. <a href="http://rec.ustc.edu.cn/share/a5529e90-5a9c-11e9-9d5b-8df73e07c637", target="_blank">Surface Mappings</a>
+		<br>
+		9. <a href="http://rec.ustc.edu.cn/share/cd00a7e0-5c24-11e9-a6ea-cf51cea267d7", target="_blank">PolyCube</a>
+		<br>
+		10. <a href="http://rec.ustc.edu.cn/share/1fbf7d90-5d18-11e9-b673-0590fbb0e469", target="_blank">Atlas</a>
+		<br>
+		11. <a href="http://rec.ustc.edu.cn/share/567b98f0-6015-11e9-b0cd-f52cb0917217", target="_blank">Spherical Parameterizations</a>
+		<br>
+		12. <a href="http://rec.ustc.edu.cn/share/b0bddca0-61a5-11e9-b0e7-c96ec23337da", target="_blank">Morphing</a>
+		<br>
+		13. <a href="http://rec.ustc.edu.cn/share/522aa580-6596-11e9-b12d-c92cc6d9e0c3", target="_blank">Directional Fields</a>
+		<br>
+		14. <a href="http://rec.ustc.edu.cn/share/356dcf70-6972-11e9-bfb5-458c40323f07", target="_blank">Delaunay Triangulations</a>
+		<br>
+		15. <a href="http://rec.ustc.edu.cn/share/436038f0-6b19-11e9-85f6-356a84f75394", target="_blank">Voronoi Diagrams</a>
+		<br>
+		14. <a href="http://rec.ustc.edu.cn/share/31377b30-70a0-11e9-90ce-95c0819c5907", target="_blank">Remeshing</a>
+		<br>
+		15. <a href="http://rec.ustc.edu.cn/share/069cb080-77db-11e9-9b0b-e57d2375d14f", target="_blank">Geometric optimization</a> by Jian-Ping Su -->
+		</p>
+		
+		<br><p class="subtitle" id = "sec_Coding" name="score_m"><strong>Coding</strong></p>
+		<hr />
+		<br>
+		<p class="text">
+		<strong>1. Basic training</strong> <br>
+		Reference: Shortest path (Dijkstra’s algorithm) and minimal spanning tree on the triangular mesh <br>
+		<!-- Reference: <a href="http://www.cs.ubc.ca/~sheffa/papers/SMI02.pdf", target="_blank">Spanning Tree Seams for Reducing Parameterization Distortion of Triangulated Surfaces</a> <br> -->
+		Deadline: 23:59 2020/3/14
+		</p>
+		<br>
+		<p class="text">
+		<strong>2. Curvature estimation and visualization</strong> <br>
+		<!-- Reference: <a href="http://courses.cs.tau.ac.il/~dcor/articles/2003/Bilateral-Mesh-Denoising.pdf", target="_blank">Bilateral mesh denoising</a> <br> -->
+		Deadline: 23:59 2020/3/21
+		</p>
+		<br>
+		<p class="text">
+		<strong>3. Mesh Smoothing</strong> <br>
+		Reference: Bilateral Normal Filtering for Mesh Denoising<br>
+		Deadline: 23:59 2020/3/28
+		</p>
+		<br>
+		<p class="text">
+		<strong>4. Mesh Parameterization 1</strong> <br>
+		Reference: Tutte's embedding method<br>
+		Deadline: 23:59 2020/4/4
+		</p>
+		<br>
+		<p class="text">
+		<strong>5. Mesh Parameterization 2</strong> <br>
+		Reference: A Local/Global Approach to Mesh Parameterization <br>
+		Deadline: 23:59 2020/4/11
+		</p>
+		<br>
+		<p class="text">
+		<strong>6. Mesh Deformation</strong> <br>
+		Reference: As-Rigid-As-Possible Surface Modeling <br> 
+		Deadline: 23:59 2020/4/18
+		</p>
+		<br>
+		<p class="text">
+		<strong>7. Barycentric Coordinates</strong> <br>
+		Reference: Mean value coordinates <br> 
+		Deadline: 23:59 2020/4/25
+		</p>
+		<br>
+		<p class="text">
+		<strong>8. Mesh Simplification</strong> <br>
+		Reference: Surface Simplification Using Quadric Error Metrics <br>
+		Deadline: 23:59 2020/5/2
+		</p>
+		<br>
+		<p class="text">
+		<strong>9. Mesh Interpolation</strong> <br>
+		Reference: As-Rigid-As-Possible Shape Interpolation<br>
+		Deadline: 23:59 2020/5/9
+		</p>
+		<br>
+		<p class="text">
+		<strong>10. Lloyd’s iteration algorithm</strong> <br>
+	    Reference: Variational shape approximation <br>
+		Deadline: 23:59 2020/5/16
+		</p>
+		<br>
+		<p class="text">
+		<strong>11. Remeshing</strong> <br>
+		Reference: A Remeshing Approach to Multiresolution Modeling <br>
+		Deadline: 23:59 2020/5/23
+		</p>
+		<br>
+		<p class="text">
+		<strong>12. Optimal Delaunay triangulation</strong> <br>
+		Reference: Optimal Delaunay triangulation <br>
+		Deadline: 23:59 2020/5/30
+		</p>
+		<br>
+		<p class="text">
+		<strong>13. Cross Fields</strong> <br>
+		Reference: Designing N-polyvector fields with complex polynomials <br>
+		Deadline: 23:59 2020/6/13
+		</p>
+		<br>
+		<p class="text">
+		<strong>14. Geometric Optimization</strong> <br>
+		Reference: Scalable Locally Injective Mappings<br>
+		Deadline: 23:59 2020/6/27
+		<br>
+		<br><br>
+		<br><br>
+		</div>
+</div>
+
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;">
+<div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;">
+</div>
+</div>
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;">
+<div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Math-italic, sans-serif;">
+</div>
+</div>
+<script>
+	$(document).ready(function(){
+		var score_flag = true;
+		$(".fix_top a:first").css({"text-decoration" : "underline"});
+		$(".fix_top a").click(function(){
+			score_flag = false;
+			var aa = $(this).attr("data-value");
+			var hh = $(aa).position().top -  80;
+			$("html,body").animate({scrollTop: hh}, 'slow', function(){
+				score_flag = true;
+			});
+			$(".fix_top a").css({"text-decoration" : "none"});
+			$(this).css({"text-decoration" : "underline"});
+		});
+		$(window).scroll(function () {
+			if(score_flag){
+				var num = 0;
+				var score = $(this).scrollTop();
+				var aa = $("p[name='score_m']");
+				for(var i = 0; i < aa.length; i++){
+					var pheight = $(aa[i]).position().top - 170;
+					if(score > pheight){
+						num = i;
+					}
+				}
+				$(".fix_top a").css({"text-decoration" : "none"});
+				$(".fix_top a:eq("+num+")").css({"text-decoration" : "underline"});
+			}
+		});
+	});
+</script>
+
+</body>
+</html>

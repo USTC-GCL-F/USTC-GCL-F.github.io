@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0092)http://vis.uky.edu/~gravity/Research/ResidentialReconstruction/ResidentialReconstruction.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Progressive Parameterizations</title>
+<link href="../projects.css" rel="stylesheet" type="text/css">
+</script>
+
+<script type="text/javascript"
+	src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/javascript" src="../jquery-1.11.0.min.js">
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+		<div class="fix_top">
+			<div>
+				<a href="javascript:;" data-value="#sec_title">Title</a>
+				<a href="javascript:;" data-value="#sec_Abstract">Abstract</a>
+				<a href="javascript:;" data-value="#sec_Downloads">Downloads</a>
+				<!-- <a href="javascript:;" data-value="#sec_Summary">Summary</a> -->
+				<a href="javascript:;" data-value="#sec_Bibtex">Bibtex</a>
+			</div>
+		</div>
+		
+        <div id="content"> 
+          	
+          <!-- Title & Authors-->
+          <br><br>
+       	  <p class="title" id = "sec_title" name="score_m">Progressive Parameterizations</p>
+       	  <p>&nbsp;</p>
+          
+          <p class="authors">
+		  <a href="http://staff.ustc.edu.cn/~lgliu/", target="_blank">Ligang Liu</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		  Chunyang Ye&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+		  Ruiqi Ni&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <a href="http://staff.ustc.edu.cn/~fuxm/", target="_blank">Xiao-Ming Fu</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <br><br>
+          <a href="http://en.ustc.edu.cn/", target="_blank">University of Science and Technology of China</a> &nbsp&nbsp&nbsp&nbsp
+		  <br><br>
+          <em>ACM Transactions on Graphics (SIGGRAPH)</em> 37(4), 2018.</p>
+		  <br>
+       	  <div align="center">
+          <img src="teaser.png" width="920" alt="Figure 1">
+          </div>
+          <p class="figure"><strong>Figure 1:</strong> Parameterizing a disk topology mesh (1792000 triangles) with low isometric distortion and no foldovers by optimizing the symmetric Dirichlet energy. Starting from the same bijective initialization [Tutte 1963] (a), the energy is measured during the optimization process. The figure (b - e) shows a snapshot of the state each method achieved at the ninth iteration marked on the graph (f). The corresponding time in seconds is marked on the graph (g). The color of the triangles from the parameterized meshes encodes the symmetric Dirichlet energy metric, with white being optimal. Our approach achieves much better efficiency than the competitors including SLIM [Rabinovich et al. 2017], AKVF [Claici et al. 2017], and CM [Shtengel et al. 2017]. In order to achieve our result in (e), SLIM, AKVF and CM require 144, 81, and 17 more iterations and 314.60, 184.45, and 38.65 more seconds, respectively.</p>
+
+		<br><p class="subtitle" id = "sec_Abstract" name="score_m"><strong>Abstract</strong></p>
+		<hr />
+		<br>
+		<p class="text">
+		We propose a novel approach, called <em>Progressive Parameterizations</em>, to compute foldover-free parameterizations with low isometric distortion on disk topology meshes. Instead of using the input mesh as a reference to define the objective function, we introduce a progressive reference that contains bounded distortion to the parameterized mesh and is as close as possible to the input mesh. After optimizing the bounded distortion energy between the progressive reference and the parameterized mesh, the parameterized mesh easily approaches the progressive reference, thereby also coming close to the input. By iteratively generating the progressive reference and optimizing the bounded distortion energy to update the parameterized mesh, our algorithm achieves high-quality parameterizations with strong practical reliability and high efficiency. We demonstrate that our algorithm succeeds using a massive test data set containing over 20712 complex disk topology meshes. Compared to the state-of-the-art methods, our method possesses higher computational efficiency and practical reliability.
+		</p>
+		<br><br><p class="subtitle" id = "sec_Downloads" name="score_m"><strong>Downloads (coming soon)</strong></p>
+		<hr />
+		<p class="centertext">
+		<a href="https://pan.baidu.com/s/1lBKgzPI6BPxume465p78FA", target="_blank">Paper</a>, <a href="https://www.dropbox.com/s/jqn1xnc7orpjze5/papers_306s4-file1.pdf?dl=0", target="_blank">Paper (Dropbox)</a>, <a href="code.7z", target="_blank">Code</a>, <a href="dataset.html", target="_blank">Data set</a>, <a href="https://pan.baidu.com/s/1Ojd6xgzb8sfMt9M-Gug7Rg", target="_blank">Paper Data (BaiduYun)</a>, <a href="https://www.dropbox.com/s/zrmayl7cf14v0ej/data.7z?dl=0", target="_blank">Paper Data (Dropbox)</a>, <a href="PP_SIG.pdf", target="_blank">Slide,  <a href="https://pan.baidu.com/s/1wK8BHVzwSmKu6MHtMrK27A", target="_blank">Video (BaiduYun)</a>,  <a href="https://www.dropbox.com/s/9h3ri5o049xzt85/Final.mp4?dl=0", target="_blank">Video (Dropbox)</a>.
+		</p>
+		<br>
+		<!-- <div align="center">
+          <img src="pipeline.png" width="920" alt="Figure 2">
+         </div>
+		 <p class="figure"><strong>Figure 2:</strong>The iteration process of our method. Here, we use \(M^p_n\) and \(M^r_n\) to represent the parameterized mesh and the reference triangles at the \(n^\text{th}\) iteration, respectively. Since \(M^p_{n+1}\) does not satisfy the condition of the while loop of Algorithm 1, our method exits it and starts solving (5). The texture mapping is shown in (e1) using the convergence parameterization \(M^p_\text{c}\) (e2).</p>  -->
+
+		<br><p class="subtitle" id = "sec_Bibtex" name="score_m"><strong>Bibtex</strong></p>
+		<hr />
+		<p class="text">
+		@article {Liu_PP_2018,<br>
+		title = {Progressive Parameterizations},<br>
+		author = {Ligang Liu and Chunyang Ye and Ruiqi Ni and Xiao-Ming Fu},<br>
+		journal = {ACM Transactions on Graphics(SIGGRAPH)},<br>
+		volume = {37},<br>
+		number = {4},<br>
+		year = {2018},<br>
+		}
+		</p>
+		</div>
+</div>
+
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;">
+<div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;">
+</div>
+</div>
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;">
+<div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Math-italic, sans-serif;">
+</div>
+</div>
+<script>
+	$(document).ready(function(){
+		var score_flag = true;
+		$(".fix_top a:first").css({"text-decoration" : "underline"});
+		$(".fix_top a").click(function(){
+			score_flag = false;
+			var aa = $(this).attr("data-value");
+			var hh = $(aa).position().top -  80;
+			$("html,body").animate({scrollTop: hh}, 'slow', function(){
+				score_flag = true;
+			});
+			$(".fix_top a").css({"text-decoration" : "none"});
+			$(this).css({"text-decoration" : "underline"});
+		});
+		$(window).scroll(function () {
+			if(score_flag){
+				var num = 0;
+				var score = $(this).scrollTop();
+				var aa = $("p[name='score_m']");
+				for(var i = 0; i < aa.length; i++){
+					var pheight = $(aa[i]).position().top - 200;
+					if(score > pheight){
+						num = i;
+					}
+				}
+				$(".fix_top a").css({"text-decoration" : "none"});
+				$(".fix_top a:eq("+num+")").css({"text-decoration" : "underline"});
+			}
+		});
+	});
+</script>
+
+</body>
+</html>

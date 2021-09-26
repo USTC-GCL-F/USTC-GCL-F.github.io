@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0092)http://vis.uky.edu/~gravity/Research/ResidentialReconstruction/ResidentialReconstruction.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Smooth Assembled Mappings for Large-Scale Real Walking in VR</title>
+<link href="../projects.css" rel="stylesheet" type="text/css">
+</script>
+
+<script type="text/javascript"
+	src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/javascript" src="../jquery-1.11.0.min.js">
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+		<div class="fix_top">
+			<div>
+				<a href="javascript:;" data-value="#sec_title">Title</a>
+				<a href="javascript:;" data-value="#sec_Abstract">Abstract</a>
+				<a href="javascript:;" data-value="#sec_Downloads">Downloads</a>
+				<!-- <a href="javascript:;" data-value="#sec_Summary">Summary</a> -->
+				<a href="javascript:;" data-value="#sec_Bibtex">Bibtex</a>
+			</div>
+		</div>
+		
+        <div id="content"> 
+          	
+          <!-- Title & Authors-->
+          <br><br>
+       	  <p class="title" id = "sec_title" name="score_m">Smooth Assembled Mappings for Large-Scale Real Walking</p>
+       	  <p>&nbsp;</p>
+          
+          <p class="authors">
+		  <a href="http://home.ustc.edu.cn/~dzc206/" target="_blank">Zhi-Chao Dong</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <a href="http://staff.ustc.edu.cn/~fuxm/", target="_blank">Xiao-Ming Fu</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		  Chi Zhang&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+		  Kang Wu &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <a href="http://staff.ustc.edu.cn/~lgliu/", target="_blank">Ligang Liu</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <br><br>
+          <a href="http://en.ustc.edu.cn/", target="_blank">University of Science and Technology of China</a> &nbsp&nbsp&nbsp&nbsp
+		  <br><br>
+          <em>ACM Transactions on Graphics (SIGGRAPH Asia)</em> 36(6), 2017.</p>
+		  <br>
+       	  <div align="center">
+          <img src="teaser.png" width="920" alt="Figure 1">
+          </div>
+          <p class="figure"><strong>Figure 1:</strong> We propose a divide-and-conquer method to compute a map from a substantially large virtual scene, as shown in (a) (24m × 24m), to a small real workspace (b) (3.6m × 3.6m). (b) The real walking path of one participant to pass through the virtual scene in our real walking workspace. (c) The photo of our real walking workspace. We build a low-cost tracking system with four Microsoft Kinect V2s, where each Kinect is placed at one corner of the workspace, to capture the users’ position. The virtual world views and user’s HMD views at two viewpoints are shown in the bottom row. </p>
+
+		<br><p class="subtitle" id = "sec_Abstract" name="score_m"><strong>Abstract</strong></p>
+		<hr />
+		<br>
+		<p class="text">
+		Virtual reality applications prefer real walking to provide highly immersive presence than other locomotive methods. Mapping-based techniques are very effective for supporting real walking in small physical workspaces while exploring large virtual scenes. However, the existing methods for computing real walking maps suff er from poor quality due to distortion. In this paper, we present a novel divide-and-conquer method, called Smooth Assembly Mapping (SAM), to compute real walking maps with low isometric distortion for large-scale virtual scenes. First, the input virtual scene is decomposed into a set of smaller local patches. Then, a group of local patches is mapped together into a real workspace by minimizing a low isometric distortion energy with smoothness constraints between the adjacent patches. All local patches are mapped and assembled one by one to obtain a complete map. Finally, a global optimization is adopted to further reduce the distortion throughout the entire map. Our method easily handles teleportation technique by computing maps of individual regions and assembling them with teleporter conformity constraints. A large number of experiments, including formative user studies and comparisons, have shown that our method succeeds in generating high-quality real walking maps from large-scale virtual scenes to small real workspaces and is demonstrably superior to state-of-the-art methods.
+		</p>
+		<br><br><p class="subtitle" id = "sec_Downloads" name="score_m"><strong>Downloads</strong></p>
+		<hr />
+		<p class="centertext">
+		<a href="http://rec.ustc.edu.cn/share/09136770-5522-11e9-832d-6d844988b55b", target="_blank">Paper</a>, <a href="https://dl.acm.org/citation.cfm?id=3130893", target="_blank">Paper (ACM)</a>, <a href="https://pan.baidu.com/s/1qYOGUvE", target="_blank"> Slide (BaiduYun)</a>, <a href="https://www.dropbox.com/s/rmwlo4tji5t70e6/SIGGRAPH_ASIA_V6.pdf?dl=0", target="_blank"> Slide (Dropbox)</a>,  <a href="https://pan.baidu.com/s/1hspLvN2", target="_blank"> Video (BaiduYun)</a>,  <a href="https://www.dropbox.com/s/ch3tki9paq2xeld/final_video.mp4?dl=0", target="_blank"> Video (Dropbox)</a>, <a href="ResultData.zip", target="_blank"> Mapping results</a>.
+		</p>
+		<br>
+		<div align="center">
+          <img src="pipeline.png" width="920" alt="Figure 2">
+         </div>
+		 <p class="figure"><strong>Figure 2:</strong>Overview of our SAM method. (a) Input VE \(S^V\) (in gradient color which is a visualization for diff erent regions); (b) \(S^V\) is decomposed into a series of primitive patches, which are classified into regular patches (yellow), leaf patches ( pink), junction patches (blue), and pseudo-junction patches (red); (c) the dual graph \(\mathcal{G}\) of the patches in (b); (d) \(\mathcal{G}\) is partitioned into a set of trees (red polygons). Each tree represents a super-patch in \(S^V\) , which is a group of patches. (e1) Mapping the first super-patch into SR (represented by the black rectangle). Left : the super-patch is initially placed; Right: then it is mapped into SR with its junction-type leaf patches mapped into the safe region \(\bar{S}^R\) (represented by the red rectangle). (e2) Mapping the second super-patch into \(S^R\). Left : the super-patch is initially assembled by the smoothness constraint with (e1)-right; Right: then it is mapped into \(S^R\) with its junction-type leaf patches mapped into \(\bar{S}^R\). (e3) All super-patches are mapped and assembled into \(S^R\). (e4) A global optimization is performed on (e3) and the final mapping result is obtained. See the accompanying video for the live mapping process.</p> 
+		 
+		<br><p class="subtitle" id = "sec_Bibtex" name="score_m"><strong>Bibtex</strong></p>
+		<hr />
+		<p class="text">
+		@article {DongSAM,<br>
+		title = {Smooth Assembled Mappings for Large-Scale Real Walking in VR},<br>
+		author = {Zhi-Chao Dong and Xiao-Ming Fu and Chi Zhang and Kang Wu and Ligang Liu},<br>
+		journal = {ACM Transactions on Graphics(SIGGRAPH Asia)},<br>
+		volume = {36},<br>
+		number = {6},<br>
+		year = {2017},<br>
+		}
+		</p>
+		</div>
+</div>
+
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;">
+<div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;">
+</div>
+</div>
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;">
+<div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Math-italic, sans-serif;">
+</div>
+</div>
+<script>
+	$(document).ready(function(){
+		var score_flag = true;
+		$(".fix_top a:first").css({"text-decoration" : "underline"});
+		$(".fix_top a").click(function(){
+			score_flag = false;
+			var aa = $(this).attr("data-value");
+			var hh = $(aa).position().top -  80;
+			$("html,body").animate({scrollTop: hh}, 'slow', function(){
+				score_flag = true;
+			});
+			$(".fix_top a").css({"text-decoration" : "none"});
+			$(this).css({"text-decoration" : "underline"});
+		});
+		$(window).scroll(function () {
+			if(score_flag){
+				var num = 0;
+				var score = $(this).scrollTop();
+				var aa = $("p[name='score_m']");
+				for(var i = 0; i < aa.length; i++){
+					var pheight = $(aa[i]).position().top - 200;
+					if(score > pheight){
+						num = i;
+					}
+				}
+				$(".fix_top a").css({"text-decoration" : "none"});
+				$(".fix_top a:eq("+num+")").css({"text-decoration" : "underline"});
+			}
+		});
+	});
+</script>
+
+</body>
+</html>

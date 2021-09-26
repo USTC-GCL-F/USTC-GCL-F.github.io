@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0092)http://vis.uky.edu/~gravity/Research/ResidentialReconstruction/ResidentialReconstruction.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Computing Inversion-Free Mappings by Simplex Assembly</title>
+<link href="../projects.css" rel="stylesheet" type="text/css">
+
+</script>
+<script type="text/javascript"
+	src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/javascript" src="../jquery-1.11.0.min.js">
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+		<div class="fix_top">
+			<div>
+				<a href="javascript:;" data-value="#sec_title">Title</a>
+				<a href="javascript:;" data-value="#sec_Abstract">Abstract</a>
+				<a href="javascript:;" data-value="#sec_Downloads">Downloads</a>
+				<a href="javascript:;" data-value="#sec_Summary">Summary</a>
+				<!-- <a href="javascript:;" data-value="#sec_Code">Code</a> -->
+				<a href="javascript:;" data-value="#sec_Bibtex">Bibtex</a>
+			</div>
+		</div>
+        <div id="content"> 
+          	
+          <!-- Title & Authors-->
+          <br><br>
+       	  <p class="title" id = "sec_title" name="score_m">Computing Inversion-Free Mappings by Simplex Assembly</p>
+       	  <p>&nbsp;</p>
+          
+          <p class="authors">
+          <a href="http://staff.ustc.edu.cn/~fuxm/", target="_blank">Xiao-Ming Fu</a><sup>1</sup>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <a href="https://xueyuhanlang.github.io/", target="_blank">Yang Liu</a><sup>2</sup>&nbsp&nbsp 
+          <br><br>
+          <sup>1</sup> <a href="http://en.ustc.edu.cn/", target="_blank">University of Science and Technology of China</a> &nbsp&nbsp&nbsp&nbsp
+          <sup>2</sup> <a href="http://research.microsoft.com/en-us/labs/asia/", target="_blank">Microsoft Research Asia</a> &nbsp&nbsp&nbsp&nbsp
+		  <br><br>
+          <em>ACM Transactions on Graphics (SIGGRAPH Asia)</em> 35(6), 2016.</p>
+		  <br><br>
+       	  <div align="center">
+          <img src="gsp.png" width="920" alt="Figure 1">
+          </div>
+          <p class="figure"><strong>Figure 1:</strong>Global seamless parameterization. Compared with [Diamanti et al. 2015], our method maintains the original singularities and has much lower edge-curl values. </p>
+
+		<br><p class="subtitle" id = "sec_Abstract" name="score_m"><strong>Abstract</strong></p>
+		<hr />
+		<br>
+		<p class="text">
+		We present a novel method, called <em>Simplex Assembly</em>, to compute inversion-free mappings with low or bounded distortion on simplicial meshes. Our method involves two steps: simplex disassembly and simplex assembly. Given a simplicial mesh and its initial piecewise affine mapping, we project the affine transformation associated with each simplex into the inversion-free and distortion-bounded space. The projection disassembles the input mesh into disjoint simplices. The disjoint simplices are then assembled to recover the original connectivity by minimizing the mapping distortion and the difference of the disjoint vertices with respect to the piecewise affine transformations, while the piecewise affine mapping is restricted inside the feasible space. Due to the use of affine transformations as variables, our method explicitly guarantees that no inverted simplex occurs, and that the mapping distortion is below the bound during the optimization. Compared with existing methods, our method is robust to an initialization with many inverted elements and positional constraints. We demonstrate the efficiency and robustness of our method through a variety of geometric processing tasks.
+		</p>
+		<br><br><p class="subtitle" id = "sec_Downloads" name="score_m"><strong>Downloads</strong></p>
+		<hr />
+		<p class="centertext">
+		<a href="http://pan.baidu.com/s/1eSOEwCy", target="_blank">Paper</a>, <a href="http://pan.baidu.com/s/1jI4TvGa", target="_blank">Data</a>, <a href="http://pan.baidu.com/s/1gfjyAOF", target="_blank">Slides</a>, <a href="https://pan.baidu.com/s/1CCOVGmQS7rwFmbPXZ_5erA", target="_blank">Code (BaiduYun)</a>.
+		</p>
+		
+		<br><p class="subtitle" id = "sec_Summary" name="score_m"><strong>Summary</strong></p>
+		<hr />
+		<p class="text">
+		<strong>Our goal</strong>: Compute inversion-free mappings with low or bounded distortion.
+		</p>
+		<br><p class="text">
+		<strong>The idea</strong>: Our essential idea includes two steps: (1) we first disassemble the simplicial mesh into disjoint simplices that are inversion-free and stay inside the feasible distortion space; (2) we treat piecewise affine transformations as variables and assemble the disjoint simplices by solving an unconstrained optimization problem whose objective penalizes disjoint simplices and restricts the affine mappings inside the feasible distortion space by a simple and novel barrier function that avoid inversion and control distortion.
+		</p>
+		 <br><p class="text">
+		<strong>Applications</strong>: Parameterizations, fixed boundary mapping, mesh deformation. 
+		</p> 
+		<br>
+		<div align="center">
+        <img src="para.png" width="920" alt="Figure 2">
+        </div>
+		 <p class="figure"><strong>Figure 2:</strong> <strong>Conformal parameterization</strong> for a Bunny model (1251046 vertices). (a) and (b) are the results of [Fu et al. 2015] initialized with a circular convex mapping and the result of Linear ABF [Zayer et al. 2007].(c) FBDM [Kovalsky et al. 2015]. (d) Our result. Our method with the speedup strategy took 10.2 seconds while the AMIPS method [Fu et al. 2015] took 2 hours with the Tutte embedding initialization and 2 minutes with the Linear ABF [Zayer et al. 2007] initialization. FBDM [Kovalsky et al. 2015] took 82.3 seconds to converge using the same bound and the LSCM initialization. The maximal and average conformal distortion of the result of AMIPS (a & b), FBDM (c)  and our method (d) are (2.29, 1.006), (2.25, 1.003), (2.50, 1.004) and (2.42, 1.004) respectively. Our method obtains a comparable result in the least time.
+		</p>
+		<div align="center">
+        <img src="fixedboundary.png" width="920" alt="Figure 3">
+        </div>
+		 <p class="figure"><strong>Figure 3:</strong> <strong>2D conformal fixed-boundary mapping</strong>. A square-shaped triangle mesh (a) is mapped onto a non-convex polygonal domain. A harmonic mapping (b) contains 28 foldovers (colored in yellow). With this poor mapping as initialization, our method can easily achieve inversion-free results with low distortion (\(K^{\textrm{conf}} = \infty\)) (h) and bounded distortion with bound \(K^{\textrm{conf}} = 4\) (i). \(E_m = 0\) in this example. We compare our method with other state-of-the-art methods. The methods of [Levi and Zorin 2014] (c),  [Xu et al . 2011] (d) and  [Weber et al. 2012] (e) cannot prevent foldovers. The method of [Levi and Zorin 2014] needs to insert 9 additional vertices into the triangulation to guarantee inversion-free results (f). Bounded distortion methods like [Lipman 2012] can find a valid mapping (g), but the bound is hard to determine. It fails when \(\delta^{con}_{bound} < 11\) using the authors' implementation with the defaulting setting. The color on triangles encodes the conformal distortion, with white being optimal.
+		</p>
+		<div align="center">
+        <img src="pc.png" width="920" alt="Figure 4">
+        </div>
+		 <p class="figure"><strong>Figure 4:</strong> <strong>Conformal PolyCube mapping</strong> of six models using our algorithm and FBDM with different settings. The initial mappings of FBDM(a) and FBDM(b) are the same as in [Aigerman and Lipman 2013]. The bound of FBDM(a) is the same as in  [Kovalsky et al . 2015]. FBDM(b) uses our maximal conformal distortion as the bound. The bottom-left insets show the initial mappings with inverted tetrahedrons (colored in yellow). The boundary tetrahedrons are color-coded using the magnitude of \(\delta^{con}\). The three numbers below each figure report the maximal conformal distortion, average conformal distortion and running time. The number of vertices and tetrahedrons of the models are: Bimba (10790,45422), Duck (2464,12601), Hand (8366,40627), Rocker (12428,60301), Max (9867,40076), Sphinx (10528,43371).
+		</p>
+		<div align="center">
+        <img src="bar_deform.png" width="800" alt="Figure 5">
+        </div>
+		 <p class="figure"><strong>Figure 5:</strong> <strong>Tetrahedral mesh deformation</strong>. Bend, twist and translate a bar. The initial mapping results of the first row are from [Aigerman and Lipman 2013] and contain some inverted tetrahedrons. The second row shows our low distortion and inversion-free results.
+		</p>
+		<!-- <br><p class="subtitle" id = "sec_Code" name="score_m"><strong>Code</strong></p>
+		<hr />
+		<p class="centertext">
+		Coming soon......
+		</p> -->
+		<br><p class="subtitle" id = "sec_Bibtex" name="score_m"><strong>Bibtex</strong></p>
+		<hr />
+		<p class="text">
+		@article {Fu-2016-SA,<br>
+		title = {Computing Inversion-Free Mappings by Simplex Assembly},<br>
+		author = {Xiao-Ming Fu and Yang Liu},<br>
+		journal = {ACM Transactions on Graphics (SIGGRAPH Asia)},<br>
+		volume = {35},<br>
+		number = {6},<br>
+		year = {2016},<br>
+		}
+		</p>
+		</div>
+</div>
+
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;">
+<div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;">
+</div>
+</div>
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;">
+<div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Math-italic, sans-serif;">
+</div>
+</div>
+<script>
+	$(document).ready(function(){
+		var score_flag = true;
+		$(".fix_top a:first").css({"text-decoration" : "underline"});
+		$(".fix_top a").click(function(){
+			score_flag = false;
+			var aa = $(this).attr("data-value");
+			var hh = $(aa).position().top -  80;
+			$("html,body").animate({scrollTop: hh}, 'slow', function(){
+				score_flag = true;
+			});
+			$(".fix_top a").css({"text-decoration" : "none"});
+			$(this).css({"text-decoration" : "underline"});
+		});
+		$(window).scroll(function () {
+			if(score_flag){
+				var num = 0;
+				var score = $(this).scrollTop();
+				var aa = $("p[name='score_m']");
+				for(var i = 0; i < aa.length; i++){
+					var pheight = $(aa[i]).position().top - 170;
+					if(score > pheight){
+						num = i;
+					}
+				}
+				$(".fix_top a").css({"text-decoration" : "none"});
+				$(".fix_top a:eq("+num+")").css({"text-decoration" : "underline"});
+			}
+		});
+	});
+</script>
+
+</body>
+</html>
