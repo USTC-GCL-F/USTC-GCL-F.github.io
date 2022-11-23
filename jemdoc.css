@@ -17,7 +17,8 @@ html {
 }
 
 body {
-	font-family:  Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	/* font-family:  Verdana, Geneva, Arial, Helvetica, sans-serif;  */
+	font-family:  Trebuchet, sans-serif;
 	color: #000;
 	background-color: #ffffff;
 	text-align: left; /* for IE */
@@ -179,7 +180,8 @@ p {
 }
 
 p.title{
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	/* font-family: Trebuchet Verdana, Geneva, Arial, Helvetica, sans-serif; */
+	font-family: Trebuchet, sans-serif;
 	font-size:30px;
 	font-weight:bold;
 	text-align:center;
