@@ -18,7 +18,8 @@ html {
 
 body {
 	/* font-family:  Verdana, Geneva, Arial, Helvetica, sans-serif;  */
-	font-family:  Trebuchet, sans-serif;
+	font-family: Linux Biolinum, sans-serif; /* Trebuchet;Montserrat,"sans-serif"*/
+	font-size: large;
 	color: #000;
 	background-color: #ffffff;
 	text-align: left; /* for IE */
