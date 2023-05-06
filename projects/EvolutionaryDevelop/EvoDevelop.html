@@ -1,0 +1,267 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta http-equiv="Content-Language" content="zh-cn">
+
+<title>Evolutionary Piecewise Developable Approximations</title>
+<style>
+<!--
+.thumbnailClass {
+	BORDER-RIGHT: white 0px outset; BORDER-TOP: white 0px outset; MARGIN: 0px 5px 0px 0px; BORDER-LEFT: white 0px outset; BORDER-BOTTOM: white 0px outset
+}
+.sectionClass {
+	BORDER-RIGHT: #286dc2 2px outset; PADDING-RIGHT: 0px; BORDER-TOP: #286dc2 2px outset; PADDING-LEFT: 0px; BACKGROUND: #286dc2; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #286dc2 2px outset; PADDING-TOP: 0px; BORDER-BOTTOM: #286dc2 2px outset
+}
+.section2Class {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 110%; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: white; TEXT-INDENT: 0.1in; PADDING-TOP: 0px; FONT-FAMILY: helvetica
+}
+.abstractClassCol {
+	COLOR: teal
+}
+.hindsightClassCol {
+	COLOR: darkred
+}
+.abstractClass {
+	COLOR: teal
+}
+.hindsightClass {
+	COLOR: darkred
+}
+
+-->
+</style>
+</head>
+
+<body>
+
+<p align="center"><b><font face="Arial" size="6">Evolutionary Piecewise Developable Approximations</font></b></p>
+<table width="800" border="0" align="center">
+	<tbody>
+		<tr><td align="center" colspan="3"><span lang="EN-US" style="font-size:14.0pt;font-family:Arial;">
+			Zheng-Yu Zhao*&nbsp;&nbsp;&nbsp;&nbsp;
+			Mo Li*&nbsp;&nbsp;&nbsp;&nbsp;
+			Zheng Zhang&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="https://qingfang1208.github.io/">Qing Fang</a><span lang="EN-US" style="font-size:14.0pt;font-family:Arial;">&nbsp;&nbsp;&nbsp;&nbsp; 
+		</span><a href="http://staff.ustc.edu.cn/~lgliu/">Ligang Liu</a><span lang="EN-US" style="font-size:14.0pt;font-family:Arial;">&nbsp;&nbsp;&nbsp;&nbsp; 
+		</span><a href="https://ustc-gcl-f.github.io/">Xiao-Ming Fu</a><span lang="EN-US" style="font-size:14.0pt;font-family:Arial;">&nbsp;&nbsp;&nbsp;&nbsp; 
+		</span></td></tr>
+	<tr>
+		<td width="495" align="center">
+		<span style="font-size: 14.0pt; font-family: Arial,sans-serif">
+		(*Joint first authors)
+		</span></td>
+	</tr>
+	<tr>
+		<td width="495" align="center">
+		<span style="font-size: 14.0pt; font-family: Arial,sans-serif">
+		<a href="http://www.ustc.edu.cn/">University of Science and Technology of China</a></span></td>
+	</tr>
+	</tbody></table>
+<p align="center"><font face="Arial" size="4"><i>ACM Transactions on Graphics 
+</i>(Proc. SIGGRAPH), 42(4), 2023.</font> </p>
+<p align="center">&nbsp;</p>
+<table width="1195" border="2" align="center" bordercolor="#FFFFFF" id="table2" style="border-collapse: collapse">
+	<tbody><tr>
+		<td align="center" colspan="2">
+		<hr>
+		<img border="0" src="figure/teaser.jpg" width="1068" height="260.53"><p align="justify">
+		<span lang="en-us"><i><span style="font-family: Arial,sans-serif">Teaser</span></i></span><i><span lang="EN-US" style="font-family:Arial,sans-serif">: </span></i>
+		<span lang="en-us"><i><span style="font-family: Arial,sans-serif">Our algorithm generates a small number of developable patches for approximating three models, including a model with three mushrooms, a chair, and
+a teapot, physically validated using color paper.</span></i></span></p><hr>&nbsp;
+	</td>
+	</tr>
+	<tr>
+		<td width="10%" align="center" bgcolor="#CCFFCC">
+		<p align="left"><font face="Arial" color="#008080" size="4">Abstract</font></p></td>
+		<td width="89%">
+		<p align="justify"><font face="Arial" size="4">
+			<br>
+			We propose a novel method to compute high-quality piecewise developable 
+			approximations for triangular meshes. Central to our approach is an evolutionary genetic algorithm 
+			for optimizing the combinatorial and discontinuous fitness function, including the approximation error, 
+			the number of patches, the patch boundary length, and the penalty for small patches and narrow regions 
+			within patches. The genetic algorithm&apos;s operations (i.e., initialization, selection, mutation, and crossover) 
+			are explicitly designed to minimize the fitness function.
+			<br>
+			The main challenge is evaluating the fitness function&apos;s approximation error as it requires developable patches, 
+			which are difficult or time-consuming to obtain. Resolving the challenge is based on a critical observation:
+			the approximation error and the mapping distortion between an input surface and its developable approximation 
+			are positively correlated empirically. To efficiently measure distortion without explicitly generating 
+			developable shapes, we creatively use conformal mapping techniques. Then, we control the mapping distortion 
+			at a relatively low level to achieve high shape similarity in the genetic algorithm. 
+			<br> 
+			The feasibility and effectiveness of our method are demonstrated over 240 complex examples. Compared with the 
+			state-of-the-art methods, our results have much smaller approximation errors, fewer patches, shorter patch 
+			boundaries, and fewer small patches and narrow regions.
+			<br>
+			<br></font></p></td>
+	</tr>
+	<tr>
+		<td width="10%" align="left" bgcolor="#FFFFCC">
+		<font face="Arial" size="4" color="#008080">Keywords</font></td>
+		<td width="89%" align="left">
+			<br>
+		<span lang="EN-US" style="font-size:13.5pt;font-family:Arial;">
+			Piecewise developable approximation, evolutionary genetic algorithm, conformal mapping, cone singularity
+		<br></span><font face="Arial" size="4"><br></font></td>
+	</tr>
+	<tr>
+		<td width="10%" align="left" bgcolor="#CCFFCC">
+		<font face="Arial" size="4" color="#008080">Motivation</font></td>
+		<td width="89%" align="left">
+		<p align="justify"><font size="4">
+		<span style="font-family: Arial,sans-serif"><br>Generating such a piecewise developable mesh is 
+			challenging due to these combinatorial constraints and mutually restrictive objectives.
+			 To adapt to these objectives and constraints, we first customize the evolutionary genetic 
+			 algorithm to construct the partition and then deform each patch to be discrete developable 
+			 to obtain a piecewise developable mesh. 
+			 In our genetic algorithm, a chromosome is a partition of the input. 
+			 The main challenge for tailor-making the genetic algorithm is to compute the approximation error for evaluating 
+			 the chromosome&apos;s fitness function, including the desired objectives and constraints. To resolve this challenge,
+			  we innovatively use the techniques of conformal mappings.<br><br></span></font></p>
+	</td></tr>
+	<tr>
+		<td width="10%" align="left" bgcolor="#FFFFCC">
+		<font face="Arial" size="4" color="#008080">Methods</font></td>
+		<td width="89%" align="left">
+		<p align="justify"><font size="4">
+		<span style="font-family: Arial,sans-serif">
+			<br>The genetic algorithm starts from an initial population consisting of many chromosomes (i.e., partitions). 
+			<p align="center">
+			<img border="0" src="figure/initial.jpg" width="1118.7" height="172.2238"></p>
+			<p align="justify"><i><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif">
+				Figure 2: The generation of one chromosome.	(a) The input. (b) The set of cone singularities. (c) The minimum spanning tree connecting all cone singularities. (d) 
+		The initial partition whose boundary contains this minimum spanning tree.</span></i></p>
+		<span style="font-family: Arial,sans-serif">
+			<p align="justify"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif">
+				Then it performs genetic operations to evolve the population for finding a chromosome with a small fitness value 
+			until the termination conditions are satisfied.</span></p>
+			<p align="center">
+			<img border="0" src="figure/pipeline.jpg" width="1120" height="359.292"></p>
+			<p align="justify"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif"><i>
+				Figure 3: Workflow of our method. Given an input mesh M (a), our algorithm first generates an initial population A 
+				(the best chromosome in the initial population is shown in (b)), then evolves the population for finding a chromosome with 
+				a small fitness value (c), and finally deform patches to be piecewise developable to generate the result (d).
+				The graph plots the fitness of the best chromosome P best in the population as a function of the number of evolutionary iterations.
+				The red, orange, pink, blue, green, and purple numbers denote</i> E<sub>total</sub>(P<sub>best</sub>), E<sub>small</sub>(P<sub>best</sub>),
+				E<sub>narrow</sub>(P<sub>best</sub>), E<sub>length</sub>(P<sub>best</sub>), E<sub>smooth</sub>(P<sub>best</sub>), 
+				and &epsilon;(P<sub>best</sub>), <i>respectively. The sudden drop of the fitness function near the 200<sup>th</sup> iteration 
+				is due to the disappearance of the narrow regions.</i></span></p>
+				<p align="justify"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif">
+				Specifically, the operations include selection, crossover, and mutation.
+				Given the best partition, we deform the input mesh to be piecewise developable while possessing a small approximation error.
+				</span><br><br></p>
+		</td>
+			</tr>
+	<tr>
+		
+		<td width="10%" align="left" bgcolor="#CCFFCC">
+		<font face="Arial" size="4" color="#008080">Paper</font></td>
+		<td width="89%" align="left">
+		<font face="Arial" size="4">
+		<br>
+		<a href="https://rec.ustc.edu.cn/share/a0ba7150-ec1e-11ed-be25-7984990dc054">PDF</a></font><br><br></td>
+		
+		<!--
+		<td width="10%" align="left" bgcolor="#CCFFCC">
+		<font face="Arial" size="4" color="#008080">Paper</font></td>
+		<td width="89%" align="left">
+		<font face="Arial" size="4">
+		<br>
+		<a href="file/Paper.pdf">PDF</a> (261M)</font><br><br></td>
+		-->
+	</tr>
+	<tr>
+		<td width="10%" align="left" bgcolor="#FFFFCC">
+		<font face="Arial" size="4" color="#008080">Software</font></td>
+		<td width="89%" align="left">
+		<span style="font-size: 13.5pt; font-family: Arial,sans-serif">
+		<br>
+		<a href="https://rec.ustc.edu.cn/share/8af0e350-ec1e-11ed-ac79-0198d24bf998">Code</a> (15.3M)<br><br></span></td>
+	</tr>
+	<tr>
+		<!-- 
+		<td width="10%" align="left" bgcolor="#CCFFCC">
+		<font face="Arial" size="4" color="#008080">Supplementary material</font></td>
+		<td width="89%" align="left"><font face="Arial" size="4">
+		<br>
+		<a href="file/Data.zip">Supplement and Data</a> (136M) <br><br></font></td>
+	-->
+
+		<td width="10%" align="left" bgcolor="#CCFFCC">
+		<font face="Arial" size="4" color="#008080">Supplementary material</font></td>
+		<td width="89%" align="left"><font face="Arial" size="4">
+		<br>
+		<a href="https://rec.ustc.edu.cn/share/c10af520-ec1e-11ed-9d46-f9a3553adf02">Supplement and Data</a> <br><br></font></td>
+	</tr>
+	<tr>
+		<td width="10%" align="left" bgcolor="#FFFFCC">
+		<font face="Arial" size="4" color="#008080">Video</font></td>
+		<td width="89%" align="left"><font face="Arial" size="4">
+		<br>
+		<a href="https://rec.ustc.edu.cn/share/76353230-ec1e-11ed-8f60-87948fd30742">Demo (*.mp4)</a> (78.6M) <br><br></font></td>
+	</tr>
+	<!-- 
+		<tr>
+		<td width="10%" align="left" bgcolor="#CCFFCC">
+		<font face="Arial" size="4" color="#008080">Presentation (at SIGGRAPH 2023)</font><p>
+		<td width="89%" align="left">
+		<font size="4"><span style="font-family: Arial,sans-serif">
+		<br>
+		<a href="http://staff.ustc.edu.cn/~lgliu/Projects/2014_DecouplingNoise/Presentation_Siggraph2014/Sig14-fastforward.pptx">Fast Forward</a> 
+		(5.5M)</span></font><p>
+		<span style="font-size: 13.5pt; font-family: Arial,sans-serif">
+		<a href="http://staff.ustc.edu.cn/~lgliu/Projects/2014_DecouplingNoise/Presentation_Siggraph2014/Sig14-talk.pdf">PPT</a> </span><font face="Arial" size="4">
+		(1.5M)</font></p>
+		</td>
+		</tr> 
+	-->
+	<tr>
+		<td width="10%" align="left" bgcolor="#CCFFCC">
+		<font face="Arial" size="4" color="#008080">Ack</font></td>
+		<td width="89%" align="left">
+		<p align="justify"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif">
+		<br>
+		We would like to thank the anonymous reviewers for their constructive suggestions and comments. 
+		This work is partially supported by the National Key R&D Program of China (2022YFB3303400), the 
+		National Natural Science Foundation of China (62272429, 62025207) and the Major Project of Science 
+		and Technology of Anhui Province (202203a05020050). </span><font face="Arial" size="4"><br><br></font></p></td>
+	</tr>
+	<tr>
+		<td width="10%" align="left" bgcolor="#FFFFCC">
+		<font face="Arial" size="4" color="#008080">BibTex</font></td>
+		<td width="89%" align="left"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif">
+			<br> @article {zhao2023evolutionary,<br>
+			&nbsp;&nbsp;&nbsp; title = {Evolutionary Piecewise Developable Approximations}, <br>
+  			&nbsp;&nbsp;&nbsp; author = {Zhao, Zheng-Yu and Li, Mo and Zhang, Zheng and Fang, Qing and Liu, Ligang and Fu, Xiao-Ming}<br>
+  			&nbsp;&nbsp;&nbsp; journal = {ACM Transactions on Graphics},<br>
+			&nbsp;&nbsp;&nbsp; volume={42},<br>
+			&nbsp;&nbsp;&nbsp; number={4},<br>
+			&nbsp;&nbsp;&nbsp; pages={1--13},
+			&nbsp;&nbsp;&nbsp; <br>
+			&nbsp;&nbsp;&nbsp; year = {2023}<br>}</span>
+		</td>
+
+	</tr>
+	</tbody>
+	</table>
+	<p><span style="font-size: 13.5pt; font-family: Arial,sans-serif">
+	<a href="http://staff.ustc.edu.cn/~lgliu/">Back to Homepage</a></span></p>
+	<hr>
+	<table width="1120" id="table1">
+	<tbody><tr>
+		<td>
+		<p align="justify"><i><font face="Verdana">Copyright and disclaimer: <br>
+		Copyright &#169; Ligang Liu<br>
+		The SOFTWARE provided at this page is provided "as is", without any 
+		guarantee made as to its suitability or fitness for any particular use. 
+		It may contain bugs, so use of this tool is at your own risk. We take no 
+		responsibility for any damage that may unintentionally be caused through 
+		its use.</font></i></p></td>
+	</tr>
+	<tr>
+	  <td align="center">  
+	  <!--#include file="counter.asp"-->
+	  </td>
+  </tr>
+</tbody></table>
+
+</body></html>
