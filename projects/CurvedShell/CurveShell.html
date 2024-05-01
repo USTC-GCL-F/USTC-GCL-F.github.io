@@ -1,0 +1,216 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta http-equiv="Content-Language" content="zh-cn">
+
+<title>Smooth Bijective Projection in a High-order Shell</title>
+<style>
+<!--
+.thumbnailClass {
+	BORDER-RIGHT: white 0px outset; BORDER-TOP: white 0px outset; MARGIN: 0px 5px 0px 0px; BORDER-LEFT: white 0px outset; BORDER-BOTTOM: white 0px outset
+}
+.sectionClass {
+	BORDER-RIGHT: #286dc2 2px outset; PADDING-RIGHT: 0px; BORDER-TOP: #286dc2 2px outset; PADDING-LEFT: 0px; BACKGROUND: #286dc2; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #286dc2 2px outset; PADDING-TOP: 0px; BORDER-BOTTOM: #286dc2 2px outset
+}
+.section2Class {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 110%; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: white; TEXT-INDENT: 0.1in; PADDING-TOP: 0px; FONT-FAMILY: helvetica
+}
+.abstractClassCol {
+	COLOR: teal
+}
+.hindsightClassCol {
+	COLOR: darkred
+}
+.abstractClass {
+	COLOR: teal
+}
+.hindsightClass {
+	COLOR: darkred
+}
+
+-->
+</style>
+</head>
+
+<body>
+
+<p align="center"><b><font face="Arial" size="6">Smooth Bijective Projection in a High-order Shell</font></b></p>
+<table width="800" border="0" align="center">
+	<tbody>
+		<tr><td align="center" colspan="3"><span lang="EN-US" style="font-size:14.0pt;font-family:Arial;">
+			Shibo Liu&nbsp;&nbsp;&nbsp;&nbsp;
+			Yang Ji&nbsp;&nbsp;&nbsp;&nbsp;
+			Jia-Peng Guo&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="http://staff.ustc.edu.cn/~lgliu/">Ligang Liu</a><span lang="EN-US" style="font-size:14.0pt;font-family:Arial;">&nbsp;&nbsp;&nbsp;&nbsp;  
+		</span><a href="https://ustc-gcl-f.github.io/">Xiao-Ming Fu</a><span lang="EN-US" style="font-size:14.0pt;font-family:Arial;">&nbsp;&nbsp;&nbsp;&nbsp; 
+		</span></td></tr>
+	<tr>
+		<td width="495" align="center">
+		<span style="font-size: 14.0pt; font-family: Arial,sans-serif">
+		</span></td>
+	</tr>
+	<tr>
+		<td width="495" align="center">
+		<span style="font-size: 14.0pt; font-family: Arial,sans-serif">
+		<a href="http://www.ustc.edu.cn/">University of Science and Technology of China</a></span></td>
+	</tr>
+	</tbody></table>
+<p align="center"><font face="Arial" size="4"><i>ACM Transactions on Graphics 
+</i>(Proc. SIGGRAPH), 43(4), 2024.</font> </p>
+<p align="center">&nbsp;</p>
+<table width="1195" border="2" align="center" bordercolor="#FFFFFF" id="table2" style="border-collapse: collapse">
+	<tbody><tr>
+		<td align="center" colspan="2">
+		<hr>
+		<img border="0" src="figure/teaser.jpg" width="1068" height="260.53"><p align="justify">
+		<span lang="en-us"><i><span style="font-family: Arial,sans-serif">Teaser</span></i></span><i><span lang="EN-US" style="font-family:Arial,sans-serif">: </span></i>
+		<span lang="en-us"><i><span style="font-family: Arial,sans-serif">High-order shell and application.
+   Given a low-quality triangular mesh (a), we construct a high-order shell (b).
+   Then, we remesh the low-quality mesh within the high-order shell to generate a new mesh, which is further tetrahedrized (c).
+   We deform the mesh in (c) to generate a deformed mesh (d) using the settings in (a). Finally, the displacement field of the deformation 
+   is bijectively transferred back to the input to produce a deformation of the input mesh (e). </span></i></span></p><hr>&nbsp;
+	</td>
+	</tr>
+	<tr>
+		<td width="10%" align="center" bgcolor="#CCFFCC">
+		<p align="left"><font face="Arial" color="#008080" size="4">Abstract</font></p></td>
+		<td width="89%">
+		<p align="justify"><font face="Arial" size="4">
+			<br>
+			We propose a new structure called a higher-order shell, which is composed of a set of triangular prisms.
+            Each triangular prism is enveloped by three Bezier triangles (top, middle, and bottom) and three side surfaces, each of which is trimmed from a bilinear surface.
+            Moreover, we define a continuous vector field to smoothly and bijectively transfer attributes between two surfaces inside the shell.
+			<br>
+			Since the higher-order shell has several hard construction constraints, we apply an interior-point strategy to robustly and automatically construct a high-order shell for an input mesh.
+			Specifically, the strategy starts from a valid linear shell with a small thickness. Then, the shell is optimized until the specified thickness is reached, where explicit checks ensure that the constraints are always satisfied.
+			<br> 
+			We extensively test our method on more than 8300 models, demonstrating its robustness and performance.
+            Compared to state-of-the-art methods, our bijective projection is smoother, and the space between the shell and input mesh is more uniform.
+			<br>
+			<br></font></p></td>
+	</tr>
+	<tr>
+		<td width="10%" align="left" bgcolor="#FFFFCC">
+		<font face="Arial" size="4" color="#008080">Keywords</font></td>
+		<td width="89%" align="left">
+			<br>
+		<span lang="EN-US" style="font-size:13.5pt;font-family:Arial;">
+			high-order shell, attribute transfer, smooth projection, bijective
+		<br></span><font face="Arial" size="4"><br></font></td>
+	</tr>
+	<tr>
+		<td width="10%" align="left" bgcolor="#CCFFCC">
+		<font face="Arial" size="4" color="#008080">Motivation</font></td>
+		<td width="89%" align="left">
+		<p align="justify"><font size="4">
+		<span style="font-family: Arial,sans-serif"><br>The generation of the described prisms presents two challenges. 
+			First, it is difficult to precisely make the edges of the three Bezier triangles lie on the bilinear surfaces.
+			Second, assuming that we can find a way to solve the first challenge, we still need to ensure that the projection along the vector field has a chance to become a bijective map between two surfaces inside the shell.
+            Then, proposing a sufficient condition to judge whether such a projection can become a bijection becomes challenging.
+			To overcome the first challenge, we establish a \emph{placement condition} to constrain the placement of control points of the three Bezier triangles, enabling the Bezier triangles' edges to lie on 
+			the bilinear surfaces accurately and the Bezier triangles to approximate the input surface.
+			After constructing the Bezier triangles accordingly, the vector field can be regarded as the image of the isoparametric lines of a complex domain
+		    under the isoparametric transformation. Then, if the isoparametric transformation is bijective in the complex domain, the projection along the vector field can be a bijection.
+			<br><br></span></font></p>
+	</td></tr>
+	<tr>
+		<td width="10%" align="left" bgcolor="#FFFFCC">
+		<font face="Arial" size="4" color="#008080">Methods</font></td>
+		<td width="89%" align="left">
+		<p align="justify"><font size="4">
+		<span style="font-family: Arial,sans-serif">
+			<br>In this paper, we define a new high-order triangular prism shell space and propose a progressive robust construction algorithm. High-order triangular prisms consist of three Bezier triangles and three bilinear surfaces.
+			 To achieve a smooth mapping, we use linear interpolation of three vectors to obtain a vector field within the prism. 
+			 By exploring conditions that make the boundaries of the Bezier triangles conform to the vector field boundaries and are easy
+			  to fit, we obtain high-order triangular prisms composed of three Bezier triangles and three bilinear surfaces.
+			<p align="center">
+			<img border="0" src="figure/curve_shell.jpg" width="1118.7" height="210.2238"></p>
+			<p align="justify"><i><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif">
+				Figure 2: The definition of high-order shell.	(a) The continuous vector field. (b) The triangular prism envelopes by three
+				Bezier triangles and three side bilinear surfaces. (c) The generation of the bezier triangles such that the boundaries of thr Bezier
+				triangle conform to the bilinear patch.</span></i></p>
+		<span style="font-family: Arial,sans-serif">
+			<p align="justify"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif">
+				To efficiently construct sparse and high-quality high-order shells, we start with a linear shell of minimal initial thickness
+				 and continuously perform local operations to optimize the shell structure until the target thickness is reached. During the 
+				 optimization process, we use an interior-point method strategy. After each local operation, we perform conditional fitting 
+				 of the Bezier triangles and reject any local operations that would cause the shell space to lose its bijective properties.</span></p>
+			<p align="center">
+			<img border="0" src="figure/pipeline.jpg" width="1120" height="359.292"></p>
+			<p align="justify"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif"><i>
+				Figure 3: Workflow of our method. Given an input mesh, our algorithm is initialized with a dense linear shell, where the vector field is defined to align with the image of the 
+				side bilinear surfaces' parametric lines in one direction. Then, we iteratively perform local remeshing operations to optimize and 
+				simplify the shell until the specified thickness is reached. In each operation, we place the control points based on the placement 
+				condition and check whether any constraint is violated. If there is a violation, we reject the operation.</i></span></p>
+				<p align="justify"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif">
+				Specifically, the operations include collapse, flip, zoom and optimize.
+				We terminate the algorithm when no local operations can be further conducted.
+				</span><br><br></p>
+		</td>
+			</tr>
+	<tr>
+		
+		<td width="10%" align="left" bgcolor="#CCFFCC">
+		<font face="Arial" size="4" color="#008080">Paper</font></td>
+		<td width="89%" align="left">
+		<font face="Arial" size="4">
+		<br>
+		<a href="https://rec.ustc.edu.cn/share/685deda0-0627-11ef-90fd-95bdb91b3141">PDF</a></font><br><br></td>
+		
+		<!--
+		<td width="10%" align="left" bgcolor="#CCFFCC">
+		<font face="Arial" size="4" color="#008080">Paper</font></td>
+		<td width="89%" align="left">
+		<font face="Arial" size="4">
+		<br>
+		<a href="file/Paper.pdf">PDF</a> (261M)</font><br><br></td>
+		-->
+	</tr>
+	
+	<tr>
+		<td width="10%" align="left" bgcolor="#CCFFCC">
+		<font face="Arial" size="4" color="#008080">Ack</font></td>
+		<td width="89%" align="left">
+		<p align="justify"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif">
+		<br>
+		We would like to thank the anonymous reviewers for their constructive suggestions and comments. 
+		This work is partially supported by the National Natural Science Foundation of China (62272429, 62025207).  </span><font face="Arial" size="4"><br><br></font></p></td>
+	</tr>
+	<tr>
+		<td width="10%" align="left" bgcolor="#FFFFCC">
+		<font face="Arial" size="4" color="#008080">BibTex</font></td>
+		<td width="89%" align="left"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif">
+			<br> @article {liu2024curveshell,<br>
+			&nbsp;&nbsp;&nbsp; title = {Smooth Bijective Projection in a High-order Shell}, <br>
+  			&nbsp;&nbsp;&nbsp; author = {Liu, Shibo and Ji, Yang and Guo, Jia-Peng and Liu, Ligang and Fu, Xiao-Ming}<br>
+  			&nbsp;&nbsp;&nbsp; journal = {ACM Transactions on Graphics},<br>
+			&nbsp;&nbsp;&nbsp; volume={43},<br>
+			&nbsp;&nbsp;&nbsp; number={4},<br>
+			&nbsp;&nbsp;&nbsp; pages={1--13},
+			&nbsp;&nbsp;&nbsp; <br>
+			&nbsp;&nbsp;&nbsp; year = {2024}<br>}</span>
+		</td>
+
+	</tr>
+	</tbody>
+	</table>
+	<p><span style="font-size: 13.5pt; font-family: Arial,sans-serif">
+	<a href="https://ustc-gcl-f.github.io/">Back to Homepage</a></span></p>
+	<hr>
+	<table width="1120" id="table1">
+	<tbody><tr>
+		<td>
+		<p align="justify"><i><font face="Verdana">Copyright and disclaimer: <br>
+		Copyright &#169; Xiao-Ming Fu<br>
+		The SOFTWARE provided at this page is provided "as is", without any 
+		guarantee made as to its suitability or fitness for any particular use. 
+		It may contain bugs, so use of this tool is at your own risk. We take no 
+		responsibility for any damage that may unintentionally be caused through 
+		its use.</font></i></p></td>
+	</tr>
+	<tr>
+	  <td align="center">  
+	  <!--#include file="counter.asp"-->
+	  </td>
+  </tr>
+</tbody></table>
+
+</body></html>
