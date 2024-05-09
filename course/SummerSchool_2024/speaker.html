@@ -1,0 +1,426 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="favicon.ico">
+
+  <title>2024中科大《计算机图形学》暑期课程</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="GAMES_style.css" rel="stylesheet">
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="js/ie-emulation-modes-warning.js"></script>
+  <script>
+      function load_js()
+{
+    var head= document.getElementsByTagName('head')[0];
+    var script= document.createElement('script');
+    script.src= 'buttom.js';
+    head.appendChild(script);
+}
+load_js();
+  </script>
+  <!--<script src="buttom.js"></script>-->
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <div class="trcontainer2" style="width:60px;position: fixed;bottom:0px;left:0px;margin:1%">
+    <button id="top1" style="width:80%;color:#4bbdd0;border: 1px solid #ccc;border-radius: 5%;background-color: #f4f4f4;  padding: 1%;margin: 1%;display: block;"><span style="width:40%;margin-left:0%;margin-right:0%">回到<br>顶部</span></button>
+
+  </div>
+
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+        <!--<a class="navbar-brand" href="#"></a>-->
+
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav">
+
+          <li><a href="index.html">课程首页</a></li>
+          <li><a href="program.html">课程安排</a></li>
+          <li class="active"><a href="speaker.html">授课教师</a></li>
+          <li><a href="registration.html">课程注册</a></li>
+          <li><a href="information.html">在线信息</a></li>
+          <li><a href="http://staff.ustc.edu.cn/~lgliu/Courses/SummerSchool/USTC-summer-school.html">历年暑期课程</a></li>
+        </ul>
+      </div>
+
+
+
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
+
+
+
+  <div class="container">
+    <div class="starter-template">
+      <div class="jumbotron">
+        <h1 style="font-size:42px">授课教师</h1>
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <p style="border-bottom: 1px solid #ffffff;"> </p>
+
+<!--
+        <div class="row placeholders">
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="zhujunyan"><img src="picture\zhujunyan.jpg" height="146"><h4>Jun-Yan Zhu</h4><span class="text-muted">Carnegie Mellon University</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="zhaoshuang"><img src="picture\zhaoshuang.jpg" height="146"><h4>Shuang Zhao</h4><span class="text-muted">University of California, Irvine</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="liuzheng"><img src="picture\liuzheng.jpg" height="146"><h4>刘郑</h4><span class="text-muted">中国地质大学<br>（武汉）</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="fangqing"><img src="picture\fangqing.jpg" height="146"><h4>方清</h4><span class="text-muted">中国科学技术大学</span></button></div>
+        </div><div class="row placeholders">
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="yangyin"><img src="picture\yangyin.jpg" height="146"><h4>Yin Yang</h4><span class="text-muted">犹他大学</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="dutao"><img src="picture\dutao.jpg" height="146"><h4>Tao Du</h4><span class="text-muted">麻省理工学院</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="chenjiong"><img src="picture\chenjiong.jpg" height="146"><h4>Jiong Chen</h4><span class="text-muted">法国信息与自动化研究所<br>巴黎高等电信学校</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="liulingjie"><img src="picture\liulingjie.jpg" height="146"><h4>Lingjie Liu</h4><span class="text-muted">Max Planck Institute for Informatics</span></button></div>
+        </div><div class="row placeholders">
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="yangjiaolong"><img src="picture\yangjiaolong.jpg" height="146"><h4>杨蛟龙</h4><span class="text-muted">微软亚洲研究院</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="sunqilin"><img src="picture\sunqilin.jpg" height="146"><h4>孙启霖</h4><span class="text-muted">香港中文大学（深圳）<br>点昀技术</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="wanglu"><img src="picture\wanglu.jpg" height="146"><h4>王璐</h4><span class="text-muted">山东大学</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="huoyuchi"><img src="picture\huoyuchi.jpg" height="146"><h4>霍宇驰</h4><span class="text-muted"> 浙江大学</span></button></div>
+        </div><div class="row placeholders">
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="yuanyazheng"><img src="picture\yuanyazheng.jpg" height="146"><h4>袁亚振</h4><span class="text-muted">腾讯科技</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="suhao"><img src="picture\suhao.jpg" height="146"><h4>Hao Su</h4><span class="text-muted">加州大学圣地亚哥分校(UCSD)</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="cuizhaopeng"><img src="picture\cuizhaopeng.jpg" height="146"><h4>崔兆鹏</h4><span class="text-muted">浙江大学</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="liaoyiyi"><img src="picture\liaoyiyi.jpg" height="146"><h4>廖依伊</h4><span class="text-muted">浙江大学</span></button></div>
+        </div><div class="row placeholders">
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="zhaixiaoya"><img src="picture\zhaixiaoya.jpg" height="146"><h4>翟晓雅</h4><span class="text-muted">中国科学技术大学</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="panhao"><img src="picture\panhao.jpg" height="146"><h4>潘浩</h4><span class="text-muted">微软亚洲研究院</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="wuwenming"><img src="picture\wuwenming.jpg" height="146"><h4>吴文明</h4><span class="text-muted">合肥工业大学</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="liruihui"><img src="picture\liruihui.jpg" height="146"><h4>李瑞辉</h4><span class="text-muted">湖南大学</span></button></div>
+        </div><div class="row placeholders">
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="laiyukun"><img src="picture\laiyukun.jpg" height="146"><h4>Yu-Kun Lai</h4><span class="text-muted">Cardiff University</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="zhubo"><img src="picture\zhubo.jpg" height="146"><h4>Bo Zhu</h4><span class="text-muted">达特茅斯学院</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="yiran"><img src="picture\yiran.jpg" height="146"><h4>易冉</h4><span class="text-muted">上海交通大学</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="lianzhouhui"><img src="picture\lianzhouhui.jpg" height="146"><h4>连宙辉</h4><span class="text-muted">北京大学</span></button></div>
+        </div><div class="row placeholders">
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="fuxiaoming"><img src="picture\fuxiaoming.jpg" height="146"><h4>傅孝明</h4><span class="text-muted">中国科学技术大学</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="chenrenjie"><img src="picture\chenrenjie.jpg" height="146"><h4>陈仁杰</h4><span class="text-muted">中国科学技术大学</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="zhangjuyong"><img src="picture\zhangjuyong.jpg" height="146"><h4>张举勇</h4><span class="text-muted">中国科学技术大学</span></button></div>
+          <div class="col-xs-6 col-sm-3 placeholder"><button id="liuligang"><img src="picture\liuligang.jpg" height="146"><h4>刘利刚</h4><span class="text-muted">中国科学技术大学</span></button></div>
+        </div>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="zhaoshuang_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>Physics-based differentiable rendering</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>Shuang Zhao (赵爽), University of California, Irvine</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>Physics-based rendering algorithms generate photorealistic images by simulating the flow of light through a detailed mathematical representation of a virtual scene. In contrast, physics-based differentiable rendering algorithms compute derivatives of images exhibiting complex light transport effects (e.g., soft shadows, interreflections, multiple scattering, and caustics) with respect to arbitrary scene parameters (e.g., camera pose, object geometry, spatially varying material properties).
+
+This new level of generality has made physics-based differentiable rendering a key ingredient in inferential pipelines for computer vision and computer graphics applications. For example, differentiable renderers can be used to solve previously intractable analysis-by-synthesis problems, that is, the search of scene configurations optimizing user-specified objective functions, using gradient-based methods (as illustrated above). Additionally, differentiable rendering can be incorporated into probabilistic inference and machine learning architecture. For example, differentiable renderers allow backpropagating through “image losses” that capture complex light transport effects, providing a robust physics-aware regularization when training neural networks. Likewise, differentiable renderers can be combined with generative models to synthesize photorealistic images.
+
+Compared to its “ordinary” counterpart, physics-based differentiable rendering introduces unique theoretical and engineering challenges. For instance, boundaries of objects introduce troublesome discontinuities during the computation of shadows and interreflections that lead to incorrect gradients if precautions are not taken.
+
+Thankfully, recent advances in physics-based differentiable rendering theory have enabled the development of unbiased Monte Carlo algorithms that overcome the above challenges, making it possible to estimate derivatives of radiometric measurements with respect to arbitrary scene parameters in a computationally efficient way. In this talk, I will provide a high-level overview on physics-based differentiable rendering, highlighting relevant theory, algorithms, implementations, as well as current and future applications in computer vision and related areas.</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>I am an Assistant Professor of Computer Science at the University of California, Irvine (UCI) and co-direct UCI's Interactive Graphics & Visualization Lab (iGravi). Before joining UCI, I was a postdoctoral associate at MIT. I received my Ph.D. in computer science from Cornell University in 2014. 
+My group works mainly in physics-based computer graphics and scientific computing with a focus on modeling and simulating how light interacts with complex materials (e.g., cloth, animal fur, and human skin). Additionally, we aim to develop efficient solutions to the inverse problems centered around the inference of geometric or material properties from physical or simulated measurements.</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="https://shuangz.com">https://shuangz.com</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="chenjiong_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>快速物理模拟中的降维方法</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>Jiong Chen (陈炯), 法国信息与自动化研究所/巴黎高等电信学校</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>VR/AR等技术的快速发展对真实世界的虚拟重现提出了更具挑战的精度、性能要求。然而物理方程本身的复杂性使得大多数离散模拟方法在处理大规模问题时性能会急剧下降, 以至实际应用中无法满足用户快速响应的需求。 围绕这一问题, 本课程将介绍降维方法在物理模拟中的发展与应用, 展示该方法能如何有效地平衡模拟精度和计算效率之间的矛盾。在内容上, 本课程将着重讨论不同降维方法背后统一的数学框架, 分析各种降维方法的空间-频谱特性, 以及收敛率和计算代价之间的相互作用, 并对时-空联合降维、一般非线性降维等前沿问题做出展望。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>陈炯, 现为法国信息与自动化研究所和巴黎高等电信学校博士后。2020年于浙江大学CAD&CG实验室获得博士学位, 师从黄劲教授。主要研究方向为物理模拟、几何处理和数值算法等。在ACM SIGGRAPH, SIGGRAPH Asia等会议上发表论文数篇。曾获博士研究生国家奖学金、“陆增镛CAD&CG高科技奖”三等奖。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="https://jiongchen.github.io">https://jiongchen.github.io</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="cuizhaopeng_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>基于神经辐射场的三维感知和理解</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>崔兆鹏, 浙江大学</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>最近基于神经辐射场的三维场景重建和渲染技术逐渐成为计算机视觉和计算机图形学领域的研究热点, 其突破了传统几何方法的计算框架, 利用神经网络去表示和学习三维场景的几何、材质和光照等信息, 提升了新视角图像合成的质量, 并被应用到动态人体重建、三维场景理解、同步定位与地图构建等方向。本课程将主要介绍神经辐射场的基本概念、方法及其前沿进展和应用。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>崔兆鹏, 浙江大学CAD&CG国家重点实验室“百人计划”研究员、博士生导师。主要研究方向为三维计算机视觉, 具体包括三维重建、运动恢复结构、多视角立体几何、三维场景理解、同步定位与地图构建、2D/3D编辑等。近年来在计算机视觉、机器人、计算机图形学、机器学习等领域的顶级期刊和会议上发表论文40余篇, 曾获ICRA 2020机器视觉最佳论文提名和IROS 2021安全、安保和救援机器人最佳论文提名。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="http://www.cad.zju.edu.cn/home/zhpcui">http://www.cad.zju.edu.cn/home/zhpcui</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="zhaixiaoya_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>基于样条表示的微结构设计</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>翟晓雅, 中国科学技术大学</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>在本节课上, 我首先介绍微尺度结构设计的研究背景及应用包括：极限超材料的设计, 仿生骨的结构设计等, 随后会介绍一些微结构设计技术的基础知识如：表示方法（基于密度, 基于样条等）与计算流程。然后分析目前微结构设计领域的研究现状及相关工作。最后会介绍目前基于样条表示的微结构设计及可微的微结构设计的研究工作。我们提出“可微的微结构”概念, 该概念的提出旨在设计出一系列具有密度和机械性能连续变化的微结构进而可以被广泛应用于医疗航空航天等领域。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>翟晓雅, 中国科学技术大学博士后研究员, 主要研究方向为计算机辅助几何设计、微结构设计、仿生骨结构设计等。研究工作主要发表在Computer-Aided Design、Structural and Multidisciplinary Optimization、Computer Methods in Applied Mechanics and Engineering、Journal of Computational Mathematics等杂志。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="https://xiaoyazhai.github.io">https://xiaoyazhai.github.io</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="dutao_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>The power of gradients in inverse dynamics problems</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>Tao Du (杜韬), 麻省理工学院（MIT）</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>Traditionally, inverse dynamics refers to reconstructing forces in a dynamic system from its kinematic motion. This talk considers a broadened definition: inferring various shape, design, and control parameters of a dynamic system from its (partial) observation, which has wide applications in robotics, biomechanics, and machine learning. To solve this problem, we develop a family of computational tools that unleash the power of gradients from physics simulation in many non-traditional ways. We demonstrate these gradient-based methods in parametrizing, modeling, and evaluating rigid-body, deformable-body, and fluidic dynamic systems in simulation and real experiments. We end this talk by discussing open problems in differentiable simulation and its applications in graphics, robotics, and learning.</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>Tao Du is a Postdoctoral Associate at MIT Computer Science and Artificial Intelligence Laboratory (CSAIL), working with Professor Wojciech Matusik and Professor Daniela Rus. His research aims to combine physics simulation, machine learning, and numerical optimization techniques to solve real-world inverse dynamics problems. His representative works include building differentiable simulation platforms for graphics and robotics research, developing computational design pipelines for real-world robots, and understanding the simulation-to-reality gap of dynamic systems. His work has been published in top-tier graphics, learning, and robotics journals and conferences and has been featured by major technical media outlets. Before continuing at MIT as a Postdoctoral Associate, Tao Du obtained his Ph.D. in Computer Science from MIT in 2021 and his Master's in Computer Science from Stanford in 2015.</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="https://people.csail.mit.edu/taodu">https://people.csail.mit.edu/taodu</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="fangqing_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>共形映射与锥奇异点参数化</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>方清,中国科学技术大学</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>在图形学中, 共形映射由于其保角性质被广泛用于曲面参数化。尽管角度扭曲为零, 但共形参数化常常伴随着严重的面积扭曲, 一种有效降低面积扭曲的方法是在曲面上添加合理的锥奇异点分布。本课程将介绍锥奇异点参数化的基本知识和该领域的相关研究工作（包括近期我们针对锥奇异点参数化及其应用的两篇文章）, 并探讨未来与之密切相关的研究课题。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>方清,现为中国科学技术大学计算数学方向博士后, 博士毕业于数学科学学院中科大图形与几何计算实验室 ,研究方向为数字几何处理,近年来在离散可展曲面、网格编辑与参数化等方向上发表多篇论文,包括ACM SIGGRAPH (Asia)、Computer-Aided Design等会议或者期刊.</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="https://qingfang1208.github.io">https://qingfang1208.github.io</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="fuxiaoming_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>几何驱动的计算艺术设计</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>傅孝明, 中国科学技术大学</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>对于艺术家创造的艺术品, 背后存在一些列的数学方法。与这些艺术最接近的数学, 就是几何学。本次课程将会介绍数字几何处理的基本知识, 然后探讨它们在计算艺术设计中的应用。重点将会从两个方面介绍：（1）网格割缝生成与参数化技术应用在橘皮成形与纸模艺术设计；（2）重新网格化用于模板建模与离散Chebyshev网生成。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>傅孝明, 副教授, 分别于2011、2016年在中国科学技术大学获得学士、博士学位。2016年至2021年于中国科学技术大学任副研究员。研究领域为计算机图形学与计算机辅助设计, 研究方向为几何处理、优化。建模、制造等。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="http://staff.ustc.edu.cn/~fuxm">http://staff.ustc.edu.cn/~fuxm</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="huoyuchi_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>绘制流水线中的着色器优化</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>霍宇驰, 浙江大学<br>&emsp;&emsp;&emsp;&emsp;&emsp;袁亚振, 腾讯科技</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>在可编程绘制管线中, 自定义的着色器(Shader)代码对游戏绘制的最终性能和效果有着非常重要的影响。自动着色器优化通过分析着色器代码简化操作对最终绘制性能和效果的影响, 自动生成最优的简化着色器LOD（level of details）, 优化最终的绘制性能。本课程将结合讲者近几年在着色器优化技术方面的研究成果, 讲述传统优化技术、深度学习技术、可微绘制技术等对该问题多方面的帮助, 并展望未来的可能的研究方向。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者1简介：</font>霍宇驰, 浙江大学CAD&CG国家重点实验室百人计划研究员, 目前主要研究与光能传输相关的计算机图形学、视觉、机器学习和计算光学课题。已在计算机图形学、视觉和机器学习顶刊顶会TOG、TVCG、CVPR、NIPS等发表学术论文10余篇。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者2简介：</font>袁亚振, 博士, 2018年毕业于浙江大学CAD&CG国家重点实验室, 研究方向为实时渲染中的优化技术, 包括自动Mesh/Shader LOD, 绘制管线优化等。发表过多篇论文, 包括ACM SIGGRAPH, ACM SIGGRAPH Asia、IEEE TVCG等, 现为腾讯公司游戏引擎开发高级工程师。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者1主页：</font> <a style="color:#000000;" href="https://person.zju.edu.cn/yuchihuo">https://person.zju.edu.cn/yuchihuo</a></li>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者2主页：</font> <a style="color:#000000;" href="https://scholar.google.com/citations?user=4EhxgBkAAAAJ&hl=en">https://scholar.google.com/citations?user=4EhxgBkAAAAJ&hl=en</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="liruihui_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>深度点云处理与几何生成</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>李瑞辉, 湖南大学</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>低成本、低功耗的三维传感器的普及促进了三维几何学习技术的发展。然而, 由于三维传感器本身的限制以及三维数据标注的复杂性, 现有几何数据集的质量和数量仍然有限。本次报告主要介绍我们在三维点云处理和几何数据生成方面所做的工作。在三维处理方面, 考虑到 3D 传感器产生的原始点云通常很稀疏, 将介绍一系列基于数据驱动的点云上采样框架, 将稀疏点云进行稠密化, 以呈现更加可用、可信的三维表示。其中重点介绍基于生成对抗网络的PU-GAN（ICCV2019）、基于任务解耦合的Dis-PU（CVPR2021）以及“可逆”点云采样（TVCG2022）。 在三维生成方面, 将介绍用于高质量形状生成和操作的无监督框架SP-GAN（SIGGRAPH2021） 和用于拓扑自适应的三维网格生成Neural Template（CVPR2022）。这种对原始几何数据的修复和多样性生成促进了 3D数据在下游任务中的有效利用。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>李瑞辉, 湖南大学信息科学与工程学院副教授。2021年7月博士毕业于香港中文大学。研究方向集中在3D视觉、3D生成模型、深度几何学习, 计算机图形学, 发表CCF-A类论文近10篇, 包括计算机图形学领域顶级会议/期刊ACM SIGGRAPH、IEEE TVCG, 视觉领域顶级会议CVPR(oral)、ICCV等。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="http://csee.hnu.edu.cn/people/liruihui">http://csee.hnu.edu.cn/people/liruihui</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="lianzhouhui_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>面向文字的形状建模与图像合成：理论、方法与应用</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>连宙辉, 北京大学</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>形状建模与图像合成是计算机图形学、计算机视觉与人工智能领域中的一个研究热点, 近年来随着深度学习技术尤其是生成对抗网络、误差扩散模型、变分编码器等深度生成模型的提出、应用与快速发展, 该问题吸引了国内外学术界和工业界越来越多研究人员的广泛关注, 并取得了显著进展。由于文字尤其是汉字数量庞大、形状复杂、风格多样、语意丰富, 使得面向文字的形状建模与图像合成任务成为生成问题中最具难度的挑战之一。本课程讲授的主要内容包括：1）数学基础：深度生成模型；2）通用形状建模与图像合成研究进展；3）面向文字的形状建模与图像合成研究进展；4）应用案例与研究展望。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>连宙辉, 北京大学王选计算机研究所副教授, 中国文字字体设计与研究中心副主任。研究领域为计算机图形学与人工智能, 近十年主要从事面向文字的形状建模与图像合成技术及其应用研究。主持完成国家自然科学基金面上、国家语委重点等科研项目, 在领域重要期刊（TPAMI, TOG, IJCV等）和会议（SIGGRAPH/SIGGRAPH Asia, CVPR, NeurIPS等）上发表论文70余篇, 谷歌学术引用2100余次, 授权国家发明专利近20项。担任ICCV、IJCAI等CCF-A国际会议的领域主席（AC）或高级程序委员会委员（SPC）, 获中国专利优秀奖（排名1）、中国人工智能学会吴文俊人工智能优秀青年奖、北京市科技新星计划等奖励/资助。中文字体制作生成方面的部分成果已通过技术转让在企业投入使用, 相关软件/产品广泛应用于各大主流移动平台上。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="https://www.wict.pku.edu.cn/zlian">https://www.wict.pku.edu.cn/zlian</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="liaoyiyi_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>三维重建及神经渲染中的表征学习</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">      </font>Representation Learning for 3D Reconstruction and Neural Rendering</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>廖依伊, 浙江大学</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>近年来, 深度学习在三维视觉领域取得了飞速发展。三维信息的表征形态多种多样, 常见的表征形式包括点云、栅格、网格面片、隐式场等。深度几何学习中, 一个核心问题是三维几何结构及颜色纹理信息应该如何被高效率、高质量地表征？从这一问题出发, 本课程首先介绍三维重建中可学习表征的发展历程及最新进展（Deep Marching Cubes, Shape as Points）。在此基础上, 介绍如何进一步引入场景的颜色纹理实现高写实度的神经渲染, 包括神经辐射场及其相关进展（KiloNeRF）。最后, 将神经渲染推广到生成模型, 探讨不同三维表征形态在三维可控图像生成中的发展历程及当前进展（CIS, GRAF, VoxGRAF）。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>廖依伊, 浙江大学特聘研究员。分别于2013年和2018年在西安交通大学和浙江大学获得学士和博士学位。2018至2021年, 她在德国马克斯普朗克智能系统研究所及德国图宾根大学从事三年博士后研究, 其间作为第一负责人搭建了包含大规模语义及样例标签、面向自动驾驶的近1TB大规模数据集KITTI-360。研究兴趣为三维视觉, 包括场景重建、场景语义理解、可控图像生成。发表论文20余篇, 包括国际知名期刊/会议TPAMI、TIP、CVPR、ICCV、NeurIPS等。担任BMVC 2021, 3DV 2022 Area Chair。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="https://yiyiliao.github.io">https://yiyiliao.github.io</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="liulingjie_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>Neural Representation and Rendering of 3D Real-world Scenes</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>Lingjie Liu (刘玲洁), Max Planck Institute for Informatics</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>High-quality reconstruction and photo-realistic rendering of real-world scenes are two important tasks that have a wide range of applications in AR/VR, movie production, games, and robotics. These tasks are challenging because real-world scenes contain complex phenomena, such as occlusions, motions and interactions. In this talk, I will introduce our recent work that integrates deep learning techniques into the traditional graphics pipeline for modeling humans and static scenes from RGB images. We have shown the advantages of these new neural approaches over the classical computer graphics methods. Finally, I will discuss challenges and opportunities in this area for future work.</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>Lingjie Liu is the incoming Aravind K. Joshi endowed Assistant Professor in the Department of Computer and Information Science at the University of Pennsylvania, where she will be leading the Computer Graphics Lab. Currently, Lingjie Liu is a Lise Meitner Postdoctoral Research Fellow working with Prof. Christian Theobalt in the Visual Computing and AI Department at Max Planck Institute for Informatics. She received her Ph.D. degree at the University of Hong Kong in 2019. Before that, she got her B.Sc. degree in Computer Science at Huazhong University of Science and Technology in 2014. Her research interests include neural scene representations, neural rendering, human performance modeling and capture, and 3D reconstruction. </li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="https://lingjie0206.github.io">https://lingjie0206.github.io</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="panhao_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>CAD建模：从逆向过程的视角</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>潘浩, 微软亚洲研究院</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>机械件CAD建模是几何建模当中的一类重要问题。当前工业软件普遍使用的CAD建模方式是参数化建模, 有着类似编程语言的结构化、过程化特点。参数化建模的优点是精确可复用, 缺点是不够直观易用。为了让CAD建模更加容易, 近年来很多工作开发了通过人工智能的方法实现逆向过程、帮助CAD参数化建模。本报告将讨论该方向的部分典型问题和代表性的工作, 比如从点云恢复CAD模型, 从草图构造CAD建模序列等。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>潘浩, 微软亚洲研究院网络图形组研究员, 主要研究方向是计算机图形学, 几何处理和建模, 3D视觉。已就曲率定义的曲面建模、 CAD建模、网格模型修复、几何深度学习、物体姿态估计等问题发表10余篇文章于ACM TOG, IEEE CVPR, IEEE RAL等。曾担任3DV, CVM, GMP, CAD/Graphics, Pacific Graphics程序委员会委员。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="https://haopan.github.io">https://haopan.github.io</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="suhao_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>Some Computer Graphics Problems in Building Embodied AI Environments</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>Hao Su (苏昊), 加州大学圣地亚哥分校(UCSD)</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>In this course, we will review the topic of representation learning for 3D geometry. 3D representation learning has played the key role in applications ranging from 3D scene capturing, editing, understanding, to end-to-end visuomotor agent learning, with broad applications from metaverse, autonomous driving and robotics, to big science problems such as particle physics and protein structure inference. We will introduce some basics and recent progress in the field. </li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>Hao Su has been in UC San Diego as Assistant Professor of Computer Science and Engineering since July 2017. He is interested in algorithms to sense, understand, and act in the physical world. He served on the program committee of multiple conferences and workshops on computer vision, computer graphics, and machine learning. He has been serving as the Area Chair of top vision conferences (CVPR/ICCV/ECCV) since 2019, the Associate Editor of Transactions on Graphics since 2020, and the Associate Editor of robotics conferences (IROS/ICRA) since 2020.</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="https://cseweb.ucsd.edu/~haosu">https://cseweb.ucsd.edu/~haosu</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="sunqilin_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>端到端计算成像与可微光学模型</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>孙启霖, 香港中文大学（深圳）、点昀技术</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>计算成像系统通常包括光学、探测器、电路以及后处理算法, 传统的设计方法对这些环节是分别进行的。实现相机系统的端到端优化, 其核心在于构建光学元件参数与后处理算法之间的关系。我们将针对打通光学、传感器、算法以及芯片联合设计的壁垒, 实现全链路优化、端到端优化深入讨论, 包括计算成像的基本方法、基于夫琅禾费近似的可微光学模型与基于图形学光线追踪的可微复杂透镜模型等。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>孙启霖, 博士, 香港中文大学（深圳）助理教授, 点昀技术（Point Spread Technology）创始人。2015年在华中科技大学获得学士学位, 2021年在阿卜杜拉国王科技大学（KAUST）获得博士学位。 研究领域集中于端到端计算成像相机设计、计算成像、光学、SPAD阵列成像、基于物理学的渲染与仿真和优化, 博士期间发表多篇一作计算机图形学顶级期刊会议ACM TOG, SIGGRAPH, Siggraph Aisa, CVPR（oral）等；所创办的点昀技术致力于打造新一代通用计算光学平台, 量产了面向实时三维重建的高速、高精度RGBD相机（120FPS 软时钟多机对齐）, 实现了全并行异构流式图像处理器架构(超低功耗、亚毫秒级延时）。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="https://sds.cuhk.edu.cn/teacher/489">https://sds.cuhk.edu.cn/teacher/489</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="wanglu_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>复杂虚拟世界高效表示和逼真渲染</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>王璐, 山东大学</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>真实感渲染通过模拟光线在3D场景中传播的物理过程, 提供各种绚丽而真实的视觉效果。随着渲染逼真程度需求的不断提升, 需要对虚拟世界进行更加精细的表达, 例如大量的几何模型、复杂的微观材质、灯光等, 这使得光路传输的过程更加复杂, 从而导致高逼真渲染面临明显的计算和存储瓶颈。本课程重点针对离散微表面材质、复杂灯具、动物毛发三种典型的“虚拟对象”, 介绍如何构建新型的材质/光照表示模型, 在有效降低存储的同时, 减少光线在复杂虚拟对象中的传播计算, 从而达到复杂虚拟世界快速渲染的目标。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>王璐, 山东大学软件学院教授, 博士生导师, 计算机学会计算机辅助设计与图形学专委会委员、计算机学会人机交互专业组委员、中国图学学会动漫图学工程专委会委员。主要研究方向是计算机图形学渲染方向, 包括表观材质建模、并行渲染、实时绘制、参与性介质渲染、后处理去噪等。承担国家重点研发计划、国家自然科学基金等10余项项目。在ACM SIGGRAPH（ACM TOG）、IEEE TVCG、CGF等上发表论文10余篇。参与制订“形状建模信息表示”方面国家标准2项。所研发的高度真实感并行渲染系统是“神威·太湖之光”十大典型应用之一。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="http://vr.sdu.edu.cn/info/1010/1060.htm">http://vr.sdu.edu.cn/info/1010/1060.htm</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="wuwenming_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>室内户型布局的自动生成</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>吴文明, 合肥工业大学</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>室内户型布局的设计与生成是室内设计和场景建模的基础, 也是计算机辅助设计领域的研究热点。近年来, 随着深度学习领域的快速发展, 基于深度学习的户型布局生成逐渐成为研究主流。本课程首先介绍户型布局自动生成的研究背景和基础知识, 然后介绍近十年来该方向的研究进展, 主要包括传统优化方法和深度学习方法, 最后本课程将结合讲者近几年在户型布局自动生成方面的研究成果, 进一步讨论优化方法和学习方法在户型布局生成方面的应用, 并展望未来可能的研究方向。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>吴文明, 合肥工业大学计算机与信息学院讲师。2015年获安徽大学统计学学士学位, 2020年获中国科学技术大学计算数学博士学位, 导师是刘利刚教授和傅孝明副教授。2016年至2017年在阿卜杜拉国王科技大学进行访问交流, 合作导师是Peter Wonka教授, 2020年至今工作于合肥工业大学计算机与信息学院。研究兴趣包括计算机图形学、计算机视觉。近年来已在ACM Transactions on Graphics、Computer Graphics Forum等国际知名期刊上发表学术论文多篇, 主持国家自然科学基金1项。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="https://wutomwu.github.io">https://wutomwu.github.io</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="yangjiaolong_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>感知三维的对抗图像生成 </li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>杨蛟龙, 微软亚洲研究院</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>二维图像是三维空间中物体的投影。传统的生成对抗模型已经可以生成逼真的二维图像, 然而其生成过程并不感知所生成内容的三维形态, 对生成内容也不能进行三维空间中的控制, 如视角控制、形状变化等。随着神经辐射场（NeRF）的提出, 感知三维的对抗图像生成成为近几年的一个研究热点。本次课程将以此为主题进行介绍, 内容包括神经辐射场基本知识讲解, 现有感知三维的图像生成方法简介, 以及领域内的最新进展分享等。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>杨蛟龙, 微软亚洲研究院主管研究员, 研究方向为三维计算机视觉、人脸人体建模与图像生成。2016于澳大利亚国立大学与北京理工大学获得双授博士学位后加入微软亚研, 以第一作者或所指导学生为第一作者在CVPR/ICCV/ECCV/SIGGRAPH/TPAMI/TVCG发表论文20余篇。长期担任顶级计算机视觉与图形学期刊和会议审稿人并多次任CVPR/ICCV/WACV等会议领域主席。获IEEE VR/TVCG 2022最佳论文奖, 2017年中国图形图像协会优秀博士论文奖（全国4篇）。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="http://jlyang.org">http://jlyang.org</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="yangyin_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>Elastic Simulation Made Better and Faster</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>Yin Yang (杨垠), 犹他大学</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>Using the digital computer to simulate dynamic behavior of elastic objects is a highly desired feature in many scientific and engineering research: in computer animation, it provides realistic effects of soft characters; in surgical simulation, it delivers vivid visual experiences to the trainee; in digital fabrication, it couples geometry design and mechanical analysis. While the basic model has been well established for a while, robustly simulating nonlinear and high-resolution deformable objects is still a challenging problem, especially in a collision-rich environment. In this talk, I will share some of our recent efforts on this classic graphics challenge, and how we manage to improve the quality and the efficiency of the simulation simultaneously. First, I would like to introduce a learning-based model reduction, which is able to capture highly nonlinear material behaviors compactly using a deep network. The network is algorithmically integrated with the simulation pipeline so that the simulation is free of any man-made artifacts. Next, we show a novel numerical solution based on interior point method, embedded in a reduced space, to process collisions and contacts among objects. Lastly, I will present an efficient GPU simulation algorithm using a novel linear solver named aggregated Jacobi. Together, we simulate complicated 3D models with hundred thousand DOFs in real time. All the collisions and contacts will be resolved, regardless of the time step, geometry, and velocity.</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>Dr. Yin Yang is currently an Associate Professor with the School of Computing at University of Utah. Before joining Utah, the birthplace of Computer Graphics, he was a faculty member at Clemson University and University of New Mexico. He received Ph.D. degree of Computer Science from The University of Texas, Dallas in 2013 (the awardee of David Daniel Fellowship). He was a Research/Teaching Assistant at UT Dallas as well as UT Southwestern Medical Center. His research mainly focuses on real-time physics-based computer graphics, animation and simulation with a strong emphasis on interdisciplinarity. He was a Research Intern in Microsoft Research Asia in 2012. He received NSF CRII (2015) and CAREER (2019) awards. Dr. Yang has published over 70 conference/journal articles in areas of computer graphics, animation, machine learning, computer aided design, and medical imaging. He serves as the TPC member for many international conferences and the reviewer for almost all the top journals/conferences in computer graphics and animation.</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="https://yangzzzy.github.io">https://yangzzzy.github.io</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="yiran_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>图像视频的内容生成</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>易冉, 上海交通大学</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>通过计算机算法自动地生成满足人们需求的可视媒体内容已被广泛应用于工业制造、电影动画制作等多个生产生活领域, 是数字内容生成等重大需求的基础, 具有重要的研究价值和社会意义。在本课程中, 将介绍图像视频的内容生成的经典方法, 以及近年来在人脸人体编辑、艺术风格图像生成、肖像动画生成、图像修复、虚拟试衣等应用上的一些新工作。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>易冉, 博士, 上海交通大学计算机科学与工程系助理教授。2016年获得清华大学工学学士学位, 2021年获得清华大学工学博士学位。她的研究方向包括计算机图形学、计算机视觉和计算几何。近五年共发表录用20余篇论文于IEEE PAMI、ACM TOG、SIGGRAPH、CVPR、ICCV、TVCG、AAAI等国际期刊和会议, 其中CCF-A国际期刊会议16篇。获得2021年度中国图象图形学学会石青云女科学家奖（青英组）、中国计算机学会计算机视觉专委会学术新锐奖、第十六届图像图形技术与应用学术会议（IGTA2021）论文竞赛一等奖、北京市图象图形学学会优秀博士论文、清华大学优秀博士学位论文、微软学者提名奖等学术奖项。担任中国图象图形学学会智能图形专委会、动画与数字娱乐专委会委员, PAMI、IJCV、TIP、CVPR、ICCV、NeurIPS、ICLR、AAAI等国际顶级期刊会议审稿人。入选上海市2022年度“科技创新行动计划”启明星项目扬帆专项。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="https://yiranran.github.io">https://yiranran.github.io</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="zhubo_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>一厘米的世界：小尺度流体计算方法</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>Bo Zhu (朱博),达特茅斯学院</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>夏日午后的小池塘, 有荷叶、露珠、水虫, 和小石子泛起的涟漪。黄昏天空下的肥皂泡, 有色彩、涡旋、光线, 和随风起舞的薄膜。给你一把一厘米的刻度尺, 你是否还能描出童年眼睛里流动的世界？
+ 
+在本课程中, 我会给大家介绍我们达特茅斯物理计算组近年于SIGGRAPH发表的一系列小尺度流体模拟技术, 在虚拟的世界里复现这些复杂的流体物理场景。我会探讨我们在小时空尺度下的流体薄膜形变、涡旋流动、物理耦合、和拓扑变化的计算方法, 并且展示如何用这些方法解算从介观到微观世界的复杂流动过程。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>朱博是达特茅斯学院计算机系助理教授。他的课题组主要研究方向是计算机图形学中的物理模拟和优化算法, 并且特别关注复杂流体系统的几何表示和模拟算法。他的工作主要发表于ACM SIGGRAPH。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="https://www.cs.dartmouth.edu/~bozhu">https://www.cs.dartmouth.edu/~bozhu</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="zhujunyan_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>Image-to-Image Translation</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>Jun-Yan Zhu (朱俊彦), Carnegie Mellon University</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>Image-to-image translation is a class of vision and graphics problems where the goal is to learn the mapping between an input image and an output image. In this talk, we investigate conditional adversarial networks as a general-purpose solution to image-to-image translation problems. We introduce several algorithms, including paired methods such as pix2pix, pix2pixHD, GauGAN, and unpaired methods such as CycleGAN, UNIT, MUNIT, and CUT. Finally, I will also demonstrate applications in different fields such as vision, graphics, and robotics, as well as usages by developers and visual artists.</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>Jun-Yan is an Assistant Professor with The Robotics Institute in the School of Computer Science of Carnegie Mellon University. He also holds affiliated faculty appointments in the Computer Science Department and Machine Learning Department. Prior to joining CMU, he was a Research Scientist at Adobe Research and a postdoctoral researcher at MIT CSAIL. He obtained his Ph.D. from UC Berkeley and his B.E. from Tsinghua University. He studies computer vision, computer graphics, computational photography, and machine learning. He is the recipient of the Facebook Fellowship, ACM SIGGRAPH Outstanding Doctoral Dissertation Award, and UC Berkeley EECS David J. Sakrison Memorial Prize for outstanding doctoral research. His co-authored work has received the NVIDIA Pioneer Research Award, SIGGRAPH 2019 Real-time Live! Best of Show Award and Audience Choice Award, and The 100 Greatest Innovations of 2019 by Popular Science.</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="https://www.cs.cmu.edu/~junyanz">https://www.cs.cmu.edu/~junyanz</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="liuzheng_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>变分法在几何曲面上的离散计算及其应用研究</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>刘郑, 中国地质大学（武汉）</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>变分法, 又称为“能量正则化方法”, 其通常将待求解问题转化为一个能量最小化问题, 然后根据具体问题构建合适的变分模型并设计有效的求解算法。变分法被广泛应用在图像处理领域并取得了巨大的成功。近年来, 变分法被越来越多地引入几何处理领域, 进而引起一系列新的挑战和问题。本课程围绕变分法在几何曲面上的离散计算, 快速算法设计及其应用研究展开。具体地, 课程会首先介绍一套基于网格面元和边元的离散计算理论；其次, 介绍交替方向乘子法, 用来对离散变分模型进行快速求解；再次, 介绍变分模型及算法在去噪、特征提取等问题中的应用；最后, 分享讲者近年来的研究成果并探讨一些未来可能的研究方向。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>刘郑, 中国地质大学（武汉）计算机学院, 副教授, 硕士生导师。分别于2006年和2012年在中国地质大学（武汉）、华中师范大学获得学士和博士学位。2013至2014年在中国科学技术大学数学科学院从事博士后研究。 研究方向包括数字几何处理, 稀疏优化, 3D 视觉等。近五年, 针对实体数据的扫描、配准、去噪和优化等问题开展研究, 在几何建模和计算数学领域发表高水平论文20余篇(其中包括IEEE TVCG、SIAM JSC、JSC、CAD、CAGD等领域重要期刊)。担任中国图像图形学会智能图形专委会委员；担任GMP 2021、 Chinagraph 2020、GDC 2021、GDC 2022会议委员会委员。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="https://labzhengliu.github.io">https://labzhengliu.github.io</a></li>
+        </ul>
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+        <ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">
+          <a id="laiyukun_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font>基于机器学习的图像风格化</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font>Yu-Kun Lai (来煜坤), Cardiff University</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font>图像风格化研究自动算法把图像转化成特定的艺术风格，传统上作为非真实感绘制研究中的一个基本问题有过很多研究。但是传统方法通常需要针对特定的风格研究不同的算法，难以推广到更丰富的风格中(例如针对某个艺术家的风格)。近年来，出现了大量基于机器学习的图像风格化研究，从不同角度看，包括针对单张参考图像或者一组图像来学习目标风格，针对单一或者多个风格进行风格化，基于优化、前向传播网络或者生成对秔网络等不同生成算法进行图像风格化，一些工作针对特定的风格在网络架构或训练过程中进一步进行了优化。本课程主要介绍基于机器学习的图像风格化的相关代表性工作和最新进展。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font>来煜坤，现为英国Cardiff大学计算机学院教授，Director of Research。2008年博士毕业于清华大学计算机系计算机图形学实验室，主要研究方向为可视计算，包括计算机图形学，几何处理，计算机视觉等。在ACM TOG/SIGGRAPH、IEEE TPAMI、IEEE TVCG、IEEE TIP、CVPR、ICCV等重要刊物和国际会议上发表论文100余篇。担任Computer Graphics Forum和The Visual Computer期刊编委，曾任SGP 2014, CVM 2016会议主席，3DOR程序委员会主席等。</li><br>
+          <li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="https://users.cs.cf.ac.uk/Yukun.Lai">https://users.cs.cf.ac.uk/Yukun.Lai</a></li>
+        </ul>
+
+        <!--<p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>-->
+        <!--<ul style="font-size:16px;font-style:normal;font-weight:300;text-align:left;padding-left:20px;">-->
+          <!--<a id="****_position" style="position:relative; top:-72px;   display: block; height: 0;"></a><br>-->
+          <!--<li><font style="color:#4bbdd0;font-weight:500;">课程题目：</font></li><br>-->
+          <!--<li><font style="color:#4bbdd0;font-weight:500;">授课讲者：</font></li><br>-->
+          <!--<li><font style="color:#4bbdd0;font-weight:500;">课程摘要：</font></li><br>-->
+          <!--<li><font style="color:#4bbdd0;font-weight:500;">讲者简介：</font></li><br>-->
+          <!--<li><font style="color:#4bbdd0;font-weight:500;">讲者主页：</font> <a style="color:#000000;" href="***">***</a></li>-->
+        <!--</ul>-->
+
+        <p style="border-bottom: 7px solid rgb(218, 238, 243);"> <br></p>
+      </div>
+
+
+
+      <footer class="footer">
+        <p>&copy; 2024 USTC CG Summer School.</p>
+      </footer>
+
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/vendor/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')
+  </script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/docs.min.js"></script>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+
+</body>
+
+</html>
