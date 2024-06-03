@@ -6,6 +6,11 @@ document.querySelector("#liutiantian").onclick = function(){ document.querySelec
 document.querySelector("#panhao").onclick = function(){ document.querySelector("#liuyang_position").scrollIntoView(true); }
 
 document.querySelector("#liminchen").onclick = function(){ document.querySelector("#liminchen_position").scrollIntoView(true); }
+document.querySelector("#dutao").onclick = function(){ document.querySelector("#dutao_position").scrollIntoView(true); }
+document.querySelector("#lichen").onclick = function(){ document.querySelector("#lichen_position").scrollIntoView(true); }
+document.querySelector("#xukun").onclick = function(){ document.querySelector("#xukun_position").scrollIntoView(true); }
+document.querySelector("#lisheng").onclick = function(){ document.querySelector("#lisheng_position").scrollIntoView(true); }
+document.querySelector("#zuoruiwen").onclick = function(){ document.querySelector("#zuoruiwen_position").scrollIntoView(true); }
 
 document.querySelector("#liuzheng").onclick = function(){ document.querySelector("#liuzheng_position").scrollIntoView(true); }
 document.querySelector("#fangqing").onclick = function(){ document.querySelector("#fangqing_position").scrollIntoView(true); }

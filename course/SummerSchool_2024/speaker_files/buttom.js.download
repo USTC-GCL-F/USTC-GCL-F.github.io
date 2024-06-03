@@ -14,10 +14,19 @@ document.querySelector("#zuoruiwen").onclick = function(){ document.querySelecto
 
 document.querySelector("#fuxiaoming").onclick = function(){ document.querySelector("#fuxiaoming_position").scrollIntoView(true); }
 document.querySelector("#chenzhonggui").onclick = function(){ document.querySelector("#fuxiaoming_position").scrollIntoView(true); }
-document.querySelector("#caojuan").onclick = function(){ document.querySelector("#fuxiaoming_position").scrollIntoView(true); }
+document.querySelector("#caojuan").onclick = function(){ document.querySelector("#caojuan_position").scrollIntoView(true); }
 document.querySelector("#xiaoyanyang").onclick = function(){ document.querySelector("#fuxiaoming_position").scrollIntoView(true); }
 document.querySelector("#guojiapeng").onclick = function(){ document.querySelector("#fuxiaoming_position").scrollIntoView(true); }
 document.querySelector("#liushibo").onclick = function(){ document.querySelector("#fuxiaoming_position").scrollIntoView(true); }
+
+document.querySelector("#tongruofeng").onclick = function(){ document.querySelector("#tongruofeng_position").scrollIntoView(true); }
+document.querySelector("#lixin").onclick = function(){ document.querySelector("#lixin_position").scrollIntoView(true); }
+
+document.querySelector("#zhangjuyong").onclick = function(){ document.querySelector("#zhangjuyong_position").scrollIntoView(true);  }
+document.querySelector("#yangjiaolong").onclick = function(){ document.querySelector("#zhangjuyong_position").scrollIntoView(true);  }
+document.querySelector("#xudi").onclick = function(){ document.querySelector("#zhangjuyong_position").scrollIntoView(true);  }
+document.querySelector("#yutao").onclick = function(){ document.querySelector("#zhangjuyong_position").scrollIntoView(true);  }
+document.querySelector("#guoyudong").onclick = function(){ document.querySelector("#zhangjuyong_position").scrollIntoView(true);  }
 
 document.querySelector("#liuzheng").onclick = function(){ document.querySelector("#liuzheng_position").scrollIntoView(true); }
 document.querySelector("#fangqing").onclick = function(){ document.querySelector("#fangqing_position").scrollIntoView(true); }
@@ -39,10 +48,10 @@ document.querySelector("#liruihui").onclick = function(){ document.querySelector
 document.querySelector("#laiyukun").onclick = function(){ document.querySelector("#laiyukun_position").scrollIntoView(true); }
 document.querySelector("#zhubo").onclick = function(){ document.querySelector("#zhubo_position").scrollIntoView(true); }
 document.querySelector("#yiran").onclick = function(){ document.querySelector("#yiran_position").scrollIntoView(true); }
-document.querySelector("#lianzhouhui").onclick = function(){ document.querySelector("#lianzhouhui_position").scrollIntoView(true); }
-document.querySelector("#fuxiaoming").onclick = function(){ document.querySelector("#fuxiaoming_position").scrollIntoView(true);  }
-document.querySelector("#zhangjuyong").onclick = function(){ window.open("http://staff.ustc.edu.cn/~juyong"); }
-document.querySelector("#chenrenjie").onclick = function(){ window.open("http://staff.ustc.edu.cn/~renjiec"); }
-document.querySelector("#liuligang").onclick = function(){ window.open("http://staff.ustc.edu.cn/~lgliu"); }
+
+
+/* document.querySelector("#zhangjuyong").onclick = function(){ window.open("http://staff.ustc.edu.cn/~juyong"); } */
+/* document.querySelector("#chenrenjie").onclick = function(){ window.open("http://staff.ustc.edu.cn/~renjiec"); }
+document.querySelector("#liuligang").onclick = function(){ window.open("http://staff.ustc.edu.cn/~lgliu"); } */
 
 }

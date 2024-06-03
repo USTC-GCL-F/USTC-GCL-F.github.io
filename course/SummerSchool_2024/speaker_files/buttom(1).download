@@ -12,6 +12,13 @@ document.querySelector("#xukun").onclick = function(){ document.querySelector("#
 document.querySelector("#lisheng").onclick = function(){ document.querySelector("#lisheng_position").scrollIntoView(true); }
 document.querySelector("#zuoruiwen").onclick = function(){ document.querySelector("#zuoruiwen_position").scrollIntoView(true); }
 
+document.querySelector("#fuxiaoming").onclick = function(){ document.querySelector("#fuxiaoming_position").scrollIntoView(true); }
+document.querySelector("#chenzhonggui").onclick = function(){ document.querySelector("#fuxiaoming_position").scrollIntoView(true); }
+document.querySelector("#caojuan").onclick = function(){ document.querySelector("#fuxiaoming_position").scrollIntoView(true); }
+document.querySelector("#xiaoyanyang").onclick = function(){ document.querySelector("#fuxiaoming_position").scrollIntoView(true); }
+document.querySelector("#guojiapeng").onclick = function(){ document.querySelector("#fuxiaoming_position").scrollIntoView(true); }
+document.querySelector("#liushibo").onclick = function(){ document.querySelector("#fuxiaoming_position").scrollIntoView(true); }
+
 document.querySelector("#liuzheng").onclick = function(){ document.querySelector("#liuzheng_position").scrollIntoView(true); }
 document.querySelector("#fangqing").onclick = function(){ document.querySelector("#fangqing_position").scrollIntoView(true); }
 document.querySelector("#yangyin").onclick = function(){ document.querySelector("#yangyin_position").scrollIntoView(true); }

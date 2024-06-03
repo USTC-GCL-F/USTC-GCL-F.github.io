@@ -21,6 +21,8 @@ document.querySelector("#liushibo").onclick = function(){ document.querySelector
 
 document.querySelector("#tongruofeng").onclick = function(){ document.querySelector("#tongruofeng_position").scrollIntoView(true); }
 document.querySelector("#lixin").onclick = function(){ document.querySelector("#lixin_position").scrollIntoView(true); }
+document.querySelector("#zhouxiaowei").onclick = function(){ document.querySelector("#zhouxiaowei_position").scrollIntoView(true); }
+document.querySelector("#nanliangliang").onclick = function(){ document.querySelector("#nanliangliang_position").scrollIntoView(true); }
 
 document.querySelector("#zhangjuyong").onclick = function(){ document.querySelector("#zhangjuyong_position").scrollIntoView(true);  }
 document.querySelector("#yangjiaolong").onclick = function(){ document.querySelector("#zhangjuyong_position").scrollIntoView(true);  }
