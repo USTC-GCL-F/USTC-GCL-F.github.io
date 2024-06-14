@@ -1,4 +1,5 @@
 window.onload = function(){
+document.querySelector("#top1").onclick = function(){document.querySelector("#top1_position").scrollIntoView(true);}
 document.querySelector("#liuyang").onclick = function(){ document.querySelector("#liuyang_position").scrollIntoView(true); }
 document.querySelector("#gaolin").onclick = function(){ document.querySelector("#liuyang_position").scrollIntoView(true); }
 document.querySelector("#wangpengshuai").onclick = function(){ document.querySelector("#liuyang_position").scrollIntoView(true); }
