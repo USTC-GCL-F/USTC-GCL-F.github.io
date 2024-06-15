@@ -1,0 +1,59 @@
+window.onload = function(){
+    document.querySelector("#top1").onclick = function(){
+        document.querySelector("#top1_position").scrollIntoView(true);
+    }
+
+
+    document.querySelector("#huiyijieshao").onclick = function(){
+        document.querySelector("#huiyijieshao_position").scrollIntoView(true);
+    }
+    document.querySelector("#baogaoanpai").onclick = function(){
+        document.querySelector("#baogaoanpai_position").scrollIntoView(true);
+    }
+    document.querySelector("#baogaojieshao").onclick = function(){
+        document.querySelector("#baogaojieshao_position").scrollIntoView(true);
+    }
+
+    document.querySelector("#huiyijieshao1").onclick = function(){
+        document.querySelector("#huiyijieshao1_position").scrollIntoView(true);
+    }
+    document.querySelector("#baogaoanpai1").onclick = function(){
+        document.querySelector("#baogaoanpai1_position").scrollIntoView(true);
+    }
+    document.querySelector("#baogaojieshao1").onclick = function(){
+        document.querySelector("#baogaojieshao1_position").scrollIntoView(true);
+    }
+
+
+    document.querySelector("#DenisZorin").onclick = function(){
+        document.querySelector("#DenisZorin_position").scrollIntoView(true);
+    }
+    document.querySelector("#JustinSolomon").onclick = function(){
+        document.querySelector("#JustinSolomon_position").scrollIntoView(true);
+    }
+    document.querySelector("#EitanGrinspun").onclick = function(){
+        document.querySelector("#EitanGrinspun_position").scrollIntoView(true);
+    }
+    document.querySelector("#JuYong").onclick = function(){
+        document.querySelector("#JuyongZhang_position").scrollIntoView(true);
+    }
+    document.querySelector("#LiXin").onclick = function(){
+        document.querySelector("#XinLi_position").scrollIntoView(true);
+    }
+    document.querySelector("#WeiHua").onclick = function(){
+        document.querySelector("#WeihuaTong_position").scrollIntoView(true);
+    }
+    document.querySelector("#RenJie").onclick = function(){
+        document.querySelector("#RenjieChen_position").scrollIntoView(true);
+    }
+    document.querySelector("#XiaoMing").onclick = function(){
+        document.querySelector("#XiaoMingFu_position").scrollIntoView(true);
+    }
+    document.querySelector("#QingFang").onclick = function(){
+        document.querySelector("#QingFang_position").scrollIntoView(true);
+    }
+    document.querySelector("#YuDong").onclick = function(){
+        document.querySelector("#YudongGuo_position").scrollIntoView(true);
+    }
+
+}
