@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<style type="text/css">	
+	    .button-top {
+		  display: inline-block;
+		  background-color: #ccc;
+		  width: 50px;
+		  height: 50px;
+		  text-align: center;
+		  border-radius: 4px;
+		  position: fixed;
+		  bottom: 30px;
+		  right: 30px;
+		  transition: background-color .3s, 
+		    opacity .5s, visibility .5s;
+		  opacity: 0;
+		  visibility: hidden;
+		  z-index: 1000;
+		}
+		.button-top::after {
+		  content: "\f077";
+		  font-family: FontAwesome;
+		  font-weight: normal;
+		  font-style: normal;
+		  font-size: 2em;
+		  line-height: 50px;
+		  color: #fff;
+		}
+		.button-top:hover {
+		  cursor: pointer;
+		  background-color: #333;
+		}
+		.button-top:active {
+		  background-color: #555;
+		}
+		.button-top.show {
+		  opacity: 1;
+		  visibility: visible;
+        }
+        .nav_display {
+            position: absolute;
+            z-index: 1000;
+        }
+        #imgdiv {
+            float:left;
+            margin:0px 0px;
+        }
+        #imgdiv img{
+            width: 100%;
+            box-shadow: 1px 1px 1px 1px #888888;
+        }
+        #imgdivs {
+            float:left;
+            margin:0px 0px;
+        }
+        #imgdivs img{
+            width: 96%;
+            box-shadow: 1px 1px 1px 1px #888888;
+        }
+</style>
+
+<head>
+        <meta name="baidu-site-verification" content="JtHOSl0Wmu" />
+        <title>第十五届中国计算机图形学大会（Chinagraph 2024）</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <link href="static/css/bootstrap.css" rel="stylesheet"/> <!-- CSS: Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="static/css/getCss.css" /> <!-- CSS: Our css :)  -->
+        <link rel="stylesheet" type="text/css" href="static/css/jquery.fancybox-1.3.4.css" /> <!-- CSS: fancybox -->
+            
+        <!-- Google fonts -->    
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+            
+        <!-- jQuery -->    
+        <script type="text/javascript" src="static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="static/js/jquery-ui-1.8.21.custom.min.js"></script>  <!-- JS: effects core + fold and clip -->
+        
+        <!-- external stuff -->    
+        <script type="text/javascript" src="static/js/javascript/custom.js"></script> <!-- JS: Our script :) -->
+        <script type="text/javascript" src="static/js/jquery.fancybox-1.3.4.pack.js"></script> <!-- JS: fancybox - modal image-->
+        <script type="text/javascript" src="static/js/fx.js"></script> <!-- JS: jquery fx used for the bar animation -->
+        <script type="text/javascript" src="static/js/jquery.nicescroll.min.js"></script> <!-- JS: nicescroll - the nice scrolling bar from index -->
+        <script type="text/javascript" src="static/js/jquery.masonry.min.js"></script> <!-- JS: masonry - portofolio new tile script -->
+        
+        
+        <script type="text/javascript" src="static/js/jquery.nivo.slider.pack.js"></script> <!-- JS: nivo slider -->
+        <link rel="stylesheet" type="text/css" href="static/css/nivo-slider.css" /> <!-- CSS: nivo slider -->
+        
+        <script type="text/javascript" src="static/js/jquery.easing.1.3.js"></script> <!-- bx Slider -->
+        <script type="text/javascript" src="static/js/jquery.bxSlider.min.js"></script> <!-- bx Slider -->
+
+        <link rel="stylesheet" href="static/css/swiper-bundle.min.css"/> <!-- swiper -->
+        <script src="static/js/swiper-bundle.min.js"></script> <!-- swiper -->
+
+</head>
+
+<body>
+
+    <div class="nav_display">
+        <input type="checkbox" id="drawer-toggle" name="drawer-toggle" class="roll" />
+        <label for="drawer-toggle" id="drawer-toggle-label" class="roll"></label>
+        <header>主页</header>
+        <nav id="drawer" class="roll">
+            <ul>
+                <li>
+                    <a href="index.html" style="font-size: 13pt; line-height:30px; color:#434343;">主页</a>
+                </li>
+                <li>
+                    <a href="committee.html" style="font-size: 13pt; line-height:30px;color:#434343;">组织结构</a>
+                </li>
+                <li>
+                    <a href="call-for-papers.html" style="font-size: 13pt; line-height:30px;color:#434343;">大会征文</a>
+                </li>
+                <li>
+                    <a href="theater.html" style="font-size: 13pt; line-height:30px;color:#434343;">电子剧场</a>
+                </li>
+                <li>
+                    <a href="registration.html" style="font-size: 13pt; line-height:30px;color:#434343;">大会注册</a>
+                </li>
+                <li>
+                    <a href="program.html" style="font-size: 13pt; line-height:30px;color:#434343;">会议日程</a>
+                </li>
+                <li>
+                    <a href="courses.html" style="font-size: 13pt; line-height:30px;color:#434343;">会前课程</a>
+                </li>
+                <li>
+                    <a href="keynotes.html" style="font-size: 13pt; line-height:30px;color:#434343;">特邀报告</a>
+                </li>
+                <li>
+                    <a href="panels.html" style="font-size: 13pt; line-height:30px;color:#434343;">技术论坛</a>
+                </li>
+                <li>
+                    <a href="sponsors.html" style="font-size: 13pt;line-height:30px;color:#434343;">赞助企业</a>
+                </li>
+                <li>
+                    <a href="traffic.html" style="font-size: 13pt;line-height:30px;color:#434343;">交通住宿</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="head_display">
+        <div class="container">
+            <div class="row header">
+                <div class="span13">
+                    <div class="js-jquery-dropdown-wrapper">
+                        <ul class="js-jquery-dropdown">
+                            <li>
+                                <a href="index.html" style="font-size: 13pt">主页</a>
+                            </li>
+                            <li>
+                                <a href="committee.html" style="font-size: 13pt">组织结构</a>
+                            </li>
+                            <li>
+                                <a href="call-for-papers.html" style="font-size: 13pt; ">大会征文</a>
+                            </li>
+                            <li>
+                                <a href="theater.html" style="font-size: 13pt; ">电子剧场</a>
+                            </li>
+                            <li>
+                                <a href="registration.html" style="font-size: 13pt">大会注册</a>
+                            </li>
+                            <li>
+                                <a href="program.html" style="font-size: 13pt">会议日程</a>
+                            </li>
+                            <li>
+                                <a href="courses.html" style="font-size: 13pt">会前课程</a>
+                            </li>
+                            <li>
+                                <a href="keynotes.html" style="font-size: 13pt">特邀报告</a>
+                            </li>
+                            <li>
+                                <a href="panels.html" style="font-size: 13pt">技术论坛</a>
+                            </li>
+                            <li>
+                                <a href="sponsors.html" style="font-size: 13pt">赞助企业</a>
+                            </li>
+                            <li>
+                                <a href="traffic.html" style="font-size: 13pt">交通住宿</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- animation wrapper -->
+    <div class="page-index-featured ">
+        <a id='buttonTop' class='button-top'></a>
+        <div class="container">
+            <div class="row" style=" box-shadow: darkgrey 0px 0px 5px 1px; border-radius:5px; margin:50px 0 0 0; ">
+
+                <!-- Swiper -->
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img border="0" src="img/new/cover1.jpg" width="100%" style="margin:0px 0 0px 0%; "></div>
+                        <div class="swiper-slide"><img border="0" src="img/new/cover2.jpg" width="100%" style="margin:0px 0 0px 0%; "></div>
+                        <div class="swiper-slide"><img border="0" src="img/new/cover3.jpg" width="100%" style="margin:0px 0 0px 0%; "></div>
+                    </div>
+                    <!-- 导航按钮 -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <!-- 滚动条 -->
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div id="content">
+                    <br>
+                    <br>
+                    <br>
+
+                    <p style="font-size:16pt; margin:15px 5% 0 5%; color:#000000;">通知公告</p>
+                    <hr>
+                    <br>
+                    <ul width="90%" style="margin:0 5% 0 5%; ">
+                        
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:30px;">
+                            2024年8月23日：Chinagraph 2024电子剧场录用通知延期至2024年9月6日（北京时间晚上23:59）。
+                            </p>
+                        </li>
+
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:30px;">
+                            2024年7月31日：论文录用决定将于今日（2024年7月31日）通过电子邮件发送给所有投稿作者。请密切关注您的邮箱（包括垃圾邮件文件夹）或者关注smartchair网站论文审稿结果反馈。
+                            </p>
+                        </li>
+
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:30px;">
+                            2024年7月30日：Chinagraph 2024已开放注册，请前往 <a href="registration.html" target="_blank">大会注册</a>。
+                            </p>
+                        </li>
+						
+						
+
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:30px;">
+                            2024年6月8日：应多数投稿作者要求，Chinagraph 2024大会决定将论文截稿日期延至2024年6月19日（北京时间晚上23:59）。论文录用通知日期暂时不变。
+                            </p>
+                        </li>
+
+
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:30px;">
+                            2024年3月24日：本次大会竞赛委员会主席由香港中文大学（深圳）韩晓光教授担任。
+                            </p>
+                        </li>
+
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:30px;">
+                            2024年3月7日：大会接收英文投稿，录用的优秀英文论文将推荐到以下国际期刊发表：《Graphical Models》(GMOD)、《Computers & Graphics》(C&G)、《Communications in Information and Systems》，其中推荐至GMOD与C&G两个期刊的论文篇数不少于12篇。
+                            </p>
+                        </li>
+
+
+
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:30px;">
+                            2024年2月28日：发布<a href="sponsors.html">企业赞助征集通知</a>。
+                            </p>
+                        </li>
+
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:30px;">
+                            2024年2月27日：发布<a href="https://mp.weixin.qq.com/s/gwLnD8zLPWOFBC-3959vFQ">征稿通知</a>。
+                            </p>
+                        </li>
+
+
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:30px;">
+                                2023年11月11日：Chinagraph 2024 会议网站开通。
+                            </p>
+                        </li>
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:30px;">
+                            2023年11月06日：Chinagraph 2024 会议将于2024年10月10-13日于安徽省黄山市屯溪区召开，将与<a href="http://pg2024.hsu.edu.cn">Pacific Graphics (PG 2024)</a>（2024年10月13-16日）在同地召开。
+                            </p>
+                        </li>
+                        
+                    </ul>
+                    <br>
+
+                    <p style="font-size:16pt; margin:15px 5% 0 5%; color:#000000;">大会简介</p>
+                    <hr>
+                    <p style="font-size:16pt; margin:15px 5% 0 5%; text-align:justify; ">
+                        <font face="Arial" style="font-size: 13pt; line-height:30px;  ">
+                            第十五届中国计算机图形学大会（Chinagraph2024）将于2024年10月10-13日在安徽黄山召开，由中国科学技术大学和黄山学院承办。本次大会将与太平洋图形学国际会议Pacific Graphics (PG 2024）同期同地举办。大会将举办会前课程、特邀报告、技术论坛、论文报告及墙报展示，另外还有对大会进行赞助的图形学相关翘楚企业带来的技术分享、产品展示及论坛交流。
+                            <br><br>
+                            欢迎所有从事计算机图形学及相关领域研究的学者、教师、学生以及工业界的专家、专业技术人员投稿和参会！会议同时接收中、英文投稿。
+                        </font>
+                    </p>
+                    <br>
+
+                    <p style="font-size:16pt; margin:15px 5% 0 5%; color:#000000;">奖项奖励</p>
+                    <hr>
+                    <br>
+
+                    <ul width="90%" style="margin:0 5% 0 5%; ">
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:30px;">
+                                待更新
+                            </p>
+                        </li>
+                    </ul>
+                    <br>
+
+
+                    <p style="font-size:16pt; margin:15px 5% 0 5%; color:#000000;">赞助企业</p>
+                    <hr>
+                    <br>
+
+                    <ul width="90%" style="margin:0 5% 0 5%; ">
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:30px;">
+                                特别赞助：<a href="https://www.bambulab.cn/zh-cn">拓竹科技</a>
+                            </p>
+					
+                        </li>
+						<li>
+							<p align="justify" style="font-size: 13pt; line-height:30px;">
+                                金牌赞助：<a href="https://b.kujiale.com/">群核科技（酷家乐）</a>
+                            </p>
+                        </li>
+                    </ul>
+                    <br>
+
+
+
+
+                    <p style="font-size:16pt; margin:15px 5% 0 5%; color:#000000;">重要日期</p>
+                    <hr>
+                    <br>
+                    <ul width="90%" style="margin:0 5% 0 5%; ">
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:30px;">投稿截止日期:&nbsp; <a class="black-link">2024年6月19日</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:30px;">录用通知日期:&nbsp; <a class="black-link">2024年7月30日</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:30px;">会议召开日期:&nbsp; <a class="black-link">2024年10月10-13日</a></p>
+                        </li>
+                    </ul>
+                    <br>
+
+
+                    <p style="font-size:16pt; margin:15px 5% 0 5%; color:#000000;">往届会议</p>
+                    <hr>
+                    <br>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt">Chinagraph 1996，杭州</span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt">Chinagraph 1998，桂林</span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt">Chinagraph 2000，浙江大学，杭州</span>
+                    </p>
+                    <p style=" margin:0px 0% 0 5%;">
+                        <span style="font-size: 13pt">Chinagraph 2002，中国科学院软件研究所和微软亚洲研究院，北京</span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt">Chinagraph 2004，西北工业大学，西安</span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt">Chinagraph 2006，浙江大学，杭州</span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt">Chinagraph 2008，中南大学，长沙</span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt">Chinagraph 2010，南京大学，南京</span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt">Chinagraph 2012，四川大学，成都</span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt">Chinagraph 2014，武汉大学，武汉</span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <a href="http://www.cad.zju.edu.cn/home/cadcg2016/pc/index.html" target="_blank">
+                            <span style="font-size: 13pt">Chinagraph 2016，浙江大学，杭州</span>
+                        </a>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <a href="http://www2.scut.edu.cn/chinagraph2018/" target="_blank">
+                            <span style="font-size: 13pt">Chinagraph 2018，华南理工大学，广州</span>
+                        </a>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <a href="https://chinagraph2020.xmu.edu.cn/main.html" target="_blank">
+                            <span style="font-size: 13pt">Chinagraph 2020，厦门大学，厦门</span>
+                        </a>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <a href="https://chinagraph2022.qhu.edu.cn/" target="_blank">
+                            <span style="font-size: 13pt">Chinagraph 2022，青海大学，西宁</span>
+                        </a>
+                    </p>
+                    <br>
+
+                    <!-- <p style="font-size:16pt; margin:15px 5% 0 5%; color:#000000;">联系方式</p> -->
+                    <!-- <hr> -->
+                    <!-- <br> -->
+                    <!-- <p style=" font-size: 13pt;margin:0 5% 0 5%;">待定</p> -->
+                    <!-- <p style=" font-size: 13pt;margin:0 5% 0 5%;">XXX、XX</p>
+                    <p style=" font-size: 13pt;margin:0 5% 0 5%;">18868890709（微信同号）</p>
+                    <p style=" font-size: 13pt;margin:0 5% 0 5%;">chinagraph2024@hsu.edu.cn</p>
+                    <p style=" font-size: 13pt;margin:0 5% 0 5%;">XXXXX XX学院</p> -->
+
+                    <br>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-10" style="width:100%; line-height:20px; margin:0 2% 0 2%;">
+                <div class="col-sm-7">
+                    &copy;Chinagraph 2024
+                </div>
+
+                <div class="col-sm-3"> https://chinagraph2024.hsu.edu.cn/</div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div style="display:none">
+        <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>
+    </div> -->
+
+    <script type="text/javascript">
+        let btn = $('#buttonTop');
+        let toTopFlag = $('#toTopFlag');
+
+        $(window).scroll(() => {
+        if ($(window).scrollTop() > 0) {
+        btn.addClass('show');
+        } else {
+        btn.removeClass('show');
+        }
+        });
+
+        btn.on('click', (e) => {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '300');
+        });
+    </script>
+</body>
+
+<script type="text/javascript">
+    var mySwiper = new Swiper ('.swiper', {
+        direction: 'horizontal', // 水平切换
+        loop: true, // 循环模式选项
+        
+        // 前进后退按钮
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+        // 滚动条
+        pagination: {
+        el: '.swiper-pagination',
+        },
+        // 自动滚动
+        autoplay: {
+          disableOnInteraction: true,  //触碰后停止自动轮播
+          delay: 5000, //5秒
+        },
+    })
+    
+</script>
+
+</html>

@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+	<style type="text/css">
+
+       .ul_style{
+	    width:90%;
+	    margin:30px 5% 30px 5%;
+	    }
+	    .ul_style li p{
+	    font-size: 13pt;
+	    line-height:20px;
+	    }
+
+        .button-top {
+		  display: inline-block;
+		  background-color: #ccc;
+		  width: 50px;
+		  height: 50px;
+		  text-align: center;
+		  border-radius: 4px;
+		  position: fixed;
+		  bottom: 30px;
+		  right: 30px;
+		  transition: background-color .3s, 
+		    opacity .5s, visibility .5s;
+		  opacity: 0;
+		  visibility: hidden;
+		  z-index: 1000;
+		}
+		.button-top::after {
+		  content: "\f077";
+		  font-family: FontAwesome;
+		  font-weight: normal;
+		  font-style: normal;
+		  font-size: 2em;
+		  line-height: 50px;
+		  color: #fff;
+		}
+		.button-top:hover {
+		  cursor: pointer;
+		  background-color: #333;
+		}
+		.button-top:active {
+		  background-color: #555;
+		}
+		.button-top.show {
+		  opacity: 1;
+		  visibility: visible;
+        }
+        
+        #imgdiv {
+            float:left;
+            margin:0px 0px;
+        }
+        #imgdiv img{
+            width: 100%;
+            box-shadow: 1px 1px 1px 1px #888888;
+        }
+        #imgdivs {
+            float:left;
+            margin:0px 0px;
+        }
+        #imgdivs img{
+            width: 96%;
+            box-shadow: 1px 1px 1px 1px #888888;
+        }
+
+        .table-c table th{border-left:1px solid;border-top:1px solid ;font-size:12pt; font-weight:normal; color:#404040;} 
+	    .table-c table{border-right:1px solid ;border-bottom:1px solid; margin:30px 5% 0px 5%;} 
+
+	</style>
+    <head>
+        <title>第十五届中国计算机图形学大会（Chinagraph 2024）</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="static/css/bootstrap.css" rel="stylesheet" /> <!-- CSS: Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="static/css/getCss.css" /> <!-- CSS: Our css :)  -->
+        <link rel="stylesheet" type="text/css" href="static/css/jquery.fancybox-1.3.4.css" /> <!-- CSS: fancybox -->
+        <link rel="stylesheet" type="text/css" href="static/css/helper.css" />
+
+        <!-- Google fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="static/js/jquery-ui-1.8.21.custom.min.js"></script>  <!-- JS: effects core + fold and clip -->
+        <!-- external stuff -->
+        <script type="text/javascript" src="static/js/javascript/custom.js"></script> <!-- JS: Our script :) -->
+        <script type="text/javascript" src="static/js/jquery.fancybox-1.3.4.pack.js"></script> <!-- JS: fancybox - modal image-->
+        <script type="text/javascript" src="static/js/fx.js"></script> <!-- JS: jquery fx used for the bar animation -->
+        <script type="text/javascript" src="static/js/jquery.nicescroll.min.js"></script> <!-- JS: nicescroll - the nice scrolling bar from index -->
+        <script type="text/javascript" src="static/js/jquery.masonry.min.js"></script> <!-- JS: masonry - portofolio new tile script -->
+
+
+        <script type="text/javascript" src="static/js/jquery.nivo.slider.pack.js"></script> <!-- JS: nivo slider -->
+        <link rel="stylesheet" type="text/css" href="static/css/nivo-slider.css" /> <!-- CSS: nivo slider -->
+
+        <script type="text/javascript" src="static/js/jquery.easing.1.3.js"></script> <!-- bx Slider -->
+        <script type="text/javascript" src="static/js/jquery.bxSlider.min.js"></script> <!-- bx Slider -->
+        <link rel="icon" href="images/favicon.png">
+    </head>
+<body>
+
+    <div class="nav_display">
+        <input type="checkbox" id="drawer-toggle" name="drawer-toggle" class="roll" />
+        <label for="drawer-toggle" id="drawer-toggle-label" class="roll"></label>
+        <header>赞助企业</header>
+        <nav id="drawer" class="roll">
+            <ul>
+                <li>
+                    <a href="index.html" style="font-size: 13pt; line-height:30px; color:#434343;">主页</a>
+                </li>
+                <li>
+                    <a href="committee.html" style="font-size: 13pt; line-height:30px;color:#434343;">组织结构</a>
+                </li>
+                <li>
+                    <a href="call-for-papers.html" style="font-size: 13pt; line-height:30px;color:#434343;">大会征文</a>
+                </li>
+                <li>
+                    <a href="theater.html" style="font-size: 13pt; line-height:30px;color:#434343;">电子剧场</a>
+                </li>
+                <li>
+                    <a href="registration.html" style="font-size: 13pt; line-height:30px;color:#434343;">大会注册</a>
+                </li>
+                <li>
+                    <a href="program.html" style="font-size: 13pt; line-height:30px;color:#434343;">会议日程</a>
+                </li>
+                <li>
+                    <a href="courses.html" style="font-size: 13pt; line-height:30px;color:#434343;">会前课程</a>
+                </li>
+                <li>
+                    <a href="keynotes.html" style="font-size: 13pt; line-height:30px;color:#434343;">特邀报告</a>
+                </li>
+                <li>
+                    <a href="panels.html" style="font-size: 13pt; line-height:30px;color:#434343;">技术论坛</a>
+                </li>
+                <li>
+                    <a href="sponsors.html" style="font-size: 13pt;line-height:30px;color:#434343;">赞助企业</a>
+                </li>
+                <li>
+                    <a href="traffic.html" style="font-size: 13pt;line-height:30px;color:#434343;">交通住宿</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="head_display">
+        <div class="container">
+            <div class="row header">
+                <div class="span13">
+                    <div class="js-jquery-dropdown-wrapper">
+                        <ul class="js-jquery-dropdown">
+                            <li>
+                                <a href="index.html" style="font-size: 13pt">主页</a>
+                            </li>
+                            <li>
+                                <a href="committee.html" style="font-size: 13pt">组织结构</a>
+                            </li>
+                            <li>
+                                <a href="call-for-papers.html" style="font-size: 13pt; ">大会征文</a>
+                            </li>
+                            <li>
+                                <a href="theater.html" style="font-size: 13pt; ">电子剧场</a>
+                            </li>
+                            <li>
+                                <a href="registration.html" style="font-size: 13pt">大会注册</a>
+                            </li>
+                            <li>
+                                <a href="program.html" style="font-size: 13pt">会议日程</a>
+                            </li>
+                            <li>
+                                <a href="courses.html" style="font-size: 13pt">会前课程</a>
+                            </li>
+                            <li>
+                                <a href="keynotes.html" style="font-size: 13pt">特邀报告</a>
+                            </li>
+                            <li>
+                                <a href="panels.html" style="font-size: 13pt">技术论坛</a>
+                            </li>
+                            <li>
+                                <a href="sponsors.html" style="font-size: 13pt">赞助企业</a>
+                            </li>
+                            <li>
+                                <a href="traffic.html" style="font-size: 13pt">交通住宿</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="page-index-featured " >
+        <a id='buttonTop' class='button-top'></a>
+        <div class="container page-text-columns" >
+            <div class="row" style=" box-shadow: darkgrey 0px 0px 5px 1px; border-radius:5px; margin:50px 0 0 0; ">
+                <img border="0" src="img/new/banner.jpg" width="100%" style="margin:0px 0 0px 0%; ">
+                <div id="content" >
+
+                <p style="font-size:16pt; margin:50px 5% 0px 5%; text-align: center;"><strong>中国计算机图形学大会（Chinagraph 2024）诚招赞助伙伴</strong></p>
+                <br><br>
+
+                <p style="font-size:15pt; margin:30px 5% 0px 5%; text-align:left;" class="organization">01 会议简介</p>
+
+                <p style="font-size:13pt; margin:30px 5% 0px 5%;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国计算机图形学大会（Chinagraph）是由中国计算机学会、中国自动化学会、中国图学学会、中国图象图形学会、中国系统仿真学会、香港多媒体及图像计算学会于1996年发起主办，是中国计算机图形学最高级别的学术会议，已成为华语学者计算机图形学学术交流的重要论坛。每两年举办一届，迄今为止已成功举办了十四届。
+                    <br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第十五届中国计算机图形学大会（Chinagraph 2024）将于2024年10月10-13日在安徽省黄山市召开，由中国科学技术大学和黄山学院承办。本次大会将举办会前课程、特邀报告、技术论坛、论文报告及墙报展示等丰富的图形技术报告与研讨，涵盖的内容包括（但不限于）：计算机图形学基础理论与算法、CAD/CAE/CAM、几何造型与处理、虚拟现实与增强现实（VR/AR/MR）、AIGC、物理仿真、计算机动画与游戏、数字人、三维视觉、可视化与可视分析，图像视频处理与数字媒体技术、人机交互技术等。还有对大会进行赞助的图形学相关翘楚企业带来的技术分享、产品展示及论坛交流。
+                    <br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此外，本次大会将与太平洋计算机图形学及应用国际会议Pacific Graphics ( PG 2024 ) 同期同地举办（2024年10月13-16日）。PG国际会议是由亚洲图形协会（Asiagraphics）主办的年度旗舰会议。作为图形学领域在亚太地区最重要的国际会议之一，PG为环太平洋地区及世界各地的研究学者、开发人员及其它从业者提供了一个顶级论坛，用于展示和讨论图形学及相关领域最新的问题、解决方案和技术。
+                </p>
+
+                <p style="font-size:15pt; margin:30px 5% 0px 5%; text-align:left;" class="organization">02 诚招赞助</p>
+
+                <p style="font-size:13pt; margin:30px 5% 0px 5%;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chinagraph 2024将汇聚来自全国各地的顶级专家、学者和产业精英，共同探讨计算机图形学、CAD/CAE/CAM、虚拟现实与增强现实（VR/AR/MR）、AIGC、数字孪生、数字人、可视化、图像处理等相关领域的前沿动态和发展趋势。我们诚挚邀请优秀企业参与赞助，在大会上展示产业进展与成果，与参会同仁们一起交流研讨，共筑计算机图形学新篇章！
+                    <br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;赞助企业将得到丰厚的参会权益、广泛的品牌曝光机会、畅通的产学研用合作渠道以及丰富的人才招聘资源！我们将助力企业与学术界的精英人士建立紧密联系，扩大企业品牌影响力，提升企业形象，开拓企业新的商机！
+                </p>
+
+                <p style="font-size:15pt; margin:30px 5% 0px 5%; text-align:left;" class="organization">03 赞助合作伙伴的级别及金额</p>
+
+                <p style="font-size:13pt; margin:30px 5% 0px 5%;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不同级别的赞助企业可享受不同的权益（以下各项如涉及赞助单位顺序，均以特别、钻石、铂金、金牌以及银牌赞助企业顺序排序，同一级别的排序将按照合作合同签订时间先后）
+                    <br><br>
+                </p>
+
+                <div class="table-c" style="margin:20px 3% 0px 3%; text-align:center;">
+                    <table border="1" cellspacing="0" width="80%">
+                        <tr>
+                            <th><br>级别<br><br></th>
+                            <th>金额</th>
+                        </tr>
+                        
+                        <tr>
+                            <td><br>特别<br><br></td>
+                            <td>20万元</td>
+                        </tr>
+                        
+                        <tr>
+                            <td><br>钻石<br><br></td>
+                            <td>15万元</td>
+                        </tr>
+
+                        <tr>
+                            <td><br>铂金<br><br></td>
+                            <td>10万元</td>
+                        </tr>
+
+                        <tr>
+                            <td><br>金牌<br><br></td>
+                            <td>5万元</td>
+                        </tr>
+
+                        <tr>
+                            <td><br>银牌<br><br></td>
+                            <td>3万元</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <p style="font-size:15pt; margin:30px 5% 0px 5%; text-align:left;" class="organization">04 各级别赞助合作伙伴的权益</p>
+
+                <p style="font-size:15pt; margin:30px 5% 0px 5%;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所有赞助商均可享受的共同权益：
+                    <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                        <li style=" margin:0px 7% -15px 7%;"><p> 在大会网站、会议手册和背景板上宣传企业信息；</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 在会议资料包中发放企业介绍资料或小礼品（限一份）；</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 在大会网站上发布一次招聘信息；</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 会场合适位置大电视循环播放企业宣传视频。如需要，可改为英文版本免费在PG 2024国际会议上继续宣传；</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 发布一期技术和产品介绍；</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 在大会开幕式上颁发致谢奖牌。</p></li>
+                    </ul>
+                    <br>        
+                </p>
+
+                <p style="font-size:15pt; margin:30px 5% 0px 5%;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;各企业分级权益：
+                    <br>        
+                </p>
+                <p style="font-size:13pt; margin:30px 5% 0px 5%;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.1 大会特别赞助（赞助金额20万元，最多2家）：
+                    <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                        <li style=" margin:0px 7% -15px 7%;"><p> 享有钻石赞助企业一切权益；</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> “大会特邀企业”演讲；</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 以报名先后次序为准进行晚宴冠名，企业代表就坐晚宴主桌。</p></li>
+                    </ul>
+                    <br>        
+                </p>
+
+                <p style="font-size:13pt; margin:30px 5% 0px 5%;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2 钻石赞助（赞助金额15万元）：
+                    <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                        <li style=" margin:0px 7% -15px 7%;"><p> 5个免注册参会名额；</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 参与企业技术论坛并演讲； </p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 参与优秀学生论坛企业宣讲； </p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 在专委会微信公众号推广一期技术和产品介绍、发布企业招聘；</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 1个大号展位，可改为英文免费在PG 2024会议上继续宣传；</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 晚宴播放企业宣传片；</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 企业代表就坐晚宴主桌。</p></li>
+                    </ul>
+                    <br>        
+                </p>
+
+                <p style="font-size:13pt; margin:30px 5% 0px 5%;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.3 铂金赞助（赞助金额10万元）：
+                    <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                        <li style=" margin:0px 7% -15px 7%;"><p> 3个免注册参会名额；</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 参与企业技术论坛并演讲；</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 参与优秀学生论坛企业宣讲； </p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 1个标准展位，可改为英文免费在PG 2024会议上继续宣传。</p></li>
+                    </ul>
+                    <br>        
+                </p>
+
+                <p style="font-size:13pt; margin:30px 5% 0px 5%;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.4 金牌赞助（赞助金额5万元）：
+                    <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                        <li style=" margin:0px 7% -15px 7%;"><p> 2个免注册参会名额；</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 1个标准展位，可改为英文免费在PG 2024会议上继续宣传。</p></li>
+                    </ul>
+                    <br>        
+                </p>
+
+                <p style="font-size:13pt; margin:30px 5% 0px 5%;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.5 银牌赞助（赞助金额3万元）：
+                    <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                        <li style=" margin:0px 7% -15px 7%;"><p> 2个免注册参会名额；</p></li></ul>
+                    <br>        
+                </p>
+
+                <p style="font-size:15pt; margin:30px 5% 0px 5%; text-align:left;" class="organization">05 赞助联系方式</p>
+                    <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                        <li style=" margin:0px 7% -15px 7%;"><p> 徐凯，国防科技大学，kevin.kai.xu@gmail.com</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 张松海，清华大学，shz@tsinghua.edu.cn，13810090780</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 张举勇，中国科学技术大学，juyong@ustc.edu.cn，18656005498</p></li>
+                    </ul>
+                    <br>
+                <hr width="90%" color="#f3e549" size="8" style="margin:30px 0 30px 5%;"> </hr>
+
+                <p style="font-size:15pt; margin:30px 5% 0px 5%; text-align:left;" class="organization">大会组织及联系方式</p>
+                    <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                        <li style=" margin:0px 7% -15px 7%;"><p> 大会主席：赵罡（清华大学），李庆宏（黄山学院），刘利刚（中国科学技术大学）</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 程序主席：徐凯（国防科技大学）</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 程序秘书长：张松海（清华大学），张举勇（中国科学技术大学）</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 组委会主席：傅孝明（中国科学技术大学），胡建伟（黄山学院）</p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 大会网址：<a href="https://chinagraph2024.hsu.edu.cn"> chinagraph2024.hsu.edu.cn</a> </p></li>
+                        <li style=" margin:0px 7% -15px 7%;"><p> 电子邮件：<a href="mailto:chinagraph2024@mail.hsu.edu.cn"> chinagraph2024@mail.hsu.edu.cn</a> </p></li>
+                    </ul>
+                    <br>
+
+                <p style="font-size:15pt; margin:30px 5% 0px 5%; text-align:left;" class="organization">往届会议赞助合作伙伴（部分）</p>
+                <img border="0" src="img/new/pastSponsors.png" width="100%" style="margin:0px 0 0px 0%; ">
+                
+
+                </div>
+            </div>
+        </div> <!-- /container -->
+    </div>
+
+
+
+
+
+<!-- footer -->
+<div class="container">
+    <div class="row">  
+       <div  class="col-sm-10" style="width:100%; line-height:20px; margin:0 2% 0 2%;">			
+           <div  class="col-sm-7" >	
+           &copy;Chinagraph 2024 	
+           </div>
+           <div class="col-sm-3"> https://chinagraph2024.hsu.edu.cn/</div>
+       </div>
+    </div>
+</div>
+            
+        
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+		
+
+	<script type="text/javascript">
+		let btn = $('#buttonTop');
+		let toTopFlag = $('#toTopFlag');
+
+		$(window).scroll(() => {
+		  if ($(window).scrollTop() > 0) {
+		    btn.addClass('show');
+		  } else {
+		    btn.removeClass('show');
+		  }
+		});
+
+		btn.on('click', (e) => {
+		  e.preventDefault();
+		  $('html, body').animate({scrollTop:0}, '300');	
+		});
+	</script>
+</body>
+</html>

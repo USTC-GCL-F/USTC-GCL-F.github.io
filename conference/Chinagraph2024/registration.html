@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+	<style type="text/css">
+
+       .ul_style{
+	    width:90%;
+	    margin:30px 5% 30px 5%;
+	    }
+	    .ul_style li p{
+	    font-size: 13pt;
+	    line-height:20px;
+	    }
+
+        .button-top {
+		  display: inline-block;
+		  background-color: #ccc;
+		  width: 50px;
+		  height: 50px;
+		  text-align: center;
+		  border-radius: 4px;
+		  position: fixed;
+		  bottom: 30px;
+		  right: 30px;
+		  transition: background-color .3s, 
+		    opacity .5s, visibility .5s;
+		  opacity: 0;
+		  visibility: hidden;
+		  z-index: 1000;
+		}
+		.button-top::after {
+		  content: "\f077";
+		  font-family: FontAwesome;
+		  font-weight: normal;
+		  font-style: normal;
+		  font-size: 2em;
+		  line-height: 50px;
+		  color: #fff;
+		}
+		.button-top:hover {
+		  cursor: pointer;
+		  background-color: #333;
+		}
+		.button-top:active {
+		  background-color: #555;
+		}
+		.button-top.show {
+		  opacity: 1;
+		  visibility: visible;
+		}
+
+        .table-c table th{border-left:1px solid;border-top:1px solid ;font-size:12pt; font-weight:normal; color:#404040;} 
+	    .table-c table{border-right:1px solid ;border-bottom:1px solid; margin:30px 5% 0px 5%;} 
+
+	</style>
+    <head>
+        <title>第十五届中国计算机图形学大会（Chinagraph 2024）</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="static/css/bootstrap.css" rel="stylesheet" /> <!-- CSS: Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="static/css/getCss.css" /> <!-- CSS: Our css :)  -->
+        <link rel="stylesheet" type="text/css" href="static/css/jquery.fancybox-1.3.4.css" /> <!-- CSS: fancybox -->
+        <link rel="stylesheet" type="text/css" href="static/css/helper.css" />
+
+        <!-- Google fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="static/js/jquery-ui-1.8.21.custom.min.js"></script>  <!-- JS: effects core + fold and clip -->
+        <!-- external stuff -->
+        <script type="text/javascript" src="static/js/javascript/custom.js"></script> <!-- JS: Our script :) -->
+        <script type="text/javascript" src="static/js/jquery.fancybox-1.3.4.pack.js"></script> <!-- JS: fancybox - modal image-->
+        <script type="text/javascript" src="static/js/fx.js"></script> <!-- JS: jquery fx used for the bar animation -->
+        <script type="text/javascript" src="static/js/jquery.nicescroll.min.js"></script> <!-- JS: nicescroll - the nice scrolling bar from index -->
+        <script type="text/javascript" src="static/js/jquery.masonry.min.js"></script> <!-- JS: masonry - portofolio new tile script -->
+
+
+        <script type="text/javascript" src="static/js/jquery.nivo.slider.pack.js"></script> <!-- JS: nivo slider -->
+        <link rel="stylesheet" type="text/css" href="static/css/nivo-slider.css" /> <!-- CSS: nivo slider -->
+
+        <script type="text/javascript" src="static/js/jquery.easing.1.3.js"></script> <!-- bx Slider -->
+        <script type="text/javascript" src="static/js/jquery.bxSlider.min.js"></script> <!-- bx Slider -->
+        <link rel="icon" href="images/favicon.png">
+    </head>
+<body>
+
+    <div class="nav_display">
+        <input type="checkbox" id="drawer-toggle" name="drawer-toggle" class="roll" />
+        <label for="drawer-toggle" id="drawer-toggle-label" class="roll"></label>
+        <header>大会注册</header>
+        <nav id="drawer" class="roll">
+            <ul>
+                <li>
+                    <a href="index.html" style="font-size: 13pt; line-height:30px; color:#434343;">主页</a>
+                </li>
+                <li>
+                    <a href="committee.html" style="font-size: 13pt; line-height:30px;color:#434343;">组织结构</a>
+                </li>
+                <li>
+                    <a href="call-for-papers.html" style="font-size: 13pt; line-height:30px;color:#434343;">大会征文</a>
+                </li>
+                <li>
+                    <a href="theater.html" style="font-size: 13pt; line-height:30px;color:#434343;">电子剧场</a>
+                </li>
+                <li>
+                    <a href="registration.html" style="font-size: 13pt; line-height:30px;color:#434343;">大会注册</a>
+                </li>
+                <li>
+                    <a href="program.html" style="font-size: 13pt; line-height:30px;color:#434343;">会议日程</a>
+                </li>
+                <li>
+                    <a href="courses.html" style="font-size: 13pt; line-height:30px;color:#434343;">会前课程</a>
+                </li>
+                <li>
+                    <a href="keynotes.html" style="font-size: 13pt; line-height:30px;color:#434343;">特邀报告</a>
+                </li>
+                <li>
+                    <a href="panels.html" style="font-size: 13pt; line-height:30px;color:#434343;">技术论坛</a>
+                </li>
+                <li>
+                    <a href="sponsors.html" style="font-size: 13pt;line-height:30px;color:#434343;">赞助企业</a>
+                </li>
+                <li>
+                    <a href="traffic.html" style="font-size: 13pt;line-height:30px;color:#434343;">交通住宿</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="head_display">
+        <div class="container">
+            <div class="row header">
+                <div class="span13">
+                    <div class="js-jquery-dropdown-wrapper">
+                        <ul class="js-jquery-dropdown">
+                            <li>
+                                <a href="index.html" style="font-size: 13pt">主页</a>
+                            </li>
+                            <li>
+                                <a href="committee.html" style="font-size: 13pt">组织结构</a>
+                            </li>
+                            <li>
+                                <a href="call-for-papers.html" style="font-size: 13pt; ">大会征文</a>
+                            </li>
+                            <li>
+                                <a href="theater.html" style="font-size: 13pt; ">电子剧场</a>
+                            </li>
+                            <li>
+                                <a href="registration.html" style="font-size: 13pt">大会注册</a>
+                            </li>
+                            <li>
+                                <a href="program.html" style="font-size: 13pt">会议日程</a>
+                            </li>
+                            <li>
+                                <a href="courses.html" style="font-size: 13pt">会前课程</a>
+                            </li>
+                            <li>
+                                <a href="keynotes.html" style="font-size: 13pt">特邀报告</a>
+                            </li>
+                            <li>
+                                <a href="panels.html" style="font-size: 13pt">技术论坛</a>
+                            </li>
+                            <li>
+                                <a href="sponsors.html" style="font-size: 13pt">赞助企业</a>
+                            </li>
+                            <li>
+                                <a href="traffic.html" style="font-size: 13pt">交通住宿</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="page-index-featured " >
+        <a id='buttonTop' class='button-top'></a>
+        <div class="container page-text-columns" >
+               <div class="row" style=" box-shadow: darkgrey 0px 0px 5px 1px; border-radius:5px; margin:50px 0 0 0; ">
+                <img border="0" src="img/new/banner.jpg" width="100%" style="margin:0px 0 0px 0%; ">
+               <div id="content" >
+                
+                <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">注册费用</p>
+                <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+					<ul style="list-style-type: none; padding: 0; margin: 0;">
+					<li style="margin: 0px 0% -15px 9%;">
+					<p>会议门票</p>
+					<span style="display: block; height: 5px; line-height: 5px;">&nbsp;</span>
+					</li>
+					</ul>
+					<table border="1" style="border-collapse: collapse; width: 80%; font-size: 13pt; line-height: 30px; text-align: center; margin: auto;">
+					<tr style="background-color:#4A90E2; color: white;">
+					<th>门票类型</th>
+					<th>参会者身份</th>
+					<th>7.30~9.15</th>
+					<th>9.16~10.13</th>
+					</tr>
+					<tr>
+					<td rowspan="2">会员</td>
+					<td>CCF专业会员</td>
+					<td>￥2100</td>
+					<td>￥2300</td>
+					</tr>
+					<tr>
+					<td>CCF学生会员</td>
+					<td>￥1100</td>
+					<td>￥1300</td>
+					</tr>
+					<tr>
+					<td rowspan="2">非会员</td>
+					<td>非会员专业人员</td>
+					<td>￥2700</td>
+					<td>￥2900</td>
+					</tr>
+					<tr>
+					<td>非会员学生</td>
+					<td>￥1400</td>
+					<td>￥1600</td>
+					</tr>
+					<tr> 
+					<td>录用论文作者之一</td>
+					<td>CCF会员</td>
+					<td>￥2100</td>
+					<td>￥2300</td>
+					</tr>
+				</table>
+				<ul style="list-style-type: none; padding: 0; margin: 0;">
+					<li style="margin: 0px 0% -15px 9%;">
+					<br>
+					<p><b>1. 注册费说明</b></p>
+					<p>(1) 每篇录用论文至少1位作者必须按照<b>"CCF专业会员"</b>参会者身份进行注册。同一作者如有多篇论文录用，需要分别独立注册缴纳注册费；</p>
+					<p>(2) 其他主办学会会员请参考<b>"CCF专业会员/CCF学生会员"</b>注册方式缴纳注册费。</p>
+					</li>
+				</ul>
+				<ul style="list-style-type: none; padding: 0; margin: 0;">
+					<li style="margin: 0px 0% -15px 9%;">
+					<br>
+					<p><b>2. 付款方式</b></p>
+					<p>线上支付：支持易支付、支付宝、微信</p>
+					<p>收款户名：中国计算机学会</p>
+					<p>开 户 行：招商银行北京海淀支行</p>
+					<p>开户账号：110943026510701</p>
+					<p>线下汇款请务必备注：Chinagraph 2024 + 参会人姓名</p>
+					<p>发票内容可选：会议费/会议注册费/会务费/培训费 </p>
+					</li>
+				</ul>
+
+                </ul>
+
+                <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">注册方式</p>
+                <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                    <li style=" margin:0px 0% -15px 9%;"><p> CCF会议系统：<a href="https://ccf.org.cn/chinagraph2024" target="_blank">https://ccf.org.cn/chinagraph2024</a></p></li>
+                </ul>
+
+                <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">注册流程</p>
+                <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                    <li style=" margin:0px 0% -15px 9%;"><p> 待定</p></li>
+                </ul>
+
+                <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">会议邀请函</p>
+                <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                    <li style=" margin:0px 0% -15px 9%;"><p> <a href="file/invitation_letter.pdf">下载Chinagraph2024邀请函</a></p></li>
+                </ul>
+               <!-- <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">注册费用</p>
+               <div class="table-c" style="margin:20px 6% 0px 6%; text-align:center;">
+                <table  >
+
+                    <tr style="background-color:#FFC1C1;">
+                        <th width="25%"><br>参会方式<br><br></th>
+                        <th width="25%">注册类型</th>
+                        <th width="25%">早鸟票（即日-9.30）</th>		
+                        <th width="25%">全通票（10.01-10.25）</th>		
+                    </tr>
+                    <tr style="background-color:#D1EEEE;">
+                        <th rowspan=4> 现场票</th>
+                        <th><br>CCF专业会员<br><br></th>
+                        <th>1600</th>		
+                        <th>1700</th>		
+                    </tr>
+                    <tr style="background-color:#D1EEEE;">
+                        <th><br>CCF学生会员<br><br></th>
+                        <th>1200</th>
+                        <th>1300</th>
+                    </tr>
+                    <tr style="background-color:#D1EEEE;">
+                        <th>非会员专业人员（全注册）</th>
+                        <th><br>2000<br><br></th>
+                        <th>2200</th>
+                    </tr>
+                    <tr style="background-color:#D1EEEE;">
+                        <th><br>非会员学生<br><br></th>
+                        <th>1500</th>
+                        <th>1700</th>
+                    </tr>
+                    <tr style="background-color:#D1EEEE;">
+                        <th><br>线上票 I<br><br></th>
+                        <th>不区分参会身份</th>
+                        <th>600</th>		
+                        <th>600</th>		
+                    </tr>
+                    <tr style="background-color:#D1EEEE;">
+                        <th><br>线上票 II<br><br></th>
+                        <th>不区分参会身份</th>
+                        <th>免费</th>		
+                        <th>免费</th>		
+                    </tr>
+                    
+                   
+                </table>
+                </div>
+
+                 <p style="font-size:14pt; margin:30px 0% 0px 7%; text-align:left;">注册费说明：</p>
+                 <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                     <li style=" margin:0px 0% -15px 9%;"><p> 现场票包括现场参会费、参会资料、会议期间午餐和晚餐、以及通过CCF直播会议平台参与CNCC2020的权限。</p></li>
+                     <li style=" margin:0px 0% -15px 9%;"><p> 每篇录用论文<a class="black-link"><font color="#FF0000">至少1位</font></a>作者必须注册“现场票（全注册）”。同一作者如有多篇论文录用，需要独立注册。</p></li>
+                     <li style=" margin:0px 0% -15px 9%;"><p> 线上票 I：同时具有通过CCF直播会议平台参加CNCC 2020的权限。如果录用论文的作者都来自高风险地区，无法现场参会，则<a class="black-link"><font color="#FF0000">至少1位</font></a>作者必须注册“线上票 I”，并在线上做论文报告。同一作者如有多篇论文录用，需要独立注册。</p></li>
+                     <li style=" margin:0px 0% -15px 9%;"><p> 线上票 II：其它无法现场参会的人员等可免费观看线上直播（只包含会议的部分内容），无需注册。</p></li>
+                 </ul>
+
+                 <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">注册方式</p>
+                 <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                    <li style=" margin:0px 0% -15px 9%;"><p> CCF会议系统：<a href="https://conf.ccf.org.cn/chinagraph2020">https://conf.ccf.org.cn/chinagraph2020</a></p></li>
+                </ul>
+
+                 <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">注册流程</p>
+                 <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                    <li style=" margin:0px 0% -15px 9%;"><p> 1）CCF注册用户和会员可直接登录。如果没有CCF账户，请先实名注册账户。</p></li>
+                    <li style=" margin:0px 0% -15px 9%;"><p> 2）进入报名页面，填写信息。为了便于会议管理、疫情防控和资料制作，会议只接受<a class="black-link"><font color="#FF0000">实名报名</font></a>，包括姓名、单位和身份证号等。
+                        如有论文录用，需填写论文ID号，否侧填无。</p></li>
+                        <li style=" margin:0px 0% -15px 9%;"><p> 3）进入购票交费页面，自行选择注册类型，然后缴纳注册费。可使用支付宝、微信、易支付或银行汇款缴费。“CCF学生会员”和“非会员学生”参会者需在会议召开时检查学生证。</p></li>
+                        <li style=" margin:0px 0% -15px 9%;"><p> 4）如需要开具发票，请填写发票信息，如抬头和税号等。</p></li>
+                </ul>
+
+                <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">会议邀请函</p>
+ -->
+
+                 
+                 <br>
+                 
+                  <hr width="90%" color="#f3e549" size="8" style="margin:30px 0 30px 5%;"> </hr>
+               </div>
+
+           </div>
+   </div> <!-- /container -->
+        </div>
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10" style="width:100%; line-height:20px; margin:0 2% 0 2%;">
+                <div class="col-sm-7">
+                    &copy;Chinagraph 2024
+                </div>
+
+                <div class="col-sm-3">https://chinagraph2024.hsu.edu.cn/
+                </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        let btn = $('#buttonTop');
+        let toTopFlag = $('#toTopFlag');
+
+        $(window).scroll(() => {
+        if ($(window).scrollTop() > 0) {
+        btn.addClass('show');
+        } else {
+        btn.removeClass('show');
+        }
+        });
+
+        btn.on('click', (e) => {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '300');
+        });
+    </script>
+
+
+</body>
+</html>

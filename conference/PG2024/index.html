@@ -1,0 +1,496 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<style type="text/css">
+	.button-top {
+		  display: inline-block;
+		  background-color: #ccc;
+		  width: 50px;
+		  height: 50px;
+		  text-align: center;
+		  border-radius: 4px;
+		  position: fixed;
+		  bottom: 30px;
+		  right: 30px;
+		  transition: background-color .3s,
+		    opacity .5s, visibility .5s;
+		  opacity: 0;
+		  visibility: hidden;
+		  z-index: 1000;
+		}
+		.button-top::after {
+		  content: "\f077";
+		  font-family: FontAwesome;
+		  font-weight: normal;
+		  font-style: normal;
+		  font-size: 2em;
+		  line-height: 50px;
+		  color: #fff;
+		}
+		.button-top:hover {
+		  cursor: pointer;
+		  background-color: #333;
+		}
+		.button-top:active {
+		  background-color: #555;
+		}
+		.button-top.show {
+		  opacity: 1;
+		  visibility: visible;
+        }
+        .nav_display {
+            position: absolute;
+            z-index: 1000;
+        }
+        #imgdiv {
+            float:left;
+            margin:0px 0px;
+        }
+        #imgdiv img{
+            width: 100%;
+            box-shadow: 1px 1px 1px 1px #888888;
+        }
+        #imgdivs {
+            float:left;
+            margin:0px 0px;
+        }
+        #imgdivs img{
+            width: 96%;
+            box-shadow: 1px 1px 1px 1px #888888;
+        }
+</style>
+
+<head>
+        <meta name="baidu-site-verification" content="JtHOSl0Wmu" />
+        <title>PG 2024</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <link href="static/css/bootstrap.css" rel="stylesheet"/> <!-- CSS: Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="static/css/getCss.css" /> <!-- CSS: Our css :)  -->
+        <link rel="stylesheet" type="text/css" href="static/css/jquery.fancybox-1.3.4.css" /> <!-- CSS: fancybox -->
+
+        <!-- Google fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="static/js/jquery-ui-1.8.21.custom.min.js"></script>  <!-- JS: effects core + fold and clip -->
+
+        <!-- external stuff -->
+        <script type="text/javascript" src="static/js/javascript/custom.js"></script> <!-- JS: Our script :) -->
+        <script type="text/javascript" src="static/js/jquery.fancybox-1.3.4.pack.js"></script> <!-- JS: fancybox - modal image-->
+        <script type="text/javascript" src="static/js/fx.js"></script> <!-- JS: jquery fx used for the bar animation -->
+        <script type="text/javascript" src="static/js/jquery.nicescroll.min.js"></script> <!-- JS: nicescroll - the nice scrolling bar from index -->
+        <script type="text/javascript" src="static/js/jquery.masonry.min.js"></script> <!-- JS: masonry - portofolio new tile script -->
+
+
+        <script type="text/javascript" src="static/js/jquery.nivo.slider.pack.js"></script> <!-- JS: nivo slider -->
+        <link rel="stylesheet" type="text/css" href="static/css/nivo-slider.css" /> <!-- CSS: nivo slider -->
+
+        <script type="text/javascript" src="static/js/jquery.easing.1.3.js"></script> <!-- bx Slider -->
+        <script type="text/javascript" src="static/js/jquery.bxSlider.min.js"></script> <!-- bx Slider -->
+
+        <link rel="stylesheet" href="static/css/swiper-bundle.min.css"/> <!-- swiper -->
+        <script src="static/js/swiper-bundle.min.js"></script> <!-- swiper -->
+</head>
+
+<body>
+
+    <div class="nav_display">
+        <input type="checkbox" id="drawer-toggle" name="drawer-toggle" class="roll" />
+        <label for="drawer-toggle" id="drawer-toggle-label" class="roll"></label>
+        <header>HOME</header>
+        <nav id="drawer" class="roll">
+            <ul>
+                <li>
+                    <a href="index.html" style="font-size: 13pt; line-height:30px; color:#434343;">HOME</a>
+                </li>
+                <li>
+                    <a href="committee.html" style="font-size: 13pt; line-height:30px;color:#434343;">ORGANIZERS</a>
+                </li>
+                <li>
+                    <a href="registration.html" style="font-size: 13pt; line-height:30px;color:#434343;">REGISTRATION</a>
+                </li>
+                <li>
+                    <a href="program.html" style="font-size: 13pt; line-height:30px;color:#434343;">PROGRAM</a>
+                </li>
+                <li>
+                    <a href="traffic.html" style="font-size: 13pt;line-height:30px;color:#434343;">VISITOR INFO</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="head_display">
+        <div class="container">
+            <div class="row header">
+                <div class="span13">
+                    <div class="js-jquery-dropdown-wrapper">
+                        <ul class="js-jquery-dropdown">
+                            <li>
+                                <a href="index.html" style="font-size: 13pt">HOME</a>
+                            </li>
+                            <li>
+                                <a href="committee.html" style="font-size: 13pt">ORGANIZERS</a>
+                            </li>
+                            <li>
+                                <a href="registration.html" style="font-size: 13pt">REGISTRATION</a>
+                            </li>
+                            <li>
+                                <a href="program.html" style="font-size: 13pt">PROGRAM</a>
+                            </li>
+                            <li>
+                                <a href="traffic.html" style="font-size: 13pt">VISITOR INFO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- animation wrapper -->
+    <div class="page-index-featured ">
+        <a id='buttonTop' class='button-top'></a>
+        <div class="container">
+            <div class="row" style=" box-shadow: darkgrey 0px 0px 5px 1px; border-radius:5px; margin:50px 0 0 0; ">
+                <!-- Swiper -->
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img border="0" src="img/new/cover4.jpg" width="100%" style="margin:0px 0 0px 0%; "></div>
+                        <div class="swiper-slide"><img border="0" src="img/new/cover3.jpg" width="100%" style="margin:0px 0 0px 0%; "></div>
+                        <!-- <div class="swiper-slide"><img border="0" src="img/new/cover2.jpg" width="100%" style="margin:0px 0 0px 0%; "></div> -->
+                        <div class="swiper-slide"><img border="0" src="img/new/cover1.jpg" width="100%" style="margin:0px 0 0px 0%; "></div>
+                    </div>
+                    <!-- 导航按钮 -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <!-- 滚动条 -->
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <a id='buttonTop' class='button-top'></a>
+                <div id="content">
+                    <br>
+                    <br>
+                    <br>
+
+                    <!-- 链接sample -->
+                        <!-- <li>
+                            <p align="justify" style="font-size: 13pt; line-height:30px;">
+                                2020.10.28：
+                                <a href="https://mp.weixin.qq.com/s/bmJCRPHAAPxF2Y6tKPRhMQ" target="_blank">Chinagraph2020圆满落幕。</a>
+                            </p>
+                        </li> -->
+
+                        <!-- 红字sample -->
+                        <!-- <li>
+                            <p align="justify" style="font-size: 13pt; line-height:30px;">
+                                2020.09.16：
+                                经程序委员会和组委会讨论，决定将早鸟票延期至<a class="black-link"><font color="#FF0000"> 9月30日</font></a>截止注册缴费。
+                            </p>
+                        </li> -->
+
+                    <p style="font-size:16pt; margin:15px 5% 0 5%; color:#000000;">Introduction to the Conference</p>
+                    <hr>
+                    <p style="font-size:16pt; margin:15px 5% 0 5%; text-align:justify; ">
+                        <font face="Arial" style="font-size: 13pt; line-height:25px;  ">
+                            The 32th Pacific Conference on Computer Graphics and Applications (Pacific Graphics 2024) will be held in Huangshan (Yellow Mountain), China. Pacific Graphics is an annual flagship conference of the Asia Graphics Association. As a highly successful conference series, Pacific Graphics provides a premium forum for researchers, developers, practitioners in the Pacific Rim and around the world to present and discuss new problems, solutions, and technologies in computer graphics and related areas.
+                        </font>
+                    </p>
+                    <p style="font-size:16pt; margin:15px 5% 0 5%; text-align:justify; ">
+                        <font face="Arial" style="font-size: 13pt; line-height:25px;  ">
+                            We welcome original unpublished submissions in all areas of computer graphics and its applications. The topics include (but are not limited to) modeling, rendering, animation, imaging, visualization, human-computer interaction, and graphics systems. Pacific Graphics 2024 will have two integrated paper tracks: Journal (Computer Graphics Forum) and Conference:<br>
+                            <ol>
+                                <li face="Arial" style="font-size: 13pt; line-height:25px; margin:15px 5% 0 5%; text-align:justify;  ">
+Journal Papers containing high-quality original and unpublished results are solicited for the journal track, and will be published in a special issue of Computer Graphics Forum (CGF), the journal of the Eurographics Association, in print and online in 2024.<br>
+                                </li>
+                                <li face="Arial" style="font-size: 13pt; line-height:25px;  margin:15px 5% 0 5%; text-align:justify; ">
+Conference Papers are expected to present novel research advancing computer graphics and applications. However, the evidence supporting these advances might not be as comprehensive as expected for Journal Papers. Papers accepted to this track will be published in the PG2024 proceedings in the EG digital library.
+ Selected and promising Conference Papers will be invited to submit an extended full-paper version to Computers & Graphics.<br>
+                                </li>
+                            </ol>
+                        </font>
+                    </p>
+                    <p style="font-size:16pt; margin:15px 5% 0 5%; text-align:justify; ">
+                        <font face="Arial" style="font-size: 13pt; line-height:25px;  ">
+                            All papers should be submitted through the SRM system (<a href="https://srmv2.eg.org/COMFy/Conference/PG_2024">https://srmv2.eg.org/COMFy/Conference/PG_2024</a>). A laTex-template is available at: <a href="egPublStyle-PG2024.zip">LaTex-template</a>.
+                            Each paper is recommended to be 7-12 pages in length. At submission time, authors can indicate if their submission should be considered for the Journal track only or for both tracks. 
+                            The review process, deadline, and committee are the same for both tracks. The review process is doubly anonymous. Each paper receives reviews from the committee and external tertiary reviewers. Authors will have opportunities to address reviewers' concerns in a rebuttal period after the first cycle of reviewing before decisions are made.
+                        </font>
+                    </p>
+                    <p style="font-size:16pt; margin:15px 5% 0 5%; text-align:justify; ">
+                        <font face="Arial" style="font-size: 13pt; line-height:25px;  ">
+                            In addition, the conference will also include poster sessions. 
+                            All posters should be submitted through the SRM system (<a href="https://srmv2.eg.org/COMFy/Conference/PG_2024C">https://srmv2.eg.org/COMFy/Conference/PG_2024C</a>). A laTex-template is available at: <a href="egPublStyle-PG2024.zip">LaTex-template</a>.
+                            The posters should be no more than 2 pages. The submission will be reviewed by the committee members and need to be anonymized.
+                        </font>
+                    </p>
+                    <p style="font-size:16pt; margin:15px 5% 0 5%; text-align:justify; ">
+                        <font face="Arial" style="font-size: 13pt; line-height:25px;  ">
+                            Pacific Graphics 2024 will be colocated with <a href="https://chinagraph2024.hsu.edu.cn">Chinagraph 2024</a>.
+                        </font>
+                    </p>
+
+
+                    <!-- <p style="font-size:16pt; margin:15px 5% 0 5%; color:#000000;">Sponsors</p>
+                    <hr>
+                    <br> -->
+
+
+                    <!-- 粗体sample -->
+                    <!-- <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 16pt"><a class="black-link"><font color="#000000">铂金赞助：虹软、华为、中望软件、Epic Games、时谛智能、网易雷火</font></a></span>
+                    </p> -->
+
+                    <!-- 图片引用sample -->
+                    <!-- <table width="90%" style="margin:0px 0% 0 5%;">
+                        <tr>
+                            <th width="33%">
+                                <a style="text-decoration:none;" href="https://www.arcsoft.com.cn/" target="_blank">
+                                    <div id="imgdivs"><img src="img/Arcsoft.png" width="200px" height="auto" style="margin:0px 0% 0px 0%"></div>
+                                </a>
+                            </th>
+                            <th width="33%">
+                                <a style="text-decoration:none;" href="https://www.huawei.com/" target="_blank">
+                                    <div id="imgdivs"><img src="img/huawei.jpg" width="200px" height="auto" style="margin:0px 0% 0px 0%"></div>
+                                </a>
+                            </th>
+                            <th width="33%">
+                                <a style="text-decoration:none;" href="https://www.zwcad.com/" target="_blank">
+                                    <div id="imgdivs"><img src="img/zwsoft.png" width="200px" height="auto" style="margin:0px 0% 0px 0%"></div>
+                                </a>
+                            </th>
+                        </tr>
+                    </table>
+                    <br> -->
+                    
+                    <br>
+                    <br>
+                    <p style="font-size:16pt; margin:15px 5% 0 5%; color:#000000;">IMPORTANT DATES</p>
+                    <hr>
+                    <br>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt">Papers: (all times are AoE)</span>
+                    </p>
+                    <br>
+                    <ul width="90%" style="margin:0 5% 0 5%; ">
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:10px;">Abstract due:&nbsp; <a class="black-link">May 31</a></p>
+                        </li>
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:10px;">Paper due:&nbsp; <a class="black-link">June 7</a></p>
+                        </li>
+                         <li>
+                            <p align="justify" style="font-size: 13pt; line-height:10px;">Review to authors:&nbsp; <a class="black-link">July 15</a></p>
+                        </li>
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:10px;">Rebuttals due:&nbsp; <a class="black-link">July 19</a></p>
+                        </li>
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:10px;">Decision notification:&nbsp; <a class="black-link">July 29</a></p>
+                        </li>
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:10px;">Revision submission:&nbsp; <a class="black-link">August 12</a></p>
+                        </li>
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:10px;">Final acceptance notification:&nbsp; <a class="black-link">August 19</a></p>
+                        </li> 
+                    </ul>
+                    <br>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt">Posters:</span>
+                    </p>
+                    <br>
+                    <ul width="90%" style="margin:0 5% 0 5%; ">
+                        <li>
+                            <p align="justify" style="font-size: 13pt; line-height:10px;">Submission due:&nbsp; <a class="black-link">August 12</a></p>
+                        </li>
+                         <li>
+                            <p align="justify" style="font-size: 13pt; line-height:10px;">Decision notification:&nbsp; <a class="black-link">August 20</a></p>
+                        </li> 
+                    </ul>
+                    <br>
+                    <br>
+
+                    <p style="font-size:16pt; margin:15px 5% 0 5%; color:#000000;">Past Conferences</p>
+                    <hr>
+                    <br>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://pg2023.org/">Pacific Graphics 2023 – Daejeon</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://pg2022.org/">Pacific Graphics 2022 – Kyoto</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://pg2021.org/">Pacific Graphics 2020+21 – Wellington</a></span>
+                    </p>
+                    <p style=" margin:0px 0% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://pg19.org/">Pacific Graphics 2019 – Seoul</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://sweb.cityu.edu.hk/pg2018/">Pacific Graphics 2018 – Hong Kong</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://www.siggraph.org.tw/pg2017/">Pacific Graphics 2017 – Taipei</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="https://indico.oist.jp/indico/event/0/">Pacific Graphics 2016 – Okinawa</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://cg.cs.tsinghua.edu.cn/pg2015/">Pacific Graphics 2015 – Beijing</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://graphics.ewha.ac.kr/PG14/">Pacific Graphics 2014 – Seoul</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://www.pg2013.org/">Pacific Graphics 2013 – Singapore</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://sweb.cityu.edu.hk/pg2012/">Pacific Graphics 2012 – Hong Kong</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://graphics.csie.ncku.edu.tw/PG2011/">Pacific Graphics 2011 – Kaohsiung</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://www.zjucadcg.cn/pg2010/Organization.html">Pacific Graphics 2010 – Hangzhou</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://cg.postech.ac.kr/pg2009/">Pacific Graphics 2009 – Jeju</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://www.pg08.com/">Pacific Graphics 2008 – Tokyo</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://mm.cse.wustl.edu/pg07/index.php">Pacific Graphics 2007 – Maui</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://graphics.im.ntu.edu.tw/pg2006/">Pacific Graphics 2006 – Taipei</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://www.fst.umac.mo/pg2005/">Pacific Graphics 2005 – Macau</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://graphics.snu.ac.kr/pg2004/">Pacific Graphics 2004 – Seoul</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://pg2003.cpsc.ucalgary.ca/">Pacific Graphics 2003 – Canmore</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://cg.cs.tsinghua.edu.cn/pg2002/">Pacific Graphics 2002 – Beijing</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt">Pacific Graphics 2001 – Tokyo</span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt"><a href="http://www.csis.hku.hk/pg2000/">Pacific Graphics 2000 – Hong Kong</a></span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt">Pacific Graphics 1999 – Seoul</span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt">Pacific Graphics 1998 – Singapore</span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt">Pacific Graphics 1997 – Seoul</span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt">Pacific Graphics 1996 – Taipei</span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt">Pacific Graphics 1995 – Seoul</span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt">Pacific Graphics 1994 – Beijing</span>
+                    </p>
+                    <p style=" margin:0px 5% 0 5%;">
+                        <span style="font-size: 13pt">Pacific Graphics 1993 – Seoul</span>
+                    </p>
+                    
+                    <br>
+                    <br>
+                    <!-- <p style="font-size:16pt; margin:15px 5% 0 5%; color:#000000;">Contact</p>
+                    <hr>
+                    <br>
+                    <p style=" font-size: 13pt;margin:0 5% 0 5%;">XXX、XX</p>
+                    <p style=" font-size: 13pt;margin:0 5% 0 5%;">18868890709（微信同号）</p>
+                    <p style=" font-size: 13pt;margin:0 5% 0 5%;">chinagraph2024@hsu.edu.cn</p>
+                    <p style=" font-size: 13pt;margin:0 5% 0 5%;">XXXXX XX学院</p> -->
+
+                    <!-- <img border="0" id="pickme" src="img/qrcode.png" width="100px" style="margin:20px 0 50px 5%; "> -->
+                    <br>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-10" style="width:100%; line-height:20px; margin:0 2% 0 2%;">
+                <div class="col-sm-7">
+                    &copy;PG 2024
+                </div>
+
+                <div class="col-sm-3"> https://pg2024.hsu.edu.cn/</div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div style="display:none">
+        <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>
+    </div> -->
+
+    <script type="text/javascript">
+        let btn = $('#buttonTop');
+        let toTopFlag = $('#toTopFlag');
+
+        $(window).scroll(() => {
+        if ($(window).scrollTop() > 0) {
+        btn.addClass('show');
+        } else {
+        btn.removeClass('show');
+        }
+        });
+
+        btn.on('click', (e) => {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '300');
+        });
+    </script>
+</body>
+
+<script type="text/javascript">
+    var mySwiper = new Swiper ('.swiper', {
+        direction: 'horizontal', // 水平切换
+        loop: true, // 循环模式选项
+        
+        // 前进后退按钮
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+        // 滚动条
+        pagination: {
+        el: '.swiper-pagination',
+        },
+        // 自动滚动
+        autoplay: {
+          disableOnInteraction: true,  //触碰后停止自动轮播
+          delay: 5000, //5秒
+        },
+    })
+    
+</script>
+
+</html>

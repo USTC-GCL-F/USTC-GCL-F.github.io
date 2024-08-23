@@ -1,0 +1,56 @@
+.organization {
+    display: block;
+    height: 35px;
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 20px;
+    line-height: 45px;
+    background-color: #d4e3dc;
+}
+
+.course_title {
+    display: block;
+    height: 35px;
+    padding-left: 5px;
+    padding-top: 10px;
+    font-size: 20px;
+    line-height: 45px;
+    background-color: #d4e3dc;
+}
+
+.course_title_wide {
+    display: block;
+    height: 65px;
+    padding-left: 5px;
+    padding-top: 10px;
+    font-size: 20px;
+    line-height: 45px;
+    background-color: #d4e3dc;
+}
+
+.org-text {
+    margin-left: 20px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.main a {
+    text-decoration: underline;
+}
+
+.page-index-featured .container .row .banner-dot {
+    position: absolute;
+    height: 20px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.page-index-featured .container .row .banner-dot .dot 
+{
+    display: inline-block;
+    float: left;
+    width: 15px;
+    height: 4px;
+    margin: 5px;
+}

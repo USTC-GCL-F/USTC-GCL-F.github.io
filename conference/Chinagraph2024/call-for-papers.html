@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+	<style type="text/css">
+       .ul_style{
+	    width:90%;
+	    margin:30px 5% 30px 5%;
+	    }
+	    .ul_style li p{
+	    font-size: 13pt;
+	    line-height:20px;
+	    }
+        .button-top {
+		  display: inline-block;
+		  background-color: #ccc;
+		  width: 50px;
+		  height: 50px;
+		  text-align: center;
+		  border-radius: 4px;
+		  position: fixed;
+		  bottom: 30px;
+		  right: 30px;
+		  transition: background-color .3s, 
+		    opacity .5s, visibility .5s;
+		  opacity: 0;
+		  visibility: hidden;
+		  z-index: 1000;
+		}
+		.button-top::after {
+		  content: "\f077";
+		  font-family: FontAwesome;
+		  font-weight: normal;
+		  font-style: normal;
+		  font-size: 2em;
+		  line-height: 50px;
+		  color: #fff;
+		}
+		.button-top:hover {
+		  cursor: pointer;
+		  background-color: #333;
+		}
+		.button-top:active {
+		  background-color: #555;
+		}
+		.button-top.show {
+		  opacity: 1;
+		  visibility: visible;
+		}
+	</style>
+    <head>
+        <title>第十五届中国计算机图形学大会（Chinagraph 2024）</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="static/css/bootstrap.css" rel="stylesheet" /> <!-- CSS: Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="static/css/getCss.css" /> <!-- CSS: Our css :)  -->
+        <link rel="stylesheet" type="text/css" href="static/css/jquery.fancybox-1.3.4.css" /> <!-- CSS: fancybox -->
+        <link rel="stylesheet" type="text/css" href="static/css/helper.css" />
+
+        <!-- Google fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="static/js/jquery-ui-1.8.21.custom.min.js"></script>  <!-- JS: effects core + fold and clip -->
+        <!-- external stuff -->
+        <script type="text/javascript" src="static/js/javascript/custom.js"></script> <!-- JS: Our script :) -->
+        <script type="text/javascript" src="static/js/jquery.fancybox-1.3.4.pack.js"></script> <!-- JS: fancybox - modal image-->
+        <script type="text/javascript" src="static/js/fx.js"></script> <!-- JS: jquery fx used for the bar animation -->
+        <script type="text/javascript" src="static/js/jquery.nicescroll.min.js"></script> <!-- JS: nicescroll - the nice scrolling bar from index -->
+        <script type="text/javascript" src="static/js/jquery.masonry.min.js"></script> <!-- JS: masonry - portofolio new tile script -->
+
+
+        <script type="text/javascript" src="static/js/jquery.nivo.slider.pack.js"></script> <!-- JS: nivo slider -->
+        <link rel="stylesheet" type="text/css" href="static/css/nivo-slider.css" /> <!-- CSS: nivo slider -->
+
+        <script type="text/javascript" src="static/js/jquery.easing.1.3.js"></script> <!-- bx Slider -->
+        <script type="text/javascript" src="static/js/jquery.bxSlider.min.js"></script> <!-- bx Slider -->
+        <link rel="icon" href="images/favicon.png">
+    </head>
+<body>
+
+    <div class="nav_display">
+        <input type="checkbox" id="drawer-toggle" name="drawer-toggle" class="roll" />
+        <label for="drawer-toggle" id="drawer-toggle-label" class="roll"></label>
+        <header>大会征文</header>
+        <nav id="drawer" class="roll">
+            <ul>
+                <li>
+                    <a href="index.html" style="font-size: 13pt; line-height:30px; color:#434343;">主页</a>
+                </li>
+                <li>
+                    <a href="committee.html" style="font-size: 13pt; line-height:30px;color:#434343;">组织结构</a>
+                </li>
+                <li>
+                    <a href="call-for-papers.html" style="font-size: 13pt; line-height:30px;color:#434343;">大会征文</a>
+                </li>
+                <li>
+                    <a href="theater.html" style="font-size: 13pt; line-height:30px;color:#434343;">电子剧场</a>
+                </li>
+                <li>
+                    <a href="registration.html" style="font-size: 13pt; line-height:30px;color:#434343;">大会注册</a>
+                </li>
+                <li>
+                    <a href="program.html" style="font-size: 13pt; line-height:30px;color:#434343;">会议日程</a>
+                </li>
+                <li>
+                    <a href="courses.html" style="font-size: 13pt; line-height:30px;color:#434343;">会前课程</a>
+                </li>
+                <li>
+                    <a href="keynotes.html" style="font-size: 13pt; line-height:30px;color:#434343;">特邀报告</a>
+                </li>
+                <li>
+                    <a href="panels.html" style="font-size: 13pt; line-height:30px;color:#434343;">技术论坛</a>
+                </li>
+                <li>
+                    <a href="sponsors.html" style="font-size: 13pt;line-height:30px;color:#434343;">赞助企业</a>
+                </li>
+                <li>
+                    <a href="traffic.html" style="font-size: 13pt;line-height:30px;color:#434343;">交通住宿</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="head_display">
+        <div class="container">
+            <div class="row header">
+                <div class="span13">
+                    <div class="js-jquery-dropdown-wrapper">
+                        <ul class="js-jquery-dropdown">
+                            <li>
+                                <a href="index.html" style="font-size: 13pt">主页</a>
+                            </li>
+                            <li>
+                                <a href="committee.html" style="font-size: 13pt">组织结构</a>
+                            </li>
+                            <li>
+                                <a href="call-for-papers.html" style="font-size: 13pt; ">大会征文</a>
+                            </li>
+                            <li>
+                                <a href="theater.html" style="font-size: 13pt; ">电子剧场</a>
+                            </li>
+                            <li>
+                                <a href="registration.html" style="font-size: 13pt">大会注册</a>
+                            </li>
+                            <li>
+                                <a href="program.html" style="font-size: 13pt">会议日程</a>
+                            </li>
+                            <li>
+                                <a href="courses.html" style="font-size: 13pt">会前课程</a>
+                            </li>
+                            <li>
+                                <a href="keynotes.html" style="font-size: 13pt">特邀报告</a>
+                            </li>
+                            <li>
+                                <a href="panels.html" style="font-size: 13pt">技术论坛</a>
+                            </li>
+                            <li>
+                                <a href="sponsors.html" style="font-size: 13pt">赞助企业</a>
+                            </li>
+                            <li>
+                                <a href="traffic.html" style="font-size: 13pt">交通住宿</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="page-index-featured ">
+        <a id='buttonTop' class='button-top'></a>
+        <div class="container">
+            <div class="row" style=" box-shadow: darkgrey 0px 0px 5px 1px; border-radius:5px; margin:50px 0 0 0; ">
+                <img border="0" src="img/new/banner.jpg" width="100%" style="margin:0px 0 0px 0%; ">
+
+                <div id="content">
+                    <p style="font-size:18pt; margin:30px 5% 0px 5%; text-align: center;">征文启事</p>
+
+                    <p style="font-size:13pt; margin:30px 5% 0px 5%;">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第十五届中国计算机图形学大会（Chinagraph2024）将于2024年10月10-13日在安徽黄山召开，由中国科学技术大学和黄山学院承办。本次大会将与太平洋图形学国际会议Pacific Graphics (PG 2024）同期同地举办。大会将举办会前课程、特邀报告、技术论坛、电子剧场、论文报告及墙报展示，另外还有对大会进行赞助的图形学相关翘楚企业带来的技术分享、产品展示及论坛交流。欢迎所有从事计算机图形学及相关领域研究的学者、教师、学生以及工业界的专家、专业技术人员投稿和参会。
+                        <B>本次大会除接受中文论文投稿之外还接受英文论文投稿，大会将推荐优秀论文至中英文期刊发表，其中推荐至《Graphical Models》、《Computers & Graphics》两个国际期刊的英文论文篇数不少于12篇。</B>
+                    
+                    </p>
+                    <p style="font-size:15pt; margin:30px 5% 0px 5%; text-align:left;" class="organization">征文范围（包括但不限于）</p>
+                    <ul class="ul_style" style="margin:20px 0% 0px 8%;">
+                        <li style=" margin:0px 0% -15px 0%;"><p> 图形学基础理论与算法</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 真实感图形</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 几何造型与处理</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 计算机动画与游戏</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 非真实感图形</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 基于图像和视频的图形技术</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 计算机辅助几何设计</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 计算机辅助设计</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 数据驱动的形状理解与建模</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 虚拟现实技术及应用</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 混合现实技术及应用</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 可视化与可视分析</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 图像视频处理与数字媒体技术</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 计算机仿真</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 人机交互技术</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 工程图形及应用</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 三维视觉</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 数字人的建模、动画、渲染</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 3D AIGC</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 网络图形学</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 端云协同的实时渲染</p></li>
+                    </ul>
+
+                    <p style="font-size:15pt; margin:30px 5% 0px 5%; text-align:left;" class="organization">重要日期</p>
+                    <ul class="ul_style" style="margin:20px 0% 0px 8%;">
+                        <li style=" margin:0px 0% -15px 0%;"><p> <B>投稿截止日期：2024年6月19日</B></p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 录用通知日期：2024年7月30日</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 会议召开日期：2024年10月10-13日</p></li>
+                    </ul>
+
+                    <p style="font-size:15pt; margin:30px 5% 0px 5%; text-align:left;" class="organization">论文投稿及推荐期刊</p>
+                    <ul class="ul_style" style="margin:20px 0% 0px 8%;">
+                        <li style=" margin:0px 0% -15px 0%;"><p>论文投稿网址：<a href="https://www.smartchair.org/Chinagraph2024/">https://www.smartchair.org/Chinagraph2024/</a></p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 大会接收中文投稿，录用的优秀论文将推荐到以下期刊发表：《计算机学报》、《计算机辅助设计与图形学学报》、《中国图象图形学报》、《图学学报》。中文投稿模板：<a href="file/template_Chinese.doc">点击下载</a></p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> <B>大会同时接收英文投稿，录用的优秀英文论文将推荐到以下国际期刊发表：《Graphical Models》(GMOD)、《Computers & Graphics》(C&G)、《Communications in Information Science》，其中推荐至GMOD与C&G两个期刊的论文篇数不少于12篇。</B>英文投稿模板：<a href="file/elsarticle-CAG-template.zip">点击下载</a>。Please ensure your manuscript is set as double-column and that line numbers are included. For convenience, please use this template in addition to the elsarticle class for generating a LaTeX manuscript.</p></li>
+                        <li style=" margin:0px 0% -15px 0%;"><p> 论文评审采用盲审机制，请投稿时务必隐藏作者、项目资助等信息；不符合匿名原则的论文将直接退稿。</p></li>
+                    </ul>
+
+                    <br>
+                    <br>
+                    <br>
+
+                </div>
+            </div> <!-- /container -->
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-10" style="width:100%; line-height:20px; margin:0 2% 0 2%;">
+                <div class="col-sm-7">
+                    &copy;Chinagraph 2024
+                </div>
+
+                <div class="col-sm-3">https://chinagraph2024.hsu.edu.cn/
+                </div>
+        </div>
+    </div>
+
+    <div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+
+
+    <script type="text/javascript">
+        let btn = $('#buttonTop');
+        let toTopFlag = $('#toTopFlag');
+
+        $(window).scroll(() => {
+        if ($(window).scrollTop() > 0) {
+        btn.addClass('show');
+        } else {
+        btn.removeClass('show');
+        }
+        });
+
+        btn.on('click', (e) => {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '300');
+        });
+    </script>
+
+
+</body>
+</html>

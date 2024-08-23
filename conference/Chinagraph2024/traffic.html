@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+	<style type="text/css">
+
+       .ul_style{
+	    width:90%;
+	    margin:30px 5% 30px 5%;
+	    }
+	    .ul_style li p{
+	    font-size: 13pt;
+	    line-height:20px;
+	    }
+
+        .button-top {
+		  display: inline-block;
+		  background-color: #ccc;
+		  width: 50px;
+		  height: 50px;
+		  text-align: center;
+		  border-radius: 4px;
+		  position: fixed;
+		  bottom: 30px;
+		  right: 30px;
+		  transition: background-color .3s, 
+		    opacity .5s, visibility .5s;
+		  opacity: 0;
+		  visibility: hidden;
+		  z-index: 1000;
+		}
+		.button-top::after {
+		  content: "\f077";
+		  font-family: FontAwesome;
+		  font-weight: normal;
+		  font-style: normal;
+		  font-size: 2em;
+		  line-height: 50px;
+		  color: #fff;
+		}
+		.button-top:hover {
+		  cursor: pointer;
+		  background-color: #333;
+		}
+		.button-top:active {
+		  background-color: #555;
+		}
+		.button-top.show {
+		  opacity: 1;
+		  visibility: visible;
+		}
+
+        .table-c table th{border-left:1px solid;border-top:1px solid ;font-size:12pt; font-weight:normal; color:#404040;} 
+	    .table-c table{border-right:1px solid ;border-bottom:1px solid; margin:30px 5% 0px 5%;} 
+
+	</style>
+    <head>
+        <title>第十五届中国计算机图形学大会（Chinagraph 2024）</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="static/css/bootstrap.css" rel="stylesheet" /> <!-- CSS: Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="static/css/getCss.css" /> <!-- CSS: Our css :)  -->
+        <link rel="stylesheet" type="text/css" href="static/css/jquery.fancybox-1.3.4.css" /> <!-- CSS: fancybox -->
+        <link rel="stylesheet" type="text/css" href="static/css/helper.css" />
+
+        <!-- Google fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="static/js/jquery-ui-1.8.21.custom.min.js"></script>  <!-- JS: effects core + fold and clip -->
+        <!-- external stuff -->
+        <script type="text/javascript" src="static/js/javascript/custom.js"></script> <!-- JS: Our script :) -->
+        <script type="text/javascript" src="static/js/jquery.fancybox-1.3.4.pack.js"></script> <!-- JS: fancybox - modal image-->
+        <script type="text/javascript" src="static/js/fx.js"></script> <!-- JS: jquery fx used for the bar animation -->
+        <script type="text/javascript" src="static/js/jquery.nicescroll.min.js"></script> <!-- JS: nicescroll - the nice scrolling bar from index -->
+        <script type="text/javascript" src="static/js/jquery.masonry.min.js"></script> <!-- JS: masonry - portofolio new tile script -->
+
+
+        <script type="text/javascript" src="static/js/jquery.nivo.slider.pack.js"></script> <!-- JS: nivo slider -->
+        <link rel="stylesheet" type="text/css" href="static/css/nivo-slider.css" /> <!-- CSS: nivo slider -->
+
+        <script type="text/javascript" src="static/js/jquery.easing.1.3.js"></script> <!-- bx Slider -->
+        <script type="text/javascript" src="static/js/jquery.bxSlider.min.js"></script> <!-- bx Slider -->
+        <link rel="icon" href="images/favicon.png">
+    </head>
+<body>
+
+    <div class="nav_display">
+        <input type="checkbox" id="drawer-toggle" name="drawer-toggle" class="roll" />
+        <label for="drawer-toggle" id="drawer-toggle-label" class="roll"></label>
+        <header>交通住宿</header>
+        <nav id="drawer" class="roll">
+            <ul>
+                <li>
+                    <a href="index.html" style="font-size: 13pt; line-height:30px; color:#434343;">主页</a>
+                </li>
+                <li>
+                    <a href="committee.html" style="font-size: 13pt; line-height:30px;color:#434343;">组织结构</a>
+                </li>
+                <li>
+                    <a href="call-for-papers.html" style="font-size: 13pt; line-height:30px;color:#434343;">大会征文</a>
+                </li>
+                <li>
+                    <a href="theater.html" style="font-size: 13pt; line-height:30px;color:#434343;">电子剧场</a>
+                </li>
+                <li>
+                    <a href="registration.html" style="font-size: 13pt; line-height:30px;color:#434343;">大会注册</a>
+                </li>
+                <li>
+                    <a href="program.html" style="font-size: 13pt; line-height:30px;color:#434343;">会议日程</a>
+                </li>
+                <li>
+                    <a href="courses.html" style="font-size: 13pt; line-height:30px;color:#434343;">会前课程</a>
+                </li>
+                <li>
+                    <a href="keynotes.html" style="font-size: 13pt; line-height:30px;color:#434343;">特邀报告</a>
+                </li>
+                <li>
+                    <a href="panels.html" style="font-size: 13pt; line-height:30px;color:#434343;">技术论坛</a>
+                </li>
+                <li>
+                    <a href="sponsors.html" style="font-size: 13pt;line-height:30px;color:#434343;">赞助企业</a>
+                </li>
+                <li>
+                    <a href="traffic.html" style="font-size: 13pt;line-height:30px;color:#434343;">交通住宿</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="head_display">
+        <div class="container">
+            <div class="row header">
+                <div class="span13">
+                    <div class="js-jquery-dropdown-wrapper">
+                        <ul class="js-jquery-dropdown">
+                            <li>
+                                <a href="index.html" style="font-size: 13pt">主页</a>
+                            </li>
+                            <li>
+                                <a href="committee.html" style="font-size: 13pt">组织结构</a>
+                            </li>
+                            <li>
+                                <a href="call-for-papers.html" style="font-size: 13pt; ">大会征文</a>
+                            </li>
+                            <li>
+                                <a href="theater.html" style="font-size: 13pt; ">电子剧场</a>
+                            </li>
+                            <li>
+                                <a href="registration.html" style="font-size: 13pt">大会注册</a>
+                            </li>
+                            <li>
+                                <a href="program.html" style="font-size: 13pt">会议日程</a>
+                            </li>
+                            <li>
+                                <a href="courses.html" style="font-size: 13pt">会前课程</a>
+                            </li>
+                            <li>
+                                <a href="keynotes.html" style="font-size: 13pt">特邀报告</a>
+                            </li>
+                            <li>
+                                <a href="panels.html" style="font-size: 13pt">技术论坛</a>
+                            </li>
+                            <li>
+                                <a href="sponsors.html" style="font-size: 13pt">赞助企业</a>
+                            </li>
+                            <li>
+                                <a href="traffic.html" style="font-size: 13pt">交通住宿</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="page-index-featured " >
+        <a id='buttonTop' class='button-top'></a>
+        <div class="container page-text-columns" >
+               <div class="row" style=" box-shadow: darkgrey 0px 0px 5px 1px; border-radius:5px; margin:50px 0 0 0; ">
+                <img border="0" src="img/new/banner.jpg" width="100%" style="margin:0px 0 0px 0%; ">
+               <div id="content" >
+                <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">酒店预订</p>
+                <ul class="ul_style" style="margin:20px 0% 0px 8%;">
+                    <li style=" margin:0px 0% 0px 0%;"><p style="font-size:14pt"> 会议地点：<a href="https://www.hsu.edu.cn/" target="_blank">黄山学院（率水校区）</a></p></li>
+                </ul>
+                <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">&emsp;地址：安徽省黄山市屯溪区西海路39号</p>
+
+                <ul class="ul_style" style="margin:20px 0% 0px 8%;">
+                    <li style="margin:0px 0% 0px 0%;"><p style="font-size:14pt"> 推荐入住酒店：<strong>酒店信息随时间波动较大，待定</strong></p></li>
+                </ul>
+                
+                <!-- <ul class="ul_style" style="margin:20px 0% 0px 8%;">
+                    <li style="margin:0px 0% 0px 0%;"><p style="font-size:14pt"> 其它酒店介绍：</p></li>
+                </ul>
+
+                <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">1. <strong>全季酒店（厦门大学店）</strong></p>
+                <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">价格：约330元~380元/晚</p>
+                <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">地址：厦门市思明区思明南路497号</p>
+                <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">客房预订：0592-2072222</a></p>
+                <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">推荐理由：酒店位于华侨博物馆附近，步行约1.2公里至厦大科艺中心（会场）。酒店环境好，步行至会场路程稍远。</a></p>
+                <br> -->
+
+                <!-- <p style="text-align: center;">
+                    <img border="0" src="img/hotels.png" width="60%" style="margin:30px 0 0px 0%; ">
+                </p> -->
+
+
+
+               <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">交通</p>
+               <p style="font-size:14pt; margin:30px 0% 0px 7%; text-align:left;">前往黄山学院：</p>
+               <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                <li style=" margin:0px 0% -15px 9%;"><p> 黄山北站→步行10米到公交站（高铁北站）→公交车（高铁快线2路）→黄山学院南区站</p></li>
+                <li style=" margin:0px 0% -15px 9%;"><p> 黄山屯溪国际机场→步行280米到公交站（黄山机场候机厅站点站）→公交车（219路）→香茗酒店北门站→换乘公交车（31路）→黄山学院南区站</p></li>
+                </ul>
+
+                <p style="font-size:14pt; margin:30px 7% 0px 7%; text-align:left;">
+                    <font style="font-weight:bold;color:#a7248a;">使用百度地图导航到此处:&nbsp;&nbsp;&nbsp;</font>
+                    <a href="https://j.map.baidu.com/57/zE4">导航</a>
+                </p> 
+                <br>
+                <p style="text-align: center;">
+                    <iframe src="https://j.map.baidu.com/57/zE4"  style="width:60%;height:450px;border:0" loading="lazy"></iframe>
+                </p>
+
+                <br>
+                 
+                <hr width="90%" color="#f3e549" size="8" style="margin:30px 0 30px 5%;"> </hr>
+               </div>
+
+           </div>
+   </div> <!-- /container -->
+        </div>
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10" style="width:100%; line-height:20px; margin:0 2% 0 2%;">
+                <div class="col-sm-7">
+                    &copy;Chinagraph 2024
+                </div>
+
+                <div class="col-sm-3">https://chinagraph2024.hsu.edu.cn/
+                </div>
+        </div>
+    </div>
+
+    <div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+
+    <script type="text/javascript">
+        let btn = $('#buttonTop');
+        let toTopFlag = $('#toTopFlag');
+
+        $(window).scroll(() => {
+        if ($(window).scrollTop() > 0) {
+        btn.addClass('show');
+        } else {
+        btn.removeClass('show');
+        }
+        });
+
+        btn.on('click', (e) => {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '300');
+        });
+    </script>
+
+
+</body>
+</html>

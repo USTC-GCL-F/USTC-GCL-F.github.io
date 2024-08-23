@@ -1,0 +1,414 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+	<style type="text/css">
+
+       .ul_style{
+           width:90%;
+           margin:30px 5% 30px 5%;
+       }
+       .ul_style li p{
+           font-size: 13pt;
+           line-height:20px;
+       }
+
+        .button-top {
+		  display: inline-block;
+		  background-color: #ccc;
+		  width: 50px;
+		  height: 50px;
+		  text-align: center;
+		  border-radius: 4px;
+		  position: fixed;
+		  bottom: 30px;
+		  right: 30px;
+		  transition: background-color .3s, 
+		    opacity .5s, visibility .5s;
+		  opacity: 0;
+		  visibility: hidden;
+		  z-index: 1000;
+		}
+		.button-top::after {
+		  content: "\f077";
+		  font-family: FontAwesome;
+		  font-weight: normal;
+		  font-style: normal;
+		  font-size: 2em;
+		  line-height: 50px;
+		  color: #fff;
+		}
+		.button-top:hover {
+		  cursor: pointer;
+		  background-color: #333;
+		}
+		.button-top:active {
+		  background-color: #555;
+		}
+		.button-top.show {
+		  opacity: 1;
+		  visibility: visible;
+		}
+
+        .table-c table th{border-left:1px solid;border-top:1px solid ;font-size:12pt; font-weight:normal; color:#404040;} 
+        .table-c table{border-right:1px solid ;border-bottom:1px solid; margin:30px 5% 0px 5%;} 
+
+	</style>
+    <head>
+        <title>第十五届中国计算机图形学大会（Chinagraph 2024）</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="static/css/bootstrap.css" rel="stylesheet" /> <!-- CSS: Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="static/css/getCss.css" /> <!-- CSS: Our css :)  -->
+        <link rel="stylesheet" type="text/css" href="static/css/jquery.fancybox-1.3.4.css" /> <!-- CSS: fancybox -->
+        <link rel="stylesheet" type="text/css" href="static/css/helper.css" />
+
+        <!-- Google fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="static/js/jquery-ui-1.8.21.custom.min.js"></script>  <!-- JS: effects core + fold and clip -->
+        <!-- external stuff -->
+        <script type="text/javascript" src="static/js/javascript/custom.js"></script> <!-- JS: Our script :) -->
+        <script type="text/javascript" src="static/js/jquery.fancybox-1.3.4.pack.js"></script> <!-- JS: fancybox - modal image-->
+        <script type="text/javascript" src="static/js/fx.js"></script> <!-- JS: jquery fx used for the bar animation -->
+        <script type="text/javascript" src="static/js/jquery.nicescroll.min.js"></script> <!-- JS: nicescroll - the nice scrolling bar from index -->
+        <script type="text/javascript" src="static/js/jquery.masonry.min.js"></script> <!-- JS: masonry - portofolio new tile script -->
+
+        <script type="text/javascript" src="static/js/jquery.nivo.slider.pack.js"></script> <!-- JS: nivo slider -->
+        <link rel="stylesheet" type="text/css" href="static/css/nivo-slider.css" /> <!-- CSS: nivo slider -->
+
+        <script type="text/javascript" src="static/js/jquery.easing.1.3.js"></script> <!-- bx Slider -->
+        <script type="text/javascript" src="static/js/jquery.bxSlider.min.js"></script> <!-- bx Slider -->
+        <link rel="icon" href="images/favicon.png">
+    </head>
+<body>
+
+    <div class="nav_display">
+        <input type="checkbox" id="drawer-toggle" name="drawer-toggle" class="roll" />
+        <label for="drawer-toggle" id="drawer-toggle-label" class="roll"></label>
+        <header>电子剧场</header>
+        <nav id="drawer" class="roll">
+            <ul>
+                <li >
+                    <a href="index.html" style="font-size: 13pt; line-height:30px; color:#434343;">主页</a>
+                </li>
+                <li>
+                    <a href="committee.html" style="font-size: 13pt; line-height:30px;color:#434343;">组织结构</a>
+                </li>
+                <li>
+                    <a href="call-for-papers.html" style="font-size: 13pt; line-height:30px;color:#434343;">大会征文</a>
+                </li>
+                <li>
+                    <a href="theater.html" style="font-size: 13pt; line-height:30px;color:#434343;">电子剧场</a>
+                </li>
+                <li>
+                    <a href="registration.html" style="font-size: 13pt; line-height:30px;color:#434343;">大会注册</a>
+                </li>
+                <li>
+                    <a href="program.html" style="font-size: 13pt; line-height:30px;color:#434343;">会议日程</a>
+                </li>
+                <li>
+                    <a href="courses.html" style="font-size: 13pt; line-height:30px;color:#434343;">会前课程</a>
+                </li>
+                <li>
+                    <a href="keynotes.html" style="font-size: 13pt; line-height:30px;color:#434343;">特邀报告</a>
+                </li>
+                <li>
+                    <a href="panels.html" style="font-size: 13pt; line-height:30px;color:#434343;">技术论坛</a>
+                </li>
+                <li>
+                    <a href="sponsors.html" style="font-size: 13pt;line-height:30px;color:#434343;">赞助企业</a>
+                </li>
+                <li>
+                    <a href="traffic.html" style="font-size: 13pt;line-height:30px;color:#434343;">交通住宿</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="head_display">
+        <div class="container">
+            <div class="row header">
+                <div class="span13">
+                    <div class="js-jquery-dropdown-wrapper">
+                        <ul class="js-jquery-dropdown">
+                            <li>
+                                <a href="index.html" style="font-size: 13pt">主页</a>
+                            </li>
+                            <li>
+                                <a href="committee.html" style="font-size: 13pt">组织结构</a>
+                            </li>
+                            <li>
+                                <a href="call-for-papers.html" style="font-size: 13pt; ">大会征文</a>
+                            </li>
+                            <li>
+                                <a href="theater.html" style="font-size: 13pt; ">电子剧场</a>
+                            </li>
+                            <li>
+                                <a href="registration.html" style="font-size: 13pt">大会注册</a>
+                            </li>
+                            <li>
+                                <a href="program.html" style="font-size: 13pt">会议日程</a>
+                            </li>
+                            <li>
+                                <a href="courses.html" style="font-size: 13pt">会前课程</a>
+                            </li>
+                            <li>
+                                <a href="keynotes.html" style="font-size: 13pt">特邀报告</a>
+                            </li>
+                            <li>
+                                <a href="panels.html" style="font-size: 13pt">技术论坛</a>
+                            </li>
+                            <li>
+                                <a href="sponsors.html" style="font-size: 13pt">赞助企业</a>
+                            </li>
+                            <li>
+                                <a href="traffic.html" style="font-size: 13pt">交通住宿</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="page-index-featured " >
+        <a id='buttonTop' class='button-top'></a>
+        <div class="container page-text-columns" >
+               <div class="row" style=" box-shadow: darkgrey 0px 0px 5px 1px; border-radius:5px; margin:50px 0 0 0; ">
+                <img border="0" src="img/new/banner.jpg" width="100%" style="margin:0px 0 0px 0%; ">
+               <div id="content" >
+               
+                 <br>
+                <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">电子剧场主席</p>
+                <p style="font-size:13pt; margin:15px 6% 0 6%; text-align:justify; ">
+                    孙立军，北京电影学院
+                </p>
+                <p style="font-size:14pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">电子剧场组织委员会（按姓氏拼音为序）</p>
+                <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                    <li style=" margin:0px 0% -5px 7%;">陈宝权，北京大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">陈&nbsp&nbsp&nbsp为，浙江大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">陈彦云，中国科学院软件技术研究所</li>
+                    <li style=" margin:0px 0% -5px 7%;">董未名，中国科学院自动化研究所</li>
+                    <li style=" margin:0px 0% -5px 7%;">董培培，独立艺术家</li>
+                    <li style=" margin:0px 0% -5px 7%;">费广正，中国传媒大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">冯&nbsp&nbsp&nbsp坚，武汉音乐学院</li>
+                    <li style=" margin:0px 0% -5px 7%;">付心仪，清华大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">耿卫东，浙江大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">郭子淳，北京化工大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">黄&nbsp&nbsp&nbsp惠，深圳大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">黄心渊，中国传媒大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">黄&nbsp&nbsp&nbsp石，中国传媒大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">胡瑞珍，深圳大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">贾云鹏，北京邮电大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">李剑平，北京电影学院</li>
+                    <li style=" margin:0px 0% -5px 7%;">李&nbsp&nbsp&nbsp萌，北京邮电大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">李子晋，中央音乐学院</li>
+                    <li style=" margin:0px 0% -5px 7%;">吕&nbsp&nbsp&nbsp曦，四川美术学院</li>
+                    <li style=" margin:0px 0% -5px 7%;">刘利刚，中国科技大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">刘世霞，清华大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">马晓娜，北京航空航天大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">马利庄，上海交通大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">牟&nbsp&nbsp&nbsp一，国际动画艺术研究院（美国）</li>
+                    <li style=" margin:0px 0% -5px 7%;">潘志庚，杭州师范大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">任&nbsp&nbsp&nbsp博，南开大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">沈旭昆，北京航空航天大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">师丹青，清华大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">孙立军，北京电影学院</li>
+                    <li style=" margin:0px 0% -5px 7%;">隋津云，山西传媒学院</li>
+                    <li style=" margin:0px 0% -5px 7%;">盛&nbsp&nbsp&nbsp斌，上海交通大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">童&nbsp&nbsp&nbsp欣，微软亚洲研究院</li>
+                    <li style=" margin:0px 0% -5px 7%;">王之纲，清华大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">汪云海，山东大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">吴&nbsp&nbsp&nbsp琼，清华大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">巫英才，浙江大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">徐千尧，清华大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">徐迎庆，清华大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">徐元春，小冰公司</li>
+                    <li style=" margin:0px 0% -5px 7%;">叶佑天，湖北美术学院</li>
+                    <li style=" margin:0px 0% -5px 7%;">易&nbsp&nbsp&nbsp晓，北京交通大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">于金辉，浙江大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">于&nbsp&nbsp&nbsp阳，上海音乐学院</li>
+                    <li style=" margin:0px 0% -5px 7%;">於&nbsp&nbsp&nbsp水，北京航空航天大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">张&nbsp&nbsp&nbsp磊，北京理工大学</li>
+                    <li style=" margin:0px 0% -5px 7%;">张松海，清华大学</li>
+                </ul>
+
+                <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">电子剧场征稿启事</p>
+                <p style="font-size:13pt; margin:15px 6% 0 6%; text-align:justify;text-indent: 2em; ">
+                中国计算机图形学大会(Chinagraph)是中国计算机图形学最高级别的学术会议,每两年举办一届。第十五届中国计算机图形学大会(Chinagraph 2024)将于2024年10月10-13日在安徽黄山召开,与太平洋图形学国际会议Pacific Graphics (PG 2024)同期同地举办。在动画、视觉效果、游戏、广告、可视化、虚拟现实等领域中，计算机图形学是不可或缺的技术，应用与发展日新月异。生成式人工智能AIGC（Artificial Intelligence Generated Content）作为人工智能技术和产业应用的要素之一，未来将推动数实融合趋势下数字内容生产方式的转变。Chinagraph 2024电子剧场旨在为相关领域设计工作者和计算机图形学与AIGC方面科研工作者打造交流平台，为计算机图形学与人工智能技术应用提供展示舞台。</p>
+                <p style="font-size:13pt; margin:15px 6% 0 6%; text-align:justify;text-indent: 2em; ">
+欢迎您成为电子剧场的体验者和参与者，在这场视觉盛会中展示您的精美作品。大会将组织权威专家对作品进行评选，并颁发最佳作品奖及多项单项奖。
+                </p>
+
+                <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">接收作品类型</p>
+                <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                    <li style=" margin:0px 0% 0px 7%;">广告：代表品牌或实体讲述叙事性故事的委托短片；</li>
+                    <li style=" margin:0px 0% 0px 7%;">故事片：包括长篇动画电影、电视剧或节目的预告片或剪辑（片段）；</li>
+                    <li style=" margin:0px 0% 0px 7%;">电影：时长为10分钟或更短的原创电影；</li>
+                    <li style=" margin:0px 0% 0px 7%;">短片：从大型作品（例如游戏）中挑出的以短片形式呈现的片段集锦；</li>
+                    <li style=" margin:0px 0% 0px 7%;">动态绘本：以视频短片形式呈现的有声或无声的绘本作品；</li>
+                    <li style=" margin:0px 0% 0px 7%;">动态海报设计：以视频短片形式呈现的海报设计作品；</li>
+                    <li style=" margin:0px 0% 0px 7%;">人工智能生成视频：基于人工智能内容生成工具生成的视频短片，必须在画面中注明“基于AI生成”；</li>
+                    <li style=" margin:0px 0% 0px 7%;">实时图形：通过使用实时渲染软件创建的图形短片、故事片或视觉效果；</li>
+                    <li style=" margin:0px 0% 0px 7%;">视觉效果：展示视觉效果的长篇故事片、电视、流媒体节目节选；</li>
+                    <li style=" margin:0px 0% 0px 7%;">可视化（数据驱动）：基于专业领域研究数据创建的图像，包括来自超级计算机模拟或数值模型的 3D 数据；通常渲染为由大型科学数据转换或驱动的实时或预渲染计算机图形；</li>
+                    <li style=" margin:0px 0% 0px 7%;">可视化（概念动画）：使用数字工具和方法（不包括大规模计算）、结合领域知识创建的影像动画；</li>
+                    <li style=" margin:0px 0% 0px 7%;">模拟：使用计算机图像形式的真实系统的数学描述或模型；</li>
+                    <li style=" margin:0px 0% 0px 7%;">电子音乐：使用音乐科技手段呈现的作品，如音乐可视化、音乐新媒体表演、视听交互作品、各种应用类或原声类电子音乐；</li>
+                </ul>
+
+                <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">作品规范</p>
+                <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                    <li style=" margin:0px 0% 0px 7%;">动态类作品格式要求：时长2-10分钟，大小不超过1GB（电子剧场拥有对选定作品自行节选的权利）；如有作品旁白请配置字幕；基于人工智能内容生成工具生成的视频短片，必须在画面中注明“基于AI生成”；</li>
+                    <li style=" margin:0px 0% 0px 7%;">视频编解码器：H.264、Apple ProRes 422；</li>
+                    <li style=" margin:0px 0% 0px 7%;">NTSC视频包装器：QuickTime、MP4；不接受DCP格式；</li>
+                    <li style=" margin:0px 0% 0px 7%;">视频分辨率：不低于1080P（1920*1080）；</li>
+                    <li style=" margin:0px 0% 0px 7%;">音频格式：44.1kHz，16bit，wav文件；</li>
+                    <li style=" margin:0px 0% 0px 7%;">如果采用其他文件格式或文件不完整，导致在评奖时无法打开，视为无效作品；</li>
+                </ul>
+
+                <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">版权要求</p>
+                <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                    <li style=" margin:0px 0% 0px 7%;">Chinagraph 2024电子剧场不要求获得作者作品的版权，作者可以将此作品参与其他评比，但拥有使用此作品在大会期间进行展示和用于大会宣传的权利；</li>
+                    <li style=" margin:0px 0% 0px 7%;">作为原创作品的评比，组委会严格要求作品完全原创或无版权纠纷（包括但不限于创意、画面内容、配乐、旁白）；</li>
+                    <li style=" margin:0px 0% 0px 7%;">如参赛作品出现版权问题，组委会将撤销该作品奖项，并对从而引发的负面影响保留进一步追责的权利；</li>
+                </ul>
+
+                <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">投稿须知</p>
+                <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                    <li style=" margin:0px 0% 0px 7%;">应在投稿系统中填写所有主创人员；</li>
+                    <li style=" margin:0px 0% 0px 7%;">学生项目：在作品创作期，所有主创人员均为在校学生。如有指导教师，可在系统中填入其姓名、单位、Email信息。如作品获奖，指导教师姓名会在证书中体现；</li>
+                    <li style=" margin:0px 0% 0px 7%;">确认并勾选投稿承诺，承诺作品的原创性，并授权Chinagraph 2024对此作品进行展示和用于大会宣传；</li>
+                    <li style=" margin:0px 0% 0px 7%;">作品以百度网盘链接形式提交到投稿系统，请务必确保链接文件正确且长期有效。</li>
+                </ul>
+
+                <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">投稿方式</p>
+                <p style="font-size:13pt; margin:15px 5% 0 5%; text-align:justify;text-indent: 2em; ">
+                投稿链接：<a href="http://www.smartchair.org/Chinagraph2024_ET">http://www.smartchair.org/Chinagraph2024_ET</a>
+                </p>
+                <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">重要日期</p>
+                <ul class="ul_style" style="margin:20px 0% 0px 0%;">
+                    <li style=" margin:0px 0% 0px 7%;">投稿截止日期:  2024年7月31日</li>
+                    <li style=" margin:0px 0% 0px 7%;">录用通知日期: 2024年8月21日</li>
+                </ul>
+
+                <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">投稿咨询</p>
+                <p style="font-size:13pt; margin:15px 6% 0 6%; text-align:justify; ">
+                chinagraph2024@mail.hsu.edu.cn
+                </p>
+                <br>
+        </div>
+    </div>
+    </div>
+
+<main>
+    <div class="header"></div>
+    <div class="content">
+        <div class="cont-main">
+            <!--<h1>电子剧场获奖名单</h1>-->
+            <!--<p style="text-indent: 2em"><a href="theater_reward.htm#1">点击查看</a></p>-->
+            <!--<h1>电子剧场入围奖名单</h1>-->
+            <!--<p style="text-indent: 2em"><a href="theater_reward.htm#2">点击查看</a></p>-->
+            
+            <!--<h1>电子剧场时间地点</h1>-->
+            <!--<p>2024年7月14日，星期四，19:00-22:00，宴会厅1</p>-->
+            <!--<br>-->
+            
+            <!--<div id="qa"></div>-->
+            <!--<h1>关于电子剧场作品最终版时长和版权问题解答</h1>-->
+            <!--<p><b>1. 作品时长问题</b></p>-->
+            <!--<ul style="text-indent: 2em;">-->
+                <!--<li>对于获奖提名作品，由于电子剧场晚会作品播放总时长的限制，因此每部作品不能超过5分钟，如果有特殊原因，请向组委会说明理由。</li>-->
+                <!--<li>对于入围奖作品，原则不超过5分钟，个别情节完整等原因难以剪辑的，加上片头片尾不得超过8分钟。</li>-->
+            <!--</ul>-->
+            <!--<p style="text-indent: 2em">组委会有权自行裁剪片段进行播放，但为了达到更好的展示效果，强烈建议作者自行将过长部分裁剪。</p>-->
+            <!--<p><b>2. 版权问题</b></p>-->
+            <!--<p style="text-indent: 2em">Chinagraph 2022电子剧场不会要求获得作者作品的版权，作者可以将此作品参与其他评比。但作为原创作品的评比，组委会严格要求作品完全原创或无版权纠纷。如参赛作品出现版权问题，组委会将撤销该作品奖项，并对从而引发的负面影响保留进一步追责的权利。</p>-->
+            <!--<p style="text-indent: 2em"><b>组委会特别提醒</b>：作品的背景音乐如非原创，须更换为无版权音乐、原创音乐或购买该音乐使用权以避免版权风险。</p>-->
+            <!--<br>-->
+            
+            <!--<div id="guide"></div>-->
+            <!--<h1>电子剧场免费及半价注册优惠操作指南，优惠注册延长至7月3日</h1>-->
+            <!--<p style="text-indent: 2em">针对近期作者集中询问的大会注册问题，组委会制作了一个电子剧场注册优惠操作指南，请参见<a href="download/e_theater_discount.pdf">PDF文件</a>，同时优惠注册延长至7月3日。</p>-->
+            <!--<br>-->
+            
+            <!--<h1>电子剧场作品奖项设置及评审结果发出通知</h1>-->
+            <!--<div style="text-indent: 2em">-->
+                <!--<p>本届电子剧场将评选出优秀创意奖、优秀技术奖、优秀视觉效果奖和优秀音乐奖四个单项奖，以及优秀作品奖、优秀学生作品奖两个综合奖。每个奖项分一等奖1名，奖金5000元及证书、二等奖2名，奖金2000元及证书、三等奖3名，奖金1000元及证书。同时，对于入围作品，本届电子剧场将颁发入围奖证书。</p>-->
+                <!--<p>目前作品评审结果已陆续发出，预计25日12:00前完成，评审结果分为：获奖提名、入围、未录用。其中：</p>-->
+                <!--<ul>-->
+                    <!--<li>入围奖作品将于会议期间在会场全天循环滚动播放，每部入围作品提供1位半价注册名额。入围奖证书请在大会期间向组委会领取；如作者未注册参会，组委会将在会后向通讯作者邮箱发送电子版入围奖证书。</li>-->
+                    <!--<li>获奖提名作品的具体奖项等级将在电子剧场晚会现场公布，并在现场颁奖；作品将在电子剧场晚会放映，并于会议期间在会场全天循环滚动播放；每部获奖提名作品提供1位免费注册名额。</li>-->
+                <!--</ul>-->
+                <!--<p>作者请注意查收作品投稿网站（smartchair.org）发出的评审结果邮件（注意查收邮件垃圾箱），或者登陆投稿网站查看评审结果；请于2022年7月1日前，将优惠注册参会信息（作品ID、作品名称、注册人姓名、单位、手机号）发送至向大会邮箱（chinagraph22_program@qhu.edu.cn）。以上信息需由组委会在注册网站录入后才能享受优惠。</p>-->
+            <!--</div>-->
+            <!--<br>-->
+            
+            <!--<h1>电子剧场获奖提名及入围作品最终版提交要求</h1>-->
+             <!--<div style="text-indent: 2em">-->
+                <!--<p>请获奖提名及入围作品作者于2022年7月3日前在投稿系统内提交作品最终版。最终版作品的要求如下：</p>-->
+                <!--<p>1. 影像作品应包含片头和片尾。片头内容包含：“Chinagraph 2022电子剧场”文字或明显标识、作品名、作者名、出品方信息、指导教师信息（如是学生作品）等；片尾字幕应包含本作品（含背景音乐）的原创声明（原创或无版权争议）；</p>-->
+                <!--<p>2. 影像作品（包含片头片尾）时长不超过5分钟，分辨率为1080p，采用H.264压缩编码标准，并使用MP4格式封装；音频44.1kHz，16bit，mp3编码；</p>-->
+                <!--<p>3. 音频作品需自行添加画面，可以为音频可视化或文字阐释，片头片尾、时长、分辨率及格式要求同影像作品；</p>-->
+                <!--<p>4. 提交方式：登录作品投稿网站smartchair.org，进入自己作品页面，点击“提交论文修改”，在摘要中更新网盘链接即可，无需上传视频。请您务必于2022年7月3日前提交作品最终版，未提交或不符合要求将视为放弃。</p>-->
+            <!--</div>-->
+            <!--<br>-->
+            
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10" style="width:100%; line-height:20px; margin:0 2% 0 2%;">
+                <div class="col-sm-7">
+                    &copy;Chinagraph 2024
+                </div>
+
+                <div class="col-sm-3">https://chinagraph2024.hsu.edu.cn/
+                </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        let btn = $('#buttonTop');
+        let toTopFlag = $('#toTopFlag');
+
+        $(window).scroll(() => {
+        if ($(window).scrollTop() > 0) {
+        btn.addClass('show');
+        } else {
+        btn.removeClass('show');
+        }
+        });
+
+        btn.on('click', (e) => {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '300');
+        });
+    </script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
