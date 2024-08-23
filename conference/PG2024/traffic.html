@@ -1,90 +1,110 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-	<style type="text/css">
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<style type="text/css">
+    .ul_style {
+        width: 90%;
+        margin: 30px 5% 30px 5%;
+    }
 
-       .ul_style{
-	    width:90%;
-	    margin:30px 5% 30px 5%;
-	    }
-	    .ul_style li p{
-	    font-size: 13pt;
-	    line-height:20px;
-	    }
+    .ul_style li p {
+        font-size: 13pt;
+        line-height: 20px;
+    }
 
-        .button-top {
-		  display: inline-block;
-		  background-color: #ccc;
-		  width: 50px;
-		  height: 50px;
-		  text-align: center;
-		  border-radius: 4px;
-		  position: fixed;
-		  bottom: 30px;
-		  right: 30px;
-		  transition: background-color .3s, 
-		    opacity .5s, visibility .5s;
-		  opacity: 0;
-		  visibility: hidden;
-		  z-index: 1000;
-		}
-		.button-top::after {
-		  content: "\f077";
-		  font-family: FontAwesome;
-		  font-weight: normal;
-		  font-style: normal;
-		  font-size: 2em;
-		  line-height: 50px;
-		  color: #fff;
-		}
-		.button-top:hover {
-		  cursor: pointer;
-		  background-color: #333;
-		}
-		.button-top:active {
-		  background-color: #555;
-		}
-		.button-top.show {
-		  opacity: 1;
-		  visibility: visible;
-		}
+    .button-top {
+        display: inline-block;
+        background-color: #ccc;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 4px;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        transition: background-color .3s,
+            opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
+    }
 
-        .table-c table th{border-left:1px solid;border-top:1px solid ;font-size:12pt; font-weight:normal; color:#404040;} 
-	    .table-c table{border-right:1px solid ;border-bottom:1px solid; margin:30px 5% 0px 5%;} 
+    .button-top::after {
+        content: "\f077";
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 2em;
+        line-height: 50px;
+        color: #fff;
+    }
 
-	</style>
-    <head>
-        <title>PG 2024</title>
+    .button-top:hover {
+        cursor: pointer;
+        background-color: #333;
+    }
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="static/css/bootstrap.css" rel="stylesheet" /> <!-- CSS: Bootstrap -->
-        <link rel="stylesheet" type="text/css" href="static/css/getCss.css" /> <!-- CSS: Our css :)  -->
-        <link rel="stylesheet" type="text/css" href="static/css/jquery.fancybox-1.3.4.css" /> <!-- CSS: fancybox -->
-        <link rel="stylesheet" type="text/css" href="static/css/helper.css" />
+    .button-top:active {
+        background-color: #555;
+    }
 
-        <!-- Google fonts -->
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+    .button-top.show {
+        opacity: 1;
+        visibility: visible;
+    }
 
-        <!-- jQuery -->
-        <script type="text/javascript" src="static/js/jquery.min.js"></script>
-        <script type="text/javascript" src="static/js/jquery-ui-1.8.21.custom.min.js"></script>  <!-- JS: effects core + fold and clip -->
-        <!-- external stuff -->
-        <script type="text/javascript" src="static/js/javascript/custom.js"></script> <!-- JS: Our script :) -->
-        <script type="text/javascript" src="static/js/jquery.fancybox-1.3.4.pack.js"></script> <!-- JS: fancybox - modal image-->
-        <script type="text/javascript" src="static/js/fx.js"></script> <!-- JS: jquery fx used for the bar animation -->
-        <script type="text/javascript" src="static/js/jquery.nicescroll.min.js"></script> <!-- JS: nicescroll - the nice scrolling bar from index -->
-        <script type="text/javascript" src="static/js/jquery.masonry.min.js"></script> <!-- JS: masonry - portofolio new tile script -->
+    .table-c table th {
+        border-left: 1px solid;
+        border-top: 1px solid;
+        font-size: 12pt;
+        font-weight: normal;
+        color: #404040;
+    }
+
+    .table-c table {
+        border-right: 1px solid;
+        border-bottom: 1px solid;
+        margin: 30px 5% 0px 5%;
+    }
+</style>
+
+<head>
+    <title>PG 2024</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="static/css/bootstrap.css" rel="stylesheet" /> <!-- CSS: Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="static/css/getCss.css" /> <!-- CSS: Our css :)  -->
+    <link rel="stylesheet" type="text/css" href="static/css/jquery.fancybox-1.3.4.css" /> <!-- CSS: fancybox -->
+    <link rel="stylesheet" type="text/css" href="static/css/helper.css" />
+
+    <!-- Google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery-ui-1.8.21.custom.min.js"></script>
+    <!-- JS: effects core + fold and clip -->
+    <!-- external stuff -->
+    <script type="text/javascript" src="static/js/javascript/custom.js"></script> <!-- JS: Our script :) -->
+    <script type="text/javascript" src="static/js/jquery.fancybox-1.3.4.pack.js"></script>
+    <!-- JS: fancybox - modal image-->
+    <script type="text/javascript" src="static/js/fx.js"></script> <!-- JS: jquery fx used for the bar animation -->
+    <script type="text/javascript" src="static/js/jquery.nicescroll.min.js"></script>
+    <!-- JS: nicescroll - the nice scrolling bar from index -->
+    <script type="text/javascript" src="static/js/jquery.masonry.min.js"></script>
+    <!-- JS: masonry - portofolio new tile script -->
 
 
-        <script type="text/javascript" src="static/js/jquery.nivo.slider.pack.js"></script> <!-- JS: nivo slider -->
-        <link rel="stylesheet" type="text/css" href="static/css/nivo-slider.css" /> <!-- CSS: nivo slider -->
+    <script type="text/javascript" src="static/js/jquery.nivo.slider.pack.js"></script> <!-- JS: nivo slider -->
+    <link rel="stylesheet" type="text/css" href="static/css/nivo-slider.css" /> <!-- CSS: nivo slider -->
 
-        <script type="text/javascript" src="static/js/jquery.easing.1.3.js"></script> <!-- bx Slider -->
-        <script type="text/javascript" src="static/js/jquery.bxSlider.min.js"></script> <!-- bx Slider -->
-        <link rel="icon" href="images/favicon.png">
-    </head>
+    <script type="text/javascript" src="static/js/jquery.easing.1.3.js"></script> <!-- bx Slider -->
+    <script type="text/javascript" src="static/js/jquery.bxSlider.min.js"></script> <!-- bx Slider -->
+    <link rel="icon" href="images/favicon.png">
+</head>
+
 <body>
 
     <div class="nav_display">
@@ -100,7 +120,8 @@
                     <a href="committee.html" style="font-size: 13pt; line-height:30px;color:#434343;">ORGANIZERS</a>
                 </li>
                 <li>
-                    <a href="registration.html" style="font-size: 13pt; line-height:30px;color:#434343;">REGISTRATION</a>
+                    <a href="registration.html"
+                        style="font-size: 13pt; line-height:30px;color:#434343;">REGISTRATION</a>
                 </li>
                 <li>
                     <a href="program.html" style="font-size: 13pt; line-height:30px;color:#434343;">PROGRAM</a>
@@ -143,94 +164,156 @@
 
 
 
-    <div class="page-index-featured " >
+    <div class="page-index-featured ">
         <a id='buttonTop' class='button-top'></a>
-        <div class="container page-text-columns" >
-               <div class="row" style=" box-shadow: darkgrey 0px 0px 5px 1px; border-radius:5px; margin:50px 0 0 0; ">
+        <div class="container page-text-columns">
+            <div class="row" style=" box-shadow: darkgrey 0px 0px 5px 1px; border-radius:5px; margin:50px 0 0 0; ">
                 <img border="0" src="img/new/banner.jpg" width="100%" style="margin:0px 0 0px 0%; ">
-               <div id="content" >
-                <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">Venue</p>
-                <ul class="ul_style" style="margin:20px 0% 0px 8%;">
-                    <li style=" margin:0px 0% 0px 0%;"><p style="font-size:14pt"> Venue：<a href="http://parkviewinternational.hotelhuangshan.cn/en" target="_blank">PARKVIEW INTERNATIONAL HOTEL Huangshan</a></p></li>
-                </ul>  
+                <div id="content">
 
-                <p style="font-size:14pt; margin:50px 7% 0px 7%; text-align:left;">Useful Apps:</p>
-                <ul class="ul_style" style="margin:20px 0% 0px 8%;">
-                    <li style=" margin:0px 0% 0px 0%;"><p style="font-size:14pt"> <b>Google Map</b> is not available in China. Please use <b>Baidu Map</b> instead.</p></li>
-                </ul>
-                <ul class="ul_style" style="margin:20px 0% 0px 8%;">
-                    <li style=" margin:0px 0% 0px 0%;"><p style="font-size:14pt"> <b>Alipay</b> or <b>Wechat</b> can be used for bus, train, and taxi payments.</p></li>
-                </ul>
+                    <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">Conference
+                        Venue</p>
+                    <ul class="ul_style" style="margin:20px 0% 0px 8%;">
+                        <li>
+                            <p style="font-size:14pt">Venue：<a href="http://parkviewinternational.hotelhuangshan.cn/en"
+                                    target="_blank">Parkview International Hotel Huangshan</a> （黄山栢景国际大酒店）</p>
+                        </li>
+                        <li>
+                            <p style="font-size:14pt">Address: 18-2 Xihai Road, Liyang Town,Tunxi District, Huangshan,
+                                Anhui</p>
+                        </li>
+                        <li>
+                            <p style="font-size:14pt">Reserve: +8620-86007566 (CouponCode:17244) or <a
+                                    href="http://parkviewinternational.hotelhuangshan.cn/en/booking.html"
+                                    target="_blank">online booking</a></p>
+                        </li>
+                        <li>
+                            <p style="font-size:14pt">Foreground Tel: +86-559-2933333</p>
+                        </li>
+                    </ul>
 
-                <p style="text-align: center;">
-                    <img border="0" src="img/new/routine0.png" width="80%" style="margin:30px 0 0px 0%; ">
-                </p>
+                    <p style="text-align: center;">
+                        <img border="0" src="img/new/venue.jpg" width="80%" style="margin:30px 0 0px 0%; ">
+                    </p>
 
-                <p style="font-size:14pt; margin:50px 7% 0px 7%; text-align:left;">
+                    <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">Traffic</p>
+
+
+                    <!-- Air -->
+
+                    <p style="font-size:14pt; margin:30px 0% 0px 7%; text-align:left;">
+                        <font style="font-weight:bold;color:#4bbdd0;">By Air:</font>
+                    </p>
+                    <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">
+                        Huangshan Airport (黄山机场), also known as Tunxi Airport (屯溪机场), is located in the Tunxi suburb of
+                        Huangshan City, approximately 7 km from the city center.
+                        The airport offers domestic flights to major cities like Beijing, Shanghai, Xi’an, Tianjin, and
+                        Guangzhou, as well as international flights to Seoul and Incheon in South
+                        Korea.
+                        The flight duration is about three hours from Beijing, one hour from Shanghai, two hours from
+                        Xi'an, and one and a half hours from Guangzhou.
+                        The flight from Hong Kong to Huangshan takes two hours, and from Seoul, around four hours.
+                    </p>
+                    <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">
+                        <strong>Bus</strong>:
+                    </p>
+                    <ol class="ul_style" style="font-size:14pt; margin:10px 8% 0px 8%; max-width: 80%;">
+                        <li> Walk 200 meters (about 3 minutes) to the Huangshan Airport Terminal bus stop.</li>
+                        <li> Take the 219 bus toward the Train Station Front Square. Operating hours: 07:25-17:55. The
+                            fare is 1 CNY.</li>
+                        <li> Get off the bus at the China Life Insurance stop, after passing the Xiangming Hotel North
+                            Gate.</li>
+                        <li> Walk 400 meters (about 6 minutes) to Huangshan Mountain Parkview International Hotel.</li>
+                    </ol>
+                    <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">
+                        <strong>Taxi</strong>:
+                    </p>
+                    <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">
+                        The taxi service is provided on the first floor of the terminal building in the airport.
+                        A ride to the city center costs about 15~20 CNY in 10 minutes.
+                    </p>
+
+                    <!-- Train -->
+
+                    <p style="font-size:14pt; margin:30px 0% 0px 7%; text-align:left;">
+                        <font style="font-weight:bold;color:#4bbdd0;">By Train:</font>
+                    </p>
+                    <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">
+                        Huangshan City is served by one high-speed railway station, Huangshanbei Railway Station
+                        (黄山北火车站).
+                        It connects to major cities across China, including Beijing, Shanghai, Hangzhou, Nanjing, and
+                        Guangzhou.
+                        The journey from Beijing takes about 5.5 hours, while the train from Shanghai takes 2.5 hours,
+                        and from Hangzhou, 1.5 hours.
+                    </p>
+
+                    <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">
+                        <strong>Bus</strong>:
+                    </p>
+                    <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">
+                    <ol class="ul_style" style="font-size:14pt; margin:10px 8% 0px 8%; max-width: 80%;">
+                        <li>Walk 150 meters (about 3 minutes) to the Gaotie BeiZhan bus stop.</li>
+                        <li>Board the Gaotie Express 2 bus heading towards Crown Plaza Hotel. The fare is 5 CNY.</li>
+                        <li>Exit the bus at the Xiangming Hotel stop, after passing Xiushui Haoyuan.</li>
+                        <li>Walk 400 meters (about 6 minutes) to Huangshan Mountain Parkview International Hotel.</li>
+                    </ol>
+                    </p>
+
+                    <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">
+                        <strong>Taxi</strong>:
+                    </p>
+                    <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">
+                        The taxi service is also provided, which costs about 45~70 CNY in 25 minutes.
+                    </p>
+
+                    <!-- Tips -->
+
+                    <p style="font-size:14pt; margin:30px 0% 0px 7%; text-align:left;">
+                        <font style="font-weight:bold;color:#4bbdd0;">Tips:</font>
+                    </p>
+                    <ul class="ul_style" style="font-size:14pt; margin:10px 0% 0px 8%;">
+                        <li style=" margin:0px 0% 0px 0%;">
+                            <p>Google Maps is not available in China, so please use Baidu Map, AMap, or Apple Maps instead.</p>
+                        </li>
+                        <li style=" margin:0px 0% 0px 0%;">
+                            <p>For payments on buses, trains, and taxis, you can use Alipay or WeChat.</p>
+                        </li>
+                    </ul>
+
+                    <!--
+                    <p style="text-align: center;">
+                        <img border="0" src="img/new/routine0.png" width="80%" style="margin:30px 0 0px 0%; ">
+                    </p>
+                    -->
+
+                    <!--
+                    <p style="font-size:14pt; margin:50px 7% 0px 7%; text-align:left;">
+                        <br>
+                        <font style="font-weight:bold;color:#9f1e45;">Google Map&nbsp;(outside China):&nbsp;&nbsp;
+                        </font>
+                        <a href="https://www.google.com/maps?saddr=My+Location&daddr=PARKVIEW+INTERNATIONAL+HOTEL">Navigate
+                            to Huangshan</a>
+                    </p>
                     <br>
-                    <font style="font-weight:bold;color:#9f1e45;">Google Map&nbsp;(outside China):&nbsp;&nbsp;</font>
-                    <a href="https://www.google.com/maps?saddr=My+Location&daddr=Huangshan+University+South">Navigate to Huangshan</a>
-                    <!-- https://www.google.com/maps/dir/My+Location/29.7134173,118.287819 -->
-                </p> 
-                <br>
-                <!-- Google Map -->
-                <p style="text-align: center;">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.9794786444863!2d118.29017607557627!3d29.691374635212732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x343672cc14cdf187%3A0xf089cfdfb529c718!2z6buE5bGx5a2m6Zmi5Y2X5qCh5Yy6!5e0!3m2!1szh-CN!2shk!4v1699026112069!5m2!1szh-CN!2shk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </p>
+                    -->
 
-                <p style="font-size:14pt; margin:50px 7% 0px 7%; text-align:left;">
-                    <font style="font-weight:bold;color:#a7248a;">Baidu Map&nbsp;(in China):&nbsp;&nbsp;</font>
-                    <a href="https://j.map.baidu.com/57/zE4">Navigate to Conference Venue</a>
-                </p> 
-                <br>
-                <p style="text-align: center;">
-                    <iframe src="https://j.map.baidu.com/57/zE4"  style="width:60%;height:450px;border:0" loading="lazy"></iframe>
-                    <!-- https://lbsyun.baidu.com/index.php?title=uri/api/web -->
-                </p>
+                    <!-- Google Map -->
+                    <!--
+                    <p style="text-align: center;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.4387392666813!2d118.29129885364863!3d29.70690422063211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x343672d65b21525b%3A0xcf27df859211f6!2z6buE5bGx5qCi5pmv5YGH5pel6YWS5bqX!5e0!3m2!1szh-CN!2sjp!4v1724414872936!5m2!1szh-CN!2sjp"
+                            style="width:60%;height:450px;border:0" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </p>
+                    -->
 
+                    <hr width="90%" color="#f3e549" size="8" style="margin:30px 0 30px 5%;">
+                    </hr>
+                </div>
 
-                <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">Traffic</p>
-                <p style="font-size:14pt; margin:30px 0% 0px 7%; text-align:left;"><font style="font-weight:bold;color:#4bbdd0;">By Air:</font></p>
-                <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">
-                    Huangshan Airport (黄山机场) is also called Tunxi Airport (屯溪机场), located in the Tunxi suburb of Huangshan City, 7km from the city center. 
-                    The airport has domestic flights from Beijing, Shanghai, Xi’an, Tianjin, and Guangzhou, and international flights from Seoul and Inchon in South Korea. 
-                    It takes about three hours from Beijing, an hour from Shanghai, two hours from Xi'an and about an hour and a half from Guangzhou. 
-                    The flight from Hong Kong to Huangshan takes two hours and from Seoul takes around four hours.
-                </p>
-                <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">
-                    <strong>Shuttle buses 218 and 219</strong> between the airport and Huangshan University operate every day at 2~3 CNY/person. 
-                    A transfer is needed and the buses run 06:30–17:30 every 20 minutes.
-                </p>
-                <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">
-                    A <strong>taxi service</strong> is provided on the first floor of the terminal building in the airport. 
-                    A ride to the city center costs about 15~20 CNY in 10 minutes.
-                </p>
-
-                <p style="font-size:14pt; margin:30px 0% 0px 7%; text-align:left;"><font style="font-weight:bold;color:#4bbdd0;">By Train:</font></p>
-                <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">
-                    There is one High-speed railway station in the city. Huangshanbei Railway Station (黄山北火车站) has trains from most big and medium cities across China, such as Beijing, Shanghai, Hangzhou, Nanjing, and Guangzhou. 
-                    A ride from Beijing needs 5.5 hours. The train from Shanghai takes 2.5 hours and from Hangzhou takes 1.5 hours.
-                </p>
-                <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">
-                    <strong>Buses 2</strong> stop in front of the railway station. There are direct buses running between the railway station and Huangshan University. 
-                    They operate 07:05–21:30, departing every 30 minutes, and costing 5 CNY. A ride to Huangshan University is about 50 minutes.
-                </p>
-                <p style="font-size:14pt; margin:10px 7% 0px 7%; text-align:left;">
-                    A <strong>taxi service</strong> is also provided and A ride to Huangshan University costs about 45~70 CNY in 25 minutes.
-                </p>
-
-
-            
- 
-                 
-                 <br>
-                 
-                  <hr width="90%" color="#f3e549" size="8" style="margin:30px 0 30px 5%;"> </hr>
-               </div>
-
-           </div>
-   </div> <!-- /container -->
-        </div>
+            </div>
+        </div> <!-- /container -->
+    </div>
 
 
 
@@ -245,29 +328,33 @@
 
                 <div class="col-sm-3">https://pg2024.hsu.edu.cn/
                 </div>
+            </div>
         </div>
-    </div>
 
-    <div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+        <div style="display:none">
+            <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript'
+                charset='gb2312'></script>
+        </div>
 
-    <script type="text/javascript">
-        let btn = $('#buttonTop');
-        let toTopFlag = $('#toTopFlag');
+        <script type="text/javascript">
+            let btn = $('#buttonTop');
+            let toTopFlag = $('#toTopFlag');
 
-        $(window).scroll(() => {
-        if ($(window).scrollTop() > 0) {
-        btn.addClass('show');
-        } else {
-        btn.removeClass('show');
-        }
-        });
+            $(window).scroll(() => {
+                if ($(window).scrollTop() > 0) {
+                    btn.addClass('show');
+                } else {
+                    btn.removeClass('show');
+                }
+            });
 
-        btn.on('click', (e) => {
-        e.preventDefault();
-        $('html, body').animate({scrollTop:0}, '300');
-        });
-    </script>
+            btn.on('click', (e) => {
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: 0 }, '300');
+            });
+        </script>
 
 
 </body>
+
 </html>
