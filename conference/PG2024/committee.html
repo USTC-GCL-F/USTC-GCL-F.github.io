@@ -1,87 +1,96 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-	<style type="text/css">
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<style type="text/css">
+    .ul_style {
+        width: 90%;
+        margin: 30px 5% 30px 5%;
+    }
 
-       .ul_style{
-	    width:90%;
-	    margin:30px 5% 30px 5%;
-	    }
-	    .ul_style li p{
-	    font-size: 13pt;
-	    line-height:20px;
-	    }
+    .ul_style li p {
+        font-size: 13pt;
+        line-height: 20px;
+    }
 
-        .button-top {
-		  display: inline-block;
-		  background-color: #ccc;
-		  width: 50px;
-		  height: 50px;
-		  text-align: center;
-		  border-radius: 4px;
-		  position: fixed;
-		  bottom: 30px;
-		  right: 30px;
-		  transition: background-color .3s, 
-		    opacity .5s, visibility .5s;
-		  opacity: 0;
-		  visibility: hidden;
-		  z-index: 1000;
-		}
-		.button-top::after {
-		  content: "\f077";
-		  font-family: FontAwesome;
-		  font-weight: normal;
-		  font-style: normal;
-		  font-size: 2em;
-		  line-height: 50px;
-		  color: #fff;
-		}
-		.button-top:hover {
-		  cursor: pointer;
-		  background-color: #333;
-		}
-		.button-top:active {
-		  background-color: #555;
-		}
-		.button-top.show {
-		  opacity: 1;
-		  visibility: visible;
-		}
+    .button-top {
+        display: inline-block;
+        background-color: #ccc;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 4px;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        transition: background-color .3s,
+            opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
+    }
 
-	</style>
-    <head>
-        <title>PG 2024</title>
+    .button-top::after {
+        content: "\f077";
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 2em;
+        line-height: 50px;
+        color: #fff;
+    }
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="static/css/bootstrap.css" rel="stylesheet" /> <!-- CSS: Bootstrap -->
-        <link rel="stylesheet" type="text/css" href="static/css/getCss.css" /> <!-- CSS: Our css :)  -->
-        <link rel="stylesheet" type="text/css" href="static/css/jquery.fancybox-1.3.4.css" /> <!-- CSS: fancybox -->
-        <link rel="stylesheet" type="text/css" href="static/css/helper.css" />
+    .button-top:hover {
+        cursor: pointer;
+        background-color: #333;
+    }
 
-        <!-- Google fonts -->
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+    .button-top:active {
+        background-color: #555;
+    }
 
-        <!-- jQuery -->
-        <script type="text/javascript" src="static/js/jquery.min.js"></script>
-        <script type="text/javascript" src="static/js/jquery-ui-1.8.21.custom.min.js"></script>  <!-- JS: effects core + fold and clip -->
-        <!-- external stuff -->
-        <script type="text/javascript" src="static/js/javascript/custom.js"></script> <!-- JS: Our script :) -->
-        <script type="text/javascript" src="static/js/jquery.fancybox-1.3.4.pack.js"></script> <!-- JS: fancybox - modal image-->
-        <script type="text/javascript" src="static/js/fx.js"></script> <!-- JS: jquery fx used for the bar animation -->
-        <script type="text/javascript" src="static/js/jquery.nicescroll.min.js"></script> <!-- JS: nicescroll - the nice scrolling bar from index -->
-        <script type="text/javascript" src="static/js/jquery.masonry.min.js"></script> <!-- JS: masonry - portofolio new tile script -->
+    .button-top.show {
+        opacity: 1;
+        visibility: visible;
+    }
+</style>
+
+<head>
+    <title>PG 2024</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="static/css/bootstrap.css" rel="stylesheet" /> <!-- CSS: Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="static/css/getCss.css" /> <!-- CSS: Our css :)  -->
+    <link rel="stylesheet" type="text/css" href="static/css/jquery.fancybox-1.3.4.css" /> <!-- CSS: fancybox -->
+    <link rel="stylesheet" type="text/css" href="static/css/helper.css" />
+
+    <!-- Google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery-ui-1.8.21.custom.min.js"></script>
+    <!-- JS: effects core + fold and clip -->
+    <!-- external stuff -->
+    <script type="text/javascript" src="static/js/javascript/custom.js"></script> <!-- JS: Our script :) -->
+    <script type="text/javascript" src="static/js/jquery.fancybox-1.3.4.pack.js"></script>
+    <!-- JS: fancybox - modal image-->
+    <script type="text/javascript" src="static/js/fx.js"></script> <!-- JS: jquery fx used for the bar animation -->
+    <script type="text/javascript" src="static/js/jquery.nicescroll.min.js"></script>
+    <!-- JS: nicescroll - the nice scrolling bar from index -->
+    <script type="text/javascript" src="static/js/jquery.masonry.min.js"></script>
+    <!-- JS: masonry - portofolio new tile script -->
 
 
-        <script type="text/javascript" src="static/js/jquery.nivo.slider.pack.js"></script> <!-- JS: nivo slider -->
-        <link rel="stylesheet" type="text/css" href="static/css/nivo-slider.css" /> <!-- CSS: nivo slider -->
+    <script type="text/javascript" src="static/js/jquery.nivo.slider.pack.js"></script> <!-- JS: nivo slider -->
+    <link rel="stylesheet" type="text/css" href="static/css/nivo-slider.css" /> <!-- CSS: nivo slider -->
 
-        <script type="text/javascript" src="static/js/jquery.easing.1.3.js"></script> <!-- bx Slider -->
-        <script type="text/javascript" src="static/js/jquery.bxSlider.min.js"></script> <!-- bx Slider -->
-        <link rel="icon" href="images/favicon.png">
-    </head>
+    <script type="text/javascript" src="static/js/jquery.easing.1.3.js"></script> <!-- bx Slider -->
+    <script type="text/javascript" src="static/js/jquery.bxSlider.min.js"></script> <!-- bx Slider -->
+    <link rel="icon" href="images/favicon.png">
+</head>
+
 <body>
 
     <div class="nav_display">
@@ -97,7 +106,8 @@
                     <a href="committee.html" style="font-size: 13pt; line-height:30px;color:#434343;">ORGANIZERS</a>
                 </li>
                 <li>
-                    <a href="registration.html" style="font-size: 13pt; line-height:30px;color:#434343;">REGISTRATION</a>
+                    <a href="registration.html"
+                        style="font-size: 13pt; line-height:30px;color:#434343;">REGISTRATION</a>
                 </li>
                 <li>
                     <a href="program.html" style="font-size: 13pt; line-height:30px;color:#434343;">PROGRAM</a>
@@ -147,20 +157,29 @@
                 <img border="0" src="img/new/banner.jpg" width="100%" style="margin:0px 0 0px 0%; ">
 
                 <div id="content">
-                    <p style="font-size:15pt; margin:60px 5% 0px 5%; text-align:left;" class="organization">Conference Co-chairs</p>
+                    <p style="font-size:15pt; margin:60px 5% 0px 5%; text-align:left;" class="organization">Conference
+                        Co-chairs</p>
                     <br>
                     <table width="90%" style="margin:0px 0% 0 6%;">
                         <tr>
-                            <th width="25%"> <img border="0" src="img/bender.jpg" width="150px" height="auto" style="margin:20px 0% 15px 0%"></th>
-                            <th width="25%"> <img border="0" src="img/llg.png" width="150px" height="auto" style="margin:20px 0% 15px 0%"></th>
-                            <th width="25%"> <img border="0" src="img/denis.jpg" width="150px" height="auto" style="margin:20px 0% 15px 0%"></th>
-                            <th width="25%"> <img border="0" width="150px" height="auto" style="margin:20px 0% 15px 0%"></th>  <!-- empty item -->
+                            <th width="25%"> <img border="0" src="img/bender.jpg" width="150px" height="auto"
+                                    style="margin:20px 0% 15px 0%"></th>
+                            <th width="25%"> <img border="0" src="img/llg.png" width="150px" height="auto"
+                                    style="margin:20px 0% 15px 0%"></th>
+                            <th width="25%"> <img border="0" src="img/denis.jpg" width="150px" height="auto"
+                                    style="margin:20px 0% 15px 0%"></th>
+                            <th width="25%"> <img border="0" width="150px" height="auto" style="margin:20px 0% 15px 0%">
+                            </th> <!-- empty item -->
                         </tr>
                         <tr>
-                            <th><a target="_blank" style="font-size: 13pt;color: #0e90d2;margin:0px 0% 0px 0%;">Jan Bender</a></th>
-                            <th><a target="_blank" style="font-size: 13pt;color: #0e90d2;margin:0px 0% 0px 0%;">Ligang Liu</a></th>
-                            <th><a target="_blank" style="font-size: 13pt;color: #0e90d2;margin:0px 0% 0px 0%;">Denis Zorin</a></th>
-                            <th><a style="font-size: 13pt;color: #0e90d2; margin:0px 0% 0px 0%;"></a></th> <!-- empty item -->
+                            <th><a target="_blank" style="font-size: 13pt;color: #0e90d2;margin:0px 0% 0px 0%;">Jan
+                                    Bender</a></th>
+                            <th><a target="_blank" style="font-size: 13pt;color: #0e90d2;margin:0px 0% 0px 0%;">Ligang
+                                    Liu</a></th>
+                            <th><a target="_blank" style="font-size: 13pt;color: #0e90d2;margin:0px 0% 0px 0%;">Denis
+                                    Zorin</a></th>
+                            <th><a style="font-size: 13pt;color: #0e90d2; margin:0px 0% 0px 0%;"></a></th>
+                            <!-- empty item -->
                         </tr>
                         <tr>
                             <th>RWTH Aachen, Germany</th>
@@ -169,42 +188,60 @@
                         </tr>
                     </table>
 
-                    <p style="font-size:15pt; margin:60px 5% 0px 5%; text-align:left;" class="organization">Program Co-chairs</p>
+                    <p style="font-size:15pt; margin:60px 5% 0px 5%; text-align:left;" class="organization">Program
+                        Co-chairs</p>
                     <br>
                     <table width="90%" style="margin:0px 0% 0 6%;">
                         <tr>
-                            <th width="25%"> <img border="0" src="img/crj.jpg" width="150px" height="auto" style="margin:20px 0% 15px 0%"></th>
-                            <th width="25%"> <img border="0" src="img/tobias.png" width="150px" height="auto" style="margin:20px 0% 15px 0%"></th>
-                            <th width="25%"> <img border="0" src="img/Whiting.jpg" width="150px" height="auto" style="margin:20px 0% 15px 0%"></th>
-                            <th width="25%"> <img border="0" width="150px" height="auto" style="margin:20px 0% 15px 0%"></th>  <!-- empty item -->
+                            <th width="25%"> <img border="0" src="img/crj.jpg" width="150px" height="auto"
+                                    style="margin:20px 0% 15px 0%"></th>
+                            <th width="25%"> <img border="0" src="img/tobias.png" width="150px" height="auto"
+                                    style="margin:20px 0% 15px 0%"></th>
+                            <th width="25%"> <img border="0" src="img/Whiting.jpg" width="150px" height="auto"
+                                    style="margin:20px 0% 15px 0%"></th>
+                            <th width="25%"> <img border="0" width="150px" height="auto" style="margin:20px 0% 15px 0%">
+                            </th> <!-- empty item -->
                         </tr>
                         <tr>
-                            <th><a target="_blank" style="font-size: 13pt;color: #0e90d2;margin:0px 0% 0px 0%;">Renjie Chen</a></th>
-                            <th><a target="_blank" style="font-size: 13pt;color: #0e90d2;margin:0px 0% 0px 0%;">Tobias Ritschel</a></th>
-                            <th><a target="_blank" style="font-size: 13pt;color: #0e90d2;margin:0px 0% 0px 0%;">Emily Whiting</a></th>
-                            <th><a style="font-size: 13pt;color: #0e90d2; margin:0px 0% 0px 0%;"></a></th> <!-- empty item -->
+                            <th><a target="_blank" style="font-size: 13pt;color: #0e90d2;margin:0px 0% 0px 0%;">Renjie
+                                    Chen</a></th>
+                            <th><a target="_blank" style="font-size: 13pt;color: #0e90d2;margin:0px 0% 0px 0%;">Tobias
+                                    Ritschel</a></th>
+                            <th><a target="_blank" style="font-size: 13pt;color: #0e90d2;margin:0px 0% 0px 0%;">Emily
+                                    Whiting</a></th>
+                            <th><a style="font-size: 13pt;color: #0e90d2; margin:0px 0% 0px 0%;"></a></th>
+                            <!-- empty item -->
                         </tr>
                         <tr>
                             <th>University of Science and Technology of China</th>
                             <th>University College London, UK</th>
-                            <th>Boston University,  USA</th>
+                            <th>Boston University, USA</th>
                         </tr>
                     </table>
 
-                    <p style="font-size:15pt; margin:60px 5% 0px 5%; text-align:left;" class="organization">Organization Co-chairs</p>
+                    <p style="font-size:15pt; margin:60px 5% 0px 5%; text-align:left;" class="organization">Organization
+                        Co-chairs</p>
                     <br>
                     <table width="90%" style="margin:0px 0% 0 6%;">
                         <tr>
-                            <th width="25%"> <img border="0" src="img/fxm.png" width="150px" height="auto" style="margin:20px 0% 15px 0%"></th>
-                            <th width="25%"> <img border="0" src="img/hyw.png" width="150px" height="auto" style="margin:20px 0% 15px 0%"></th>
-                            <th width="25%"> <img border="0" width="150px" height="auto" style="margin:20px 0% 15px 0%"></th>  <!-- empty item -->
-                            <th width="25%"> <img border="0" width="150px" height="auto" style="margin:20px 0% 15px 0%"></th>  <!-- empty item -->
+                            <th width="25%"> <img border="0" src="img/fxm.png" width="150px" height="auto"
+                                    style="margin:20px 0% 15px 0%"></th>
+                            <th width="25%"> <img border="0" src="img/hyw.png" width="150px" height="auto"
+                                    style="margin:20px 0% 15px 0%"></th>
+                            <th width="25%"> <img border="0" width="150px" height="auto" style="margin:20px 0% 15px 0%">
+                            </th> <!-- empty item -->
+                            <th width="25%"> <img border="0" width="150px" height="auto" style="margin:20px 0% 15px 0%">
+                            </th> <!-- empty item -->
                         </tr>
                         <tr>
-                            <th><a target="_blank" style="font-size: 13pt;color: #0e90d2;margin:0px 0% 0px 0%;">Xiao-Ming Fu</a></th>
-                            <th><a target="_blank" style="font-size: 13pt;color: #0e90d2;margin:0px 0% 0px 0%;">Jianwei Hu</a></th>
-                            <th><a style="font-size: 13pt;color: #0e90d2; margin:0px 0% 0px 0%;"></a></th> <!-- empty item -->
-                            <th><a style="font-size: 13pt;color: #0e90d2; margin:0px 0% 0px 0%;"></a></th> <!-- empty item -->
+                            <th><a target="_blank"
+                                    style="font-size: 13pt;color: #0e90d2;margin:0px 0% 0px 0%;">Xiao-Ming Fu</a></th>
+                            <th><a target="_blank" style="font-size: 13pt;color: #0e90d2;margin:0px 0% 0px 0%;">Jianwei
+                                    Hu</a></th>
+                            <th><a style="font-size: 13pt;color: #0e90d2; margin:0px 0% 0px 0%;"></a></th>
+                            <!-- empty item -->
+                            <th><a style="font-size: 13pt;color: #0e90d2; margin:0px 0% 0px 0%;"></a></th>
+                            <!-- empty item -->
                         </tr>
                         <tr>
                             <th>University of Science and Technology of China</th>
@@ -212,136 +249,382 @@
                         </tr>
                     </table>
 
-                    <p style="font-size:15pt; margin:60px 5% 0px 5%; text-align:left;" class="organization">Sorting Committee</p>
+                    <p style="font-size:15pt; margin:60px 5% 0px 5%; text-align:left;" class="organization">Sorting
+                        Committee</p>
                     <br>
                     <table width="90%" style="font-size:13pt; margin:0px 0% 0 6%;">
-<tr><td>Renjie Chen, University of Science and Technology of China</td>
-</tr><tr><td>Tobias Ritschel, University College London</td></tr>
-<tr><td>Emily Whiting, Boston University</td>
-<tr><td>Kellnhofer Petr, TU Delft</td>
- </tr><tr><td>Nico Pietroni, University of Technology Sydney</td></tr>
-</tr><tr><td>Beibei Wang, Nanjing University</td></tr>
+                        <tr>
+                            <td>Renjie Chen, University of Science and Technology of China</td>
+                        </tr>
+                        <tr>
+                            <td>Tobias Ritschel, University College London</td>
+                        </tr>
+                        <tr>
+                            <td>Emily Whiting, Boston University</td>
+                        <tr>
+                            <td>Kellnhofer Petr, TU Delft</td>
+                        </tr>
+                        <tr>
+                            <td>Nico Pietroni, University of Technology Sydney</td>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <td>Beibei Wang, Nanjing University</td>
+                        </tr>
                     </table>
 
 
-                    <p style="font-size:15pt; margin:60px 5% 0px 5%; text-align:left;" class="organization">Program Committee</p>
+                    <p style="font-size:15pt; margin:60px 5% 0px 5%; text-align:left;" class="organization">Program
+                        Committee</p>
                     <br>
                     <table width="90%" style="font-size:13pt; margin:0px 0% 0 6%;">
-<tr><td>Aigerman Noam, University of Montreal</td>
-</tr><tr>   <td>Aksoy Yagiz, Simon Fraser University</td></tr>
-<tr><td>Baek Seung-Hwan, POSTECH</td>
-</tr><tr>    <td>Batty Christopher, University of Waterloo</td></tr>
-<tr><td>Bessmeltsev Mikhail, Université de Montréal</td>
- </tr><tr>   <td>Bonneel Nicolas, CNRS / UNIV. LYON</td></tr>
-<tr><td>Cadik Martin, Brno University of Technology</td>
- </tr><tr>   <td>Cao Juan, Xiamen University</td></tr>
-<tr><td>Chen Bin, Max-Planck-Institut für Informatik</td>
- </tr><tr>   <td>Chen Xuejin, University of Science and Technology of China</td></tr>
-<tr><td>Chen Zhonggui, Xiamen University</td>
- </tr><tr>   <td>Cho Sunghyun, POSTECH</td></tr>
-<tr><td>Cordonnier Guillaume, Inria Université Côte d'Azur</td>
- </tr><tr>   <td>Dachsbacher Carsten, Karlsruhe Institute of Technology</td></tr>
-<tr><td>Digne Julie, LIRIS - CNRS</td>
- </tr><tr>   <td>Dischler Jean-Michel, ICUBE - Université de Strasbourg</td></tr>
-<tr><td>Dodgson Neil, Victoria University of Wellington</td>
- </tr><tr>   <td>Fang Qing, University of Science and Technology of China</td></tr>
-<tr><td>Faraj Noura, Université de Montpellier -- LIRMM</td>
- </tr><tr>   <td>Frisvad Jeppe Revall, Technical University of Denmark</td></tr>
-<tr><td>Fu Hongbo, City University of Hong Kong</td>
- </tr><tr>   <td>Gain James, University of Cape Town</td></tr>
-<tr><td>Galin Eric, LIRIS - Université Claude Bernard Lyon 1</td>
- </tr><tr>   <td>Gao Xifeng, Tencent America</td></tr>
-<tr><td>Giorgi Daniela, National Research Council of Italy – Institute of Information Science and Technologies</td>
- </tr><tr>   <td>Grittmann Pascal, Saarland University</td></tr>
-<tr><td>Gryaditskaya Yulia, CVSSP Surrey Institute for People-Centred AI</td>
- </tr><tr>   <td>Günther Tobias, FAU Erlangen-Nuremberg</td></tr>
-<tr><td>Guo Xiaohu, University of Texas at Dallas</td>
- </tr><tr>   <td>Han Xiaoguang, CUHK - Shenzhen</td></tr>
-<tr><td>Havran Vlastimil, Czech Technical University in Prague</td>
- </tr><tr>   <td>He Ying, Nanyang Technological University</td></tr>
-<tr><td>Herholz Sebastian, Intel Corporation</td>
- </tr><tr>   <td>Holden Daniel, Epic Games</td></tr>
-<tr><td>Jeschke Stefan, unaffiliated</td>
- </tr><tr>   <td>Jiang Caigui, Xi'an Jiaotong University</td></tr>
-<tr><td>Jorge Joaquim, INESC-ID</td>
- </tr><tr>   <td>Kellnhofer Petr, TU Delft</td></tr>
-<tr><td>Kim Young Min, Seoul National University</td>
- </tr><tr>   <td>Klein Reinhard, University of Bonn</td></tr>
-<tr><td>Kobbelt Leif, RWTH Aachen University</td>
- </tr><tr>   <td>Kuffner dos Anjos Rafael, University College London</td></tr>
-<tr><td>Kwon Taesoo, Hanyang University</td>
- </tr><tr>   <td>Lai Yu-Kun, Cardiff University</td></tr>
-<tr><td>Larsson Maria, The University of Tokyo</td>
- </tr><tr>   <td>Le Binh, SEED - Electronic Arts</td></tr>
-<tr><td>Lee Joo Ho, Sogang University</td>
- </tr><tr>   <td>Lee Yoonsang, Hanyang University</td></tr>
-<tr><td>Li Minchen, Carnegie Mellon University</td>
- </tr><tr>   <td>Li Xin, Texas A&M University</td></tr>
-<tr><td>Lin Wen-Chieh, National Yang Ming Chiao Tong University</td>
- </tr><tr>   <td>Liu Libin, Peking University</td></tr>
-<tr><td>Liu Tiantian, Taichi Graphics</td>
- </tr><tr>   <td>Liu Zheng, China University of Geosciences</td></tr>
-<tr><td>Lu Lin, Shandong University</td>
- </tr><tr>   <td>Marco Julio, Universidad Zaragoza</td></tr>
-<tr><td>Meng Xiaoxu, Tencent</td>
- </tr><tr>   <td>Meyer Alexandre, Université Lyon</td></tr>
-<tr><td>Michels Dominik L., KAUST</td>
- </tr><tr>   <td>Montazeri Zahra, University of Manchester</td></tr>
-<tr><td>Nam Giljoo, Facebook</td>
- </tr><tr>   <td>Narain Rahul, Indian Institute of Technology Delhi</td></tr>
-<tr><td>Nguyen-Phuoc Thu, Reality Labs Research Meta</td>
- </tr><tr>   <td>Okabe Makoto, Shizuoka University</td></tr>
-<tr><td>Oliveira Manuel M., Universidade Federal do Rio Grande do Sul</td>
- </tr><tr>   <td>Pan Hao, Microsoft Research Asia</td></tr>
-<tr><td>Parakkat Amal Dev, Institut Polytechnique de Paris</td>
- </tr><tr>   <td>Patane Giuseppe, CNR-IMATI</td></tr>
-<tr><td>Pellacini Fabio, University of Modena and Reggio Emilia</td>
- </tr><tr>   <td>Philip Julien, Netflix Eyeline Studios</td></tr>
-<tr><td>Pietroni Nico, University of Technology Sydney</td>
- </tr><tr>   <td>Piovarči Michal, ETH Zurich</td></tr>
-<tr><td>Popa Tiberiu, Concordia University</td>
- </tr><tr>   <td>Ren Bo, Nankai Univeristy</td></tr>
-<tr><td>Ren Jing, ETH Zurich</td>
- </tr><tr>   <td>Roessl Christian, University of Magdeburg</td></tr>
-<tr><td>Schreck Camille, Inria Nancy</td>
- </tr><tr>   <td>Sharp Nicholas, NVIDIA</td></tr>
-<tr><td>Singh Gurprit, Max-Planck Institute for Informatics Saarbrucken</td>
- </tr><tr>   <td>Song Peng, Singapore University of Technology and Design</td></tr>
-<tr><td>Su Wanchao, Monash University</td>
- </tr><tr>   <td>Subr Kartic, University of Edinburgh</td></tr>
-<tr><td>Sun Qi, New York University</td>
- </tr><tr>   <td>Tan Jianchao, George Mason University</td></tr>
-<tr><td>Tang Min, Zhejiang University</td>
- </tr><tr>   <td>Thiery Jean-Marc, Adobe Research</td></tr>
-<tr><td>Tursun Cara, University of Groningen</td>
- </tr><tr>   <td>Umetani Nobuyuki, The University of Tokyo</td></tr>
-<tr><td>Vaxman Amir, The University of Edinburgh</td>
- </tr><tr>   <td>Vouga Etienne, UT Austin</td></tr>
-<tr><td>Wang Beibei, Nanjing University</td>
- </tr><tr>   <td>Wang Miao, Beihang University</td></tr>
-<tr><td>Wang Yunhai, Shandong university</td>
- </tr><tr>   <td>Wu Hongzhi, Zhejiang University</td></tr>
-<tr><td>Wu Hsiang-Yun, The St. Pölten University of Applied Sciences</td>
- </tr><tr>   <td>Wu Kui, LightSpeed Studios</td></tr>
- </tr><tr>   <td>Xia Shihong, Institute of Computing Technology Chinese Academy of Sciences</td></tr>
-<tr><td>Xiao Chunxia, Wuhan University</td>
- </tr><tr>   <td>Xin Shiqing, Shandong University</td></tr>
-<tr><td>Xu Feng, Tsinghua University</td>
- </tr><tr>   <td>Xu Kun, Tsinghua University</td></tr>
-<tr><td>Xu Pengfei, Shenzhen University</td>
- </tr><tr>   <td>Xu Weiwei, Zhejiang University</td></tr>
-<tr><td>Ye Hui, City University of Hong Kong</td>
- </tr><tr>   <td>Yue Yonghao, Aoyama Gakuin University</td></tr>
-<tr><td>Zhai Xiaoya, University of Science and Technology of China</td>
- </tr><tr>   <td>Zhang Fang-Lue, Victoria University of Wellington</td></tr>
-<tr><td>Zhang Lei, Beijing Institute of Technology</td>
- </tr><tr>   <td>Zhang Meng, Nanjng University of Science and Technology</td></tr>
-<tr><td>Zhang Yun, Communication University of Zhejiang</td>
- </tr><tr>   <td>Zhao Haisen, Shandong University</td></tr>
-<tr><td>Zhu Bo, Georgia Institute of Technology</td>
- </tr><tr>   <td>Zhu Chenyang, National University of Defense Technology</td></tr>
-<tr><td>Zhu Junqiu, UC Santa Barbara</td>
- </tr><tr>   <td>Zhu Zhe, Duke University</td></tr>
+                        <tr>
+                            <td>Aigerman Noam, University of Montreal</td>
+                        </tr>
+                        <tr>
+                            <td>Aksoy Yagiz, Simon Fraser University</td>
+                        </tr>
+                        <tr>
+                            <td>Baek Seung-Hwan, POSTECH</td>
+                        </tr>
+                        <tr>
+                            <td>Batty Christopher, University of Waterloo</td>
+                        </tr>
+                        <tr>
+                            <td>Bessmeltsev Mikhail, Université de Montréal</td>
+                        </tr>
+                        <tr>
+                            <td>Bonneel Nicolas, CNRS / UNIV. LYON</td>
+                        </tr>
+                        <tr>
+                            <td>Cadik Martin, Brno University of Technology</td>
+                        </tr>
+                        <tr>
+                            <td>Cao Juan, Xiamen University</td>
+                        </tr>
+                        <tr>
+                            <td>Chen Bin, Max-Planck-Institut für Informatik</td>
+                        </tr>
+                        <tr>
+                            <td>Chen Xuejin, University of Science and Technology of China</td>
+                        </tr>
+                        <tr>
+                            <td>Chen Zhonggui, Xiamen University</td>
+                        </tr>
+                        <tr>
+                            <td>Cho Sunghyun, POSTECH</td>
+                        </tr>
+                        <tr>
+                            <td>Cordonnier Guillaume, Inria Université Côte d'Azur</td>
+                        </tr>
+                        <tr>
+                            <td>Dachsbacher Carsten, Karlsruhe Institute of Technology</td>
+                        </tr>
+                        <tr>
+                            <td>Digne Julie, LIRIS - CNRS</td>
+                        </tr>
+                        <tr>
+                            <td>Dischler Jean-Michel, ICUBE - Université de Strasbourg</td>
+                        </tr>
+                        <tr>
+                            <td>Dodgson Neil, Victoria University of Wellington</td>
+                        </tr>
+                        <tr>
+                            <td>Fang Qing, University of Science and Technology of China</td>
+                        </tr>
+                        <tr>
+                            <td>Faraj Noura, Université de Montpellier -- LIRMM</td>
+                        </tr>
+                        <tr>
+                            <td>Frisvad Jeppe Revall, Technical University of Denmark</td>
+                        </tr>
+                        <tr>
+                            <td>Fu Hongbo, City University of Hong Kong</td>
+                        </tr>
+                        <tr>
+                            <td>Gain James, University of Cape Town</td>
+                        </tr>
+                        <tr>
+                            <td>Galin Eric, LIRIS - Université Claude Bernard Lyon 1</td>
+                        </tr>
+                        <tr>
+                            <td>Gao Xifeng, Tencent America</td>
+                        </tr>
+                        <tr>
+                            <td>Giorgi Daniela, National Research Council of Italy – Institute of Information Science
+                                and Technologies</td>
+                        </tr>
+                        <tr>
+                            <td>Grittmann Pascal, Saarland University</td>
+                        </tr>
+                        <tr>
+                            <td>Gryaditskaya Yulia, CVSSP Surrey Institute for People-Centred AI</td>
+                        </tr>
+                        <tr>
+                            <td>Günther Tobias, FAU Erlangen-Nuremberg</td>
+                        </tr>
+                        <tr>
+                            <td>Guo Xiaohu, University of Texas at Dallas</td>
+                        </tr>
+                        <tr>
+                            <td>Han Xiaoguang, CUHK - Shenzhen</td>
+                        </tr>
+                        <tr>
+                            <td>Havran Vlastimil, Czech Technical University in Prague</td>
+                        </tr>
+                        <tr>
+                            <td>He Ying, Nanyang Technological University</td>
+                        </tr>
+                        <tr>
+                            <td>Herholz Sebastian, Intel Corporation</td>
+                        </tr>
+                        <tr>
+                            <td>Holden Daniel, Epic Games</td>
+                        </tr>
+                        <tr>
+                            <td>Jeschke Stefan, unaffiliated</td>
+                        </tr>
+                        <tr>
+                            <td>Jiang Caigui, Xi'an Jiaotong University</td>
+                        </tr>
+                        <tr>
+                            <td>Jorge Joaquim, INESC-ID</td>
+                        </tr>
+                        <tr>
+                            <td>Kellnhofer Petr, TU Delft</td>
+                        </tr>
+                        <tr>
+                            <td>Kim Young Min, Seoul National University</td>
+                        </tr>
+                        <tr>
+                            <td>Klein Reinhard, University of Bonn</td>
+                        </tr>
+                        <tr>
+                            <td>Kobbelt Leif, RWTH Aachen University</td>
+                        </tr>
+                        <tr>
+                            <td>Kuffner dos Anjos Rafael, University College London</td>
+                        </tr>
+                        <tr>
+                            <td>Kwon Taesoo, Hanyang University</td>
+                        </tr>
+                        <tr>
+                            <td>Lai Yu-Kun, Cardiff University</td>
+                        </tr>
+                        <tr>
+                            <td>Larsson Maria, The University of Tokyo</td>
+                        </tr>
+                        <tr>
+                            <td>Le Binh, SEED - Electronic Arts</td>
+                        </tr>
+                        <tr>
+                            <td>Lee Joo Ho, Sogang University</td>
+                        </tr>
+                        <tr>
+                            <td>Lee Yoonsang, Hanyang University</td>
+                        </tr>
+                        <tr>
+                            <td>Li Minchen, Carnegie Mellon University</td>
+                        </tr>
+                        <tr>
+                            <td>Li Xin, Texas A&M University</td>
+                        </tr>
+                        <tr>
+                            <td>Lin Wen-Chieh, National Yang Ming Chiao Tong University</td>
+                        </tr>
+                        <tr>
+                            <td>Liu Libin, Peking University</td>
+                        </tr>
+                        <tr>
+                            <td>Liu Tiantian, Taichi Graphics</td>
+                        </tr>
+                        <tr>
+                            <td>Liu Zheng, China University of Geosciences</td>
+                        </tr>
+                        <tr>
+                            <td>Lu Lin, Shandong University</td>
+                        </tr>
+                        <tr>
+                            <td>Marco Julio, Universidad Zaragoza</td>
+                        </tr>
+                        <tr>
+                            <td>Meng Xiaoxu, Tencent</td>
+                        </tr>
+                        <tr>
+                            <td>Meyer Alexandre, Université Lyon</td>
+                        </tr>
+                        <tr>
+                            <td>Michels Dominik L., KAUST</td>
+                        </tr>
+                        <tr>
+                            <td>Montazeri Zahra, University of Manchester</td>
+                        </tr>
+                        <tr>
+                            <td>Nam Giljoo, Facebook</td>
+                        </tr>
+                        <tr>
+                            <td>Narain Rahul, Indian Institute of Technology Delhi</td>
+                        </tr>
+                        <tr>
+                            <td>Nguyen-Phuoc Thu, Reality Labs Research Meta</td>
+                        </tr>
+                        <tr>
+                            <td>Okabe Makoto, Shizuoka University</td>
+                        </tr>
+                        <tr>
+                            <td>Oliveira Manuel M., Universidade Federal do Rio Grande do Sul</td>
+                        </tr>
+                        <tr>
+                            <td>Pan Hao, Microsoft Research Asia</td>
+                        </tr>
+                        <tr>
+                            <td>Parakkat Amal Dev, Institut Polytechnique de Paris</td>
+                        </tr>
+                        <tr>
+                            <td>Patane Giuseppe, CNR-IMATI</td>
+                        </tr>
+                        <tr>
+                            <td>Pellacini Fabio, University of Modena and Reggio Emilia</td>
+                        </tr>
+                        <tr>
+                            <td>Philip Julien, Netflix Eyeline Studios</td>
+                        </tr>
+                        <tr>
+                            <td>Pietroni Nico, University of Technology Sydney</td>
+                        </tr>
+                        <tr>
+                            <td>Piovarči Michal, ETH Zurich</td>
+                        </tr>
+                        <tr>
+                            <td>Popa Tiberiu, Concordia University</td>
+                        </tr>
+                        <tr>
+                            <td>Ren Bo, Nankai Univeristy</td>
+                        </tr>
+                        <tr>
+                            <td>Ren Jing, ETH Zurich</td>
+                        </tr>
+                        <tr>
+                            <td>Roessl Christian, University of Magdeburg</td>
+                        </tr>
+                        <tr>
+                            <td>Schreck Camille, Inria Nancy</td>
+                        </tr>
+                        <tr>
+                            <td>Sharp Nicholas, NVIDIA</td>
+                        </tr>
+                        <tr>
+                            <td>Singh Gurprit, Max-Planck Institute for Informatics Saarbrucken</td>
+                        </tr>
+                        <tr>
+                            <td>Song Peng, Singapore University of Technology and Design</td>
+                        </tr>
+                        <tr>
+                            <td>Su Wanchao, Monash University</td>
+                        </tr>
+                        <tr>
+                            <td>Subr Kartic, University of Edinburgh</td>
+                        </tr>
+                        <tr>
+                            <td>Sun Qi, New York University</td>
+                        </tr>
+                        <tr>
+                            <td>Tan Jianchao, George Mason University</td>
+                        </tr>
+                        <tr>
+                            <td>Tang Min, Zhejiang University</td>
+                        </tr>
+                        <tr>
+                            <td>Thiery Jean-Marc, Adobe Research</td>
+                        </tr>
+                        <tr>
+                            <td>Tursun Cara, University of Groningen</td>
+                        </tr>
+                        <tr>
+                            <td>Umetani Nobuyuki, The University of Tokyo</td>
+                        </tr>
+                        <tr>
+                            <td>Vaxman Amir, The University of Edinburgh</td>
+                        </tr>
+                        <tr>
+                            <td>Vouga Etienne, UT Austin</td>
+                        </tr>
+                        <tr>
+                            <td>Wang Beibei, Nanjing University</td>
+                        </tr>
+                        <tr>
+                            <td>Wang Miao, Beihang University</td>
+                        </tr>
+                        <tr>
+                            <td>Wang Yunhai, Shandong university</td>
+                        </tr>
+                        <tr>
+                            <td>Wu Hongzhi, Zhejiang University</td>
+                        </tr>
+                        <tr>
+                            <td>Wu Hsiang-Yun, The St. Pölten University of Applied Sciences</td>
+                        </tr>
+                        <tr>
+                            <td>Wu Kui, LightSpeed Studios</td>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <td>Xia Shihong, Institute of Computing Technology Chinese Academy of Sciences</td>
+                        </tr>
+                        <tr>
+                            <td>Xiao Chunxia, Wuhan University</td>
+                        </tr>
+                        <tr>
+                            <td>Xin Shiqing, Shandong University</td>
+                        </tr>
+                        <tr>
+                            <td>Xu Feng, Tsinghua University</td>
+                        </tr>
+                        <tr>
+                            <td>Xu Kun, Tsinghua University</td>
+                        </tr>
+                        <tr>
+                            <td>Xu Pengfei, Shenzhen University</td>
+                        </tr>
+                        <tr>
+                            <td>Xu Weiwei, Zhejiang University</td>
+                        </tr>
+                        <tr>
+                            <td>Ye Hui, City University of Hong Kong</td>
+                        </tr>
+                        <tr>
+                            <td>Yue Yonghao, Aoyama Gakuin University</td>
+                        </tr>
+                        <tr>
+                            <td>Zhai Xiaoya, University of Science and Technology of China</td>
+                        </tr>
+                        <tr>
+                            <td>Zhang Fang-Lue, Victoria University of Wellington</td>
+                        </tr>
+                        <tr>
+                            <td>Zhang Lei, Beijing Institute of Technology</td>
+                        </tr>
+                        <tr>
+                            <td>Zhang Meng, Nanjng University of Science and Technology</td>
+                        </tr>
+                        <tr>
+                            <td>Zhang Yun, Communication University of Zhejiang</td>
+                        </tr>
+                        <tr>
+                            <td>Zhao Haisen, Shandong University</td>
+                        </tr>
+                        <tr>
+                            <td>Zhu Bo, Georgia Institute of Technology</td>
+                        </tr>
+                        <tr>
+                            <td>Zhu Chenyang, National University of Defense Technology</td>
+                        </tr>
+                        <tr>
+                            <td>Zhu Junqiu, UC Santa Barbara</td>
+                        </tr>
+                        <tr>
+                            <td>Zhu Zhe, Duke University</td>
+                        </tr>
                     </table>
                     <br>
                     <br>
@@ -360,27 +643,28 @@
 
                 <div class="col-sm-3">https://pg2024.hsu.edu.cn/
                 </div>
+            </div>
         </div>
-    </div>
 
-    <script type="text/javascript">
-        let btn = $('#buttonTop');
-        let toTopFlag = $('#toTopFlag');
+        <script type="text/javascript">
+            let btn = $('#buttonTop');
+            let toTopFlag = $('#toTopFlag');
 
-        $(window).scroll(() => {
-        if ($(window).scrollTop() > 0) {
-        btn.addClass('show');
-        } else {
-        btn.removeClass('show');
-        }
-        });
+            $(window).scroll(() => {
+                if ($(window).scrollTop() > 0) {
+                    btn.addClass('show');
+                } else {
+                    btn.removeClass('show');
+                }
+            });
 
-        btn.on('click', (e) => {
-        e.preventDefault();
-        $('html, body').animate({scrollTop:0}, '300');
-        });
-    </script>
+            btn.on('click', (e) => {
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: 0 }, '300');
+            });
+        </script>
 
 
 </body>
+
 </html>

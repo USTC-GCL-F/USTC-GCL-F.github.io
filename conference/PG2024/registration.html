@@ -1,88 +1,109 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-	<style type="text/css">
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<style type="text/css">
+    .ul_style {
+        width: 90%;
+        margin: 30px 5% 30px 5%;
+    }
 
-       .ul_style{
-	    width:90%;
-	    margin:30px 5% 30px 5%;
-	    }
-	    .ul_style li p{
-	    font-size: 13pt;
-	    line-height:20px;
-	    }
+    .ul_style li p {
+        font-size: 13pt;
+        line-height: 20px;
+    }
 
-        .button-top {
-		  display: inline-block;
-		  background-color: #ccc;
-		  width: 50px;
-		  height: 50px;
-		  text-align: center;
-		  border-radius: 4px;
-		  position: fixed;
-		  bottom: 30px;
-		  right: 30px;
-		  transition: background-color .3s, 
-		    opacity .5s, visibility .5s;
-		  opacity: 0;
-		  visibility: hidden;
-		  z-index: 1000;
-		}
-		.button-top::after {
-		  content: "\f077";
-		  font-family: FontAwesome;
-		  font-weight: normal;
-		  font-style: normal;
-		  font-size: 2em;
-		  line-height: 50px;
-		  color: #fff;
-		}
-		.button-top:hover {
-		  cursor: pointer;
-		  background-color: #333;
-		}
-		.button-top:active {
-		  background-color: #555;
-		}
-		.button-top.show {
-		  opacity: 1;
-		  visibility: visible;
-		}
+    .button-top {
+        display: inline-block;
+        background-color: #ccc;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 4px;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        transition: background-color .3s,
+            opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
+    }
 
-        .table-c table th{border-left:1px solid;border-top:1px solid ;font-size:12pt; font-weight:normal; color:#404040;} 
-	    .table-c table{border-right:1px solid ;border-bottom:1px solid; margin:30px 5% 0px 5%;} 
+    .button-top::after {
+        content: "\f077";
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 2em;
+        line-height: 50px;
+        color: #fff;
+    }
 
-	</style>
-    <head>
-        <title>PG 2024</title>
+    .button-top:hover {
+        cursor: pointer;
+        background-color: #333;
+    }
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="static/css/bootstrap.css" rel="stylesheet" /> <!-- CSS: Bootstrap -->
-        <link rel="stylesheet" type="text/css" href="static/css/getCss.css" /> <!-- CSS: Our css :)  -->
-        <link rel="stylesheet" type="text/css" href="static/css/jquery.fancybox-1.3.4.css" /> <!-- CSS: fancybox -->
-        <link rel="stylesheet" type="text/css" href="static/css/helper.css" />
+    .button-top:active {
+        background-color: #555;
+    }
 
-        <!-- Google fonts -->
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+    .button-top.show {
+        opacity: 1;
+        visibility: visible;
+    }
 
-        <!-- jQuery -->
-        <script type="text/javascript" src="static/js/jquery.min.js"></script>
-        <script type="text/javascript" src="static/js/jquery-ui-1.8.21.custom.min.js"></script>  <!-- JS: effects core + fold and clip -->
-        <!-- external stuff -->
-        <script type="text/javascript" src="static/js/javascript/custom.js"></script> <!-- JS: Our script :) -->
-        <script type="text/javascript" src="static/js/jquery.fancybox-1.3.4.pack.js"></script> <!-- JS: fancybox - modal image-->
-        <script type="text/javascript" src="static/js/fx.js"></script> <!-- JS: jquery fx used for the bar animation -->
-        <script type="text/javascript" src="static/js/jquery.nicescroll.min.js"></script> <!-- JS: nicescroll - the nice scrolling bar from index -->
-        <script type="text/javascript" src="static/js/jquery.masonry.min.js"></script> <!-- JS: masonry - portofolio new tile script -->
+    .table-c table th {
+        border-left: 1px solid;
+        border-top: 1px solid;
+        font-size: 12pt;
+        font-weight: normal;
+        color: #404040;
+    }
 
-        <script type="text/javascript" src="static/js/jquery.nivo.slider.pack.js"></script> <!-- JS: nivo slider -->
-        <link rel="stylesheet" type="text/css" href="static/css/nivo-slider.css" /> <!-- CSS: nivo slider -->
+    .table-c table {
+        border-right: 1px solid;
+        border-bottom: 1px solid;
+        margin: 30px 5% 0px 5%;
+    }
+</style>
 
-        <script type="text/javascript" src="static/js/jquery.easing.1.3.js"></script> <!-- bx Slider -->
-        <script type="text/javascript" src="static/js/jquery.bxSlider.min.js"></script> <!-- bx Slider -->
-        <link rel="icon" href="images/favicon.png">
-    </head>
+<head>
+    <title>PG 2024</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="static/css/bootstrap.css" rel="stylesheet" /> <!-- CSS: Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="static/css/getCss.css" /> <!-- CSS: Our css :)  -->
+    <link rel="stylesheet" type="text/css" href="static/css/jquery.fancybox-1.3.4.css" /> <!-- CSS: fancybox -->
+    <link rel="stylesheet" type="text/css" href="static/css/helper.css" />
+
+    <!-- Google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery-ui-1.8.21.custom.min.js"></script>
+    <!-- JS: effects core + fold and clip -->
+    <!-- external stuff -->
+    <script type="text/javascript" src="static/js/javascript/custom.js"></script> <!-- JS: Our script :) -->
+    <script type="text/javascript" src="static/js/jquery.fancybox-1.3.4.pack.js"></script>
+    <!-- JS: fancybox - modal image-->
+    <script type="text/javascript" src="static/js/fx.js"></script> <!-- JS: jquery fx used for the bar animation -->
+    <script type="text/javascript" src="static/js/jquery.nicescroll.min.js"></script>
+    <!-- JS: nicescroll - the nice scrolling bar from index -->
+    <script type="text/javascript" src="static/js/jquery.masonry.min.js"></script>
+    <!-- JS: masonry - portofolio new tile script -->
+
+    <script type="text/javascript" src="static/js/jquery.nivo.slider.pack.js"></script> <!-- JS: nivo slider -->
+    <link rel="stylesheet" type="text/css" href="static/css/nivo-slider.css" /> <!-- CSS: nivo slider -->
+
+    <script type="text/javascript" src="static/js/jquery.easing.1.3.js"></script> <!-- bx Slider -->
+    <script type="text/javascript" src="static/js/jquery.bxSlider.min.js"></script> <!-- bx Slider -->
+    <link rel="icon" href="images/favicon.png">
+</head>
+
 <body>
 
     <div class="nav_display">
@@ -101,7 +122,8 @@
                     <a href="keynote.html" style="font-size: 13pt; line-height:30px;color:#434343;">KEYNOTES</a>
                 </li>
                 <li>
-                    <a href="registration.html" style="font-size: 13pt; line-height:30px;color:#434343;">REGISTRATION</a>
+                    <a href="registration.html"
+                        style="font-size: 13pt; line-height:30px;color:#434343;">REGISTRATION</a>
                 </li>
                 <li>
                     <a href="program.html" style="font-size: 13pt; line-height:30px;color:#434343;">PROGRAM</a>
@@ -147,100 +169,119 @@
 
 
 
-    <div class="page-index-featured " >
+    <div class="page-index-featured ">
         <a id='buttonTop' class='button-top'></a>
-        <div class="container page-text-columns" >
-               <div class="row" style=" box-shadow: darkgrey 0px 0px 5px 1px; border-radius:5px; margin:50px 0 0 0; ">
+        <div class="container page-text-columns">
+            <div class="row" style=" box-shadow: darkgrey 0px 0px 5px 1px; border-radius:5px; margin:50px 0 0 0; ">
                 <img border="0" src="img/new/banner.jpg" width="100%" style="margin:0px 0 0px 0%; ">
-               
-                <div id="content" >
-               <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">Registration</p>
-               <br>
-                <table style="font-size:14pt; margin:50px 5% 0px 5%; text-align:left;"  border="1">
-                    <thead>
-                        <tr>
-                            <th>Category</th>
-                            <th>Early Bird<br> (until Sep 7, 2024)</th>
-                            <th>Regular <br> (after Sep 7, 2024)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>AG/CCF Member Full</td>
-                            <td>3500 CNY / 500 USD</td>
-                            <td>3700 CNY / 530 USD</td>
-                        </tr>
-                        <tr>
-                            <td>AG/CCF Member Student</td>
-                            <td>2000 CNY / 290 USD</td>
-                            <td>2200 CNY / 320 USD</td>
-                        </tr>
-                        <tr>
-                            <td>Non-AG/CCF Member Full</td>
-                            <td>4000 CNY / 570 USD</td>
-                            <td>4200 CNY / 600 USD</td>
-                        </tr>
-                        <tr>
-                            <td>Non-AG/CCF Member Student</td>
-                            <td>2200 CNY / 320 USD</td>
-                            <td>2400 CNY / 350 USD</td>
-                        </tr>
-                        <tr>
-                            <td>One of the authors of the <br> accepted paper/poster</td>
-                            <td>3500 CNY / 500 USD</td>
-                            <td>3700 CNY / 530 USD</td>
-                        </tr>
-                    </tbody>
-                </table>
 
-                <p style="font-size:13pt; margin:50px 5% 0px 5%; text-align:left;" ><strong>Note:</strong></p>
-                <ul style="font-size:13pt; margin:50px 5% 0px 5%; text-align:left;" >
-                    <li>At least one author from each paper/poster must have one full registration for the conference before the registration deadline for your paper/poster to be accepted.<br><br></li>
-                    <li>Full and student registration includes all technical sessions, coffee breaks, and dining (3 lunches and 3 dinners), accommodation or travel is not included in the registration fee.<br><br></li>
-                    <li>To take advantage of member registration rates, you must be an AG or a CCF member and provide a valid Membership ID number at the time you register.<br><br></li>
-                    <li>Student ID Cards will be required on-site as evidence of the reduced student fee.<br><br></li>
-                    <li>Cancellations are required to be made up to 15 days (on/before September 28, 2024) in advance. Otherwise, no refund will be issued. Please email pg2024@mail.hsu.edu.cn to make a cancellation request. The organisers cannot accept liability for costs incurred in the event of the conference having to be cancelled as a result of circumstances beyond its reasonable control.<br><br></li>
-                </ul>
+                <div id="content">
+                    <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">Registration
+                    </p>
+                    <br>
+                    <table style="font-size:14pt; margin:50px 5% 0px 5%; text-align:left;" border="1">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Early Bird<br> (until Sep 7, 2024)</th>
+                                <th>Regular <br> (after Sep 7, 2024)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AG/CCF Member Full</td>
+                                <td>3500 CNY / 500 USD</td>
+                                <td>3700 CNY / 530 USD</td>
+                            </tr>
+                            <tr>
+                                <td>AG/CCF Member Student</td>
+                                <td>2000 CNY / 290 USD</td>
+                                <td>2200 CNY / 320 USD</td>
+                            </tr>
+                            <tr>
+                                <td>Non-AG/CCF Member Full</td>
+                                <td>4000 CNY / 570 USD</td>
+                                <td>4200 CNY / 600 USD</td>
+                            </tr>
+                            <tr>
+                                <td>Non-AG/CCF Member Student</td>
+                                <td>2200 CNY / 320 USD</td>
+                                <td>2400 CNY / 350 USD</td>
+                            </tr>
+                            <tr>
+                                <td>One of the authors of the <br> accepted paper/poster</td>
+                                <td>3500 CNY / 500 USD</td>
+                                <td>3700 CNY / 530 USD</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-               <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">Payment Information</p>
-               <p style="font-size:14pt; margin:50px 5% 0px 5%; text-align:left;">
-               Please note "your affiliation + name + PG2024" when transferring the registration fee. You can choose either of the following ways to complete the payment.
+                    <p style="font-size:13pt; margin:50px 5% 0px 5%; text-align:left;"><strong>Note:</strong></p>
+                    <ul style="font-size:13pt; margin:50px 5% 0px 5%; text-align:left;">
+                        <li>At least one author from each paper/poster must have one full registration for the
+                            conference before the registration deadline for your paper/poster to be accepted.<br><br>
+                        </li>
+                        <li>Full and student registration includes all technical sessions, coffee breaks, and dining (3
+                            lunches and 3 dinners), accommodation or travel is not included in the registration
+                            fee.<br><br></li>
+                        <li>To take advantage of member registration rates, you must be an AG or a CCF member and
+                            provide a valid Membership ID number at the time you register.<br><br></li>
+                        <li>Student ID Cards will be required on-site as evidence of the reduced student fee.<br><br>
+                        </li>
+                        <li>Cancellations are required to be made up to 15 days (on/before September 28, 2024) in
+                            advance. Otherwise, no refund will be issued. Please email pg2024@mail.hsu.edu.cn to make a
+                            cancellation request. The organisers cannot accept liability for costs incurred in the event
+                            of the conference having to be cancelled as a result of circumstances beyond its reasonable
+                            control.<br><br></li>
+                    </ul>
 
-               <ol style="font-size:14pt; margin:50px 5% 0px 5%; text-align:left;" >
-                   <li>
-RMB Transfer<br><br>
-开户行: 中国农业银行黄山黎阳支行<br><br>
-户名: 黄山学院<br><br>
-账号: 12660501040001818<br><br>
-                   </li>
-                   <li>
-Foreign Currency Transfer<br><br>
-BENEFICIARY BANK: THE AGRICULTURAL BANK OF CHINA, ANHUI HUANGSHAN BRANCH,<br> NO.60 YUCHENG ROAD, TUNXI DISTRICT, HUANGSHAN CITY, ANHUI PROVINCE, P.R.CHINA<br><br>
-SWIFT:ABOCCNBJ120<br><br>
-BENEFICIARY: HUANGSHAN UNIVERSITY<br><br>
-ADDRESS: NO.39, XIHAI ROAD, TUNXI, HUANGSHAN, ANHUI, CHINA<br><br>
-ACCOUNT NO.: 12660114040002081<br><br>
-                   </li>
-                   <li>On-site registration<br><br>
-Please pay your registration fee with cash, UnionPay bank card, or Wechat.<br><br>
-Registration time: 8:30 - 18:00, 13 - 16 October, 2024.<br><br>
+                    <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">Payment
+                        Information</p>
+                    <p style="font-size:14pt; margin:50px 5% 0px 5%; text-align:left;">
+                        Please note "your affiliation + name + PG2024" when transferring the registration fee. You can
+                        choose either of the following ways to complete the payment.
 
-                   </li>
-               </ol>
+                    <ol style="font-size:14pt; margin:50px 5% 0px 5%; text-align:left;">
+                        <li>
+                            RMB Transfer<br><br>
+                            开户行: 中国农业银行黄山黎阳支行<br><br>
+                            户名: 黄山学院<br><br>
+                            账号: 12660501040001818<br><br>
+                        </li>
+                        <li>
+                            Foreign Currency Transfer<br><br>
+                            BENEFICIARY BANK: THE AGRICULTURAL BANK OF CHINA, ANHUI HUANGSHAN BRANCH,<br> NO.60 YUCHENG
+                            ROAD, TUNXI DISTRICT, HUANGSHAN CITY, ANHUI PROVINCE, P.R.CHINA<br><br>
+                            SWIFT:ABOCCNBJ120<br><br>
+                            BENEFICIARY: HUANGSHAN UNIVERSITY<br><br>
+                            ADDRESS: NO.39, XIHAI ROAD, TUNXI, HUANGSHAN, ANHUI, CHINA<br><br>
+                            ACCOUNT NO.: 12660114040002081<br><br>
+                        </li>
+                        <li>On-site registration<br><br>
+                            Please pay your registration fee with cash, UnionPay bank card, or Wechat.<br><br>
+                            Registration time: 8:30 - 18:00, 13 - 16 October, 2024.<br><br>
+
+                        </li>
+                    </ol>
 
 
-                <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">Contact</p>
-                <p style="font-size:14pt; margin:50px 5% 0px 5%; text-align:left;">Official Invitation Letter.<br>
-If you have registered for the conference and need an invitation letter (e.g. to support your visa application to come to the China), please email pg2024@mail.hsu.edu.cn, providing your name, contact address, passport number, date of birth, and the paper title if you are going to present. Please note that such a letter can only be sent after you have completed the registration process, including payment.
- </p>
+                    <p style="font-size:15pt; margin:50px 5% 0px 5%; text-align:left;" class="organization">Contact</p>
+                    <p style="font-size:14pt; margin:50px 5% 0px 5%; text-align:left;">Official Invitation Letter.<br>
+                        If you have registered for the conference and need an invitation letter (e.g. to support your
+                        visa application to come to the China), please email pg2024@mail.hsu.edu.cn, providing your
+                        name, contact address, passport number, date of birth, and the paper title if you are going to
+                        present. Please note that such a letter can only be sent after you have completed the
+                        registration process, including payment.
+                    </p>
 
-                <br>
-                <hr width="90%" color="#f3e549" size="8" style="margin:30px 0 30px 5%;"> </hr>
-               </div>
+                    <br>
+                    <hr width="90%" color="#f3e549" size="8" style="margin:30px 0 30px 5%;">
+                    </hr>
+                </div>
 
-           </div>
-   </div> <!-- /container -->
-</div>
+            </div>
+        </div> <!-- /container -->
+    </div>
 
 
 
@@ -255,27 +296,28 @@ If you have registered for the conference and need an invitation letter (e.g. to
 
                 <div class="col-sm-3">https://pg2024.hsu.edu.cn/
                 </div>
+            </div>
         </div>
-    </div>
 
-    <script type="text/javascript">
-        let btn = $('#buttonTop');
-        let toTopFlag = $('#toTopFlag');
+        <script type="text/javascript">
+            let btn = $('#buttonTop');
+            let toTopFlag = $('#toTopFlag');
 
-        $(window).scroll(() => {
-        if ($(window).scrollTop() > 0) {
-        btn.addClass('show');
-        } else {
-        btn.removeClass('show');
-        }
-        });
+            $(window).scroll(() => {
+                if ($(window).scrollTop() > 0) {
+                    btn.addClass('show');
+                } else {
+                    btn.removeClass('show');
+                }
+            });
 
-        btn.on('click', (e) => {
-        e.preventDefault();
-        $('html, body').animate({scrollTop:0}, '300');
-        });
-    </script>
+            btn.on('click', (e) => {
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: 0 }, '300');
+            });
+        </script>
 
 
 </body>
+
 </html>
