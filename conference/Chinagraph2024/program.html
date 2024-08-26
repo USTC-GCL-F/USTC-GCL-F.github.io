@@ -6,7 +6,7 @@
 	
 	.table-c table th{border-bottom:1px solid;font-size:12pt; font-weight:normal; color:#404040; line-height:30px;} 
     .table-c table{ margin:30px 5% 0px 5%; width:90%;} 
-    .table-d table th{border-left:1px solid;border-top:1px solid ;font-size:12pt; font-weight:normal; color:#404040;} 
+    .table-d table th{border-left:1px solid;border-top:1px solid ;font-size:12pt; font-weight:normal; color:#404040;} td{border-left:1px solid;border-top:1px solid ;font-size:12pt; font-weight:normal; color:#404040;} 
 	.table-d table{border-right:1px solid ;border-bottom:1px solid; margin:30px 5% 0px 5%; width:90%;} 
 	.detail {margin:30px 5% 0px 5%;}
 	.detail p{font-weight:700;  margin-top:50px;}
@@ -217,48 +217,125 @@
                 <hr>
 
                 <div id="content" >
-                <p style="font-size:16pt; margin:30px 5% 0px 5%; text-align: center;";; id="overview"; id="overview"><strong>1. 会议日程概要</strong></p>
+                <p style="font-size:16pt; margin:30px 5% 0px 5%; text-align: center;"; id="overview"; id="overview"><strong>1. 会议日程概要</strong></p>
                 <div class="table-d" style="margin:20px 1% 0px 1%; text-align:center;">
-                    <table  >
-                         <tr style="background-color:rgb(253, 233, 217)">
-                            <th colspan=12><br>日程<br><br></th>
-                            <th colspan=12>上午</th>
-                            <th colspan=12; width="35%">下午</th>
-                            <th colspan=12; >晚上</th>
+                    <table border="1">
+                        <!-- 第一行 -->
+                        <tr style="background-color:rgb(253, 233, 217)">
+                            <th rowspan="1" colspan="12"><br>日程<br><br></th>
+                            <th rowspan="1" colspan="12">上午</th>
+                            <th rowspan="1" colspan="12" width="36%">下午</th>
+                            <th rowspan="1" colspan="12">晚上</th>
                         </tr>
 
-                        <tr style="background-color:#D1EEEE;">
-                            <th rowspan=2 colspan=12> <br><br>10月10日<br><br><br></th>
-                            <th rowspan=1 colspan=12>会前课程1</th>
-                            <th rowspan=1 colspan=12>会前课程2</th>
-                            <th rowspan=1 colspan=12>电子剧场 </th>
-                            
+                     
+                       <tr style="background-color:#D1EEEE">
+                            <td rowspan="2" colspan="12"><br><br>10月10日<br><br><br></td>
+                            <td rowspan="2" colspan="12">会前课程1</td>
+                            <td rowspan="1" colspan="12">会前课程2</td>
+                            <td rowspan="2" colspan="12">电子剧场</td>
+                        </tr>
+                        
+                       
+                       <tr style="background-color:#D1EEEE">
+                            <td rowspan="1" colspan="6">技术论坛1</td>
+                            <td rowspan="1" colspan="6">技术论坛2</td>
                         </tr>
 
-                        <tr style="background-color:#D1EEEE;">
-                            <th rowspan=1 colspan=6>技术论坛1</th>
-                            <th rowspan=1 colspan=6>技术论坛2</th>
-                            <th rowspan=1 colspan=6>技术论坛3</th>
+
+                        <tr style="background-color:rgb(253, 233, 217)">
+                            <th rowspan="3" colspan="12"> <br><br>10月11日<br><br><br></th>
+                            <th rowspan="3" colspan="3">开幕式</th>
+                            <th rowspan="3" colspan="3">特邀报告1</th>
+                            <th rowspan="3" colspan="3">特邀报告2</th>
+                            <th rowspan="1" colspan="3" width="12%">论文fastforward</th>
+                            <th rowspan="1" colspan="6">技术论坛3</th>
+                            <th rowspan="1" colspan="6">技术论坛6</th>
+                            <th rowspan="3" colspan="12">晚宴</th>
+                        </tr>
+                        
+
+                        <tr style="background-color:rgb(253, 233, 217)">
+                            <th rowspan="2" colspan="3">学术新星论坛</th>
                             <th rowspan=1 colspan=6>技术论坛4</th>
-                            <th rowspan=1 colspan=12>技术论坛5 </th>
+                            <th rowspan=1 colspan=6>技术论坛7</th>
                         </tr>
- 
-                        <tr style="background-color:rgb(253, 233, 217);">
-                            <th rowspan=2 colspan=12> <br><br>10月11日<br><br><br></th>
-                            <th rowspan=2 colspan=3>开幕式</th>
-                            <th rowspan=2 colspan=3>特邀报告1</th>
-                            <th rowspan=2 colspan=3>特邀报告2</th>
-                            <th rowspan=2 colspan=3; width="12%">论文fastforward</th>
-                            <th colspan=6>技术论坛6</th>
-                            <th colspan=6>技术论坛8</th>
-                            <th rowspan=2 colspan=12>晚宴</th>
+
+                        <tr style="background-color:rgb(253, 233, 217)">
+                            <th rowspan=1 colspan=6>技术论坛5</th>
+                            <th rowspan=1 colspan=6>技术论坛8</th>
+                        </tr>
+
+                        <tr style="background-color:#D1EEEE">
+                            <td rowspan="3" colspan="12"><br><br>10月12日<br><br><br></td>
+                            <td rowspan="3" colspan="4">特邀报告3</td>
+                            <td rowspan="3" colspan="4">特邀报告4</td>
+                            <td rowspan="3" colspan="4">特邀报告5</td>
+                            <td rowspan="1" colspan="4">技术论坛9</td>
+                            <td rowspan="1" colspan="4">技术论坛12</td>
+                            <td rowspan="1" colspan="4">技术论坛15</td>
+                            <td rowspan="1" colspan="12">技术论坛17</td>
+                        </tr>
+                        
+                        <tr style="background-color:#D1EEEE;">
+                            <td rowspan="1" colspan="4">技术论坛10</td>
+                            <td rowspan="1" colspan="4">技术论坛13</td>
+                            <td rowspan="2" colspan="4">技术论坛16</td>
+                            <td rowspan="2" colspan="12">技术论坛18</td>
+                        </tr>
+
+                        <tr style="background-color:#D1EEEE;">
+                            <td rowspan="1" colspan="4">技术论坛11</td>
+                            <td rowspan="1" colspan="4">技术论坛14</td>
                         </tr>
 
                         <tr style="background-color:rgb(253, 233, 217);">
-                            <th colspan=6>技术论坛7</th>
-                            <th colspan=6>技术论坛9</th>
+                            <th rowspan=1 colspan=12> <br><br>10月13日<br><br><br></th>
+                            <th rowspan=1 colspan=3>特邀报告6</th>
+                            <th rowspan=1 colspan=3>特邀报告7</th>
+                            <th rowspan=1 colspan=3>技术论坛19</th>
+                            <th rowspan=1 colspan=3>闭幕式</th>
+                            <th rowspan=1 colspan=12></th>
+                            <th rowspan=1 colspan=12></th>
                         </tr>
 
+
+
+
+
+ <!--
+
+                          <tr style="background-color:#D1EEEE;">
+                            <th colspan=4>技术论坛11</th>
+                            <th colspan=4>技术论坛13</th>
+                            <th colspan=4>技术论坛15</th>
+                        </tr>
+
+
+
+                      <tr style="background-color:rgb(253, 233, 217)">
+                            <th rowspan="6" colspan="12"> <br><br>10月11日<br><br><br></th>
+                            <th rowspan="6" colspan="3">开幕式</th>
+                            <th rowspan="6" colspan="3">特邀报告1</th>
+                            <th rowspan="6" colspan="3">特邀报告2</th>
+                            <th rowspan="3" colspan="3" width="12%">论文fastforward</th>
+                            <th rowspan="2" colspan="6">技术论坛3</th>
+                            <th rowspan="2" colspan="6">技术论坛6</th>
+                            <th rowspan="6" colspan="12">晚宴</th>
+                        </tr>
+                        
+
+                        <tr style="background-color:rgb(253, 233, 217)">
+                            <th rowspan="3" colspan="3">学术新星论坛</th>
+                           <th rowspan=2 colspan=6>技术论坛4</th>
+                            <th rowspan=2 colspan=6>技术论坛7</th>
+                        </tr>-->
+<!--
+                       <tr style="background-color:rgb(253, 233, 217);">
+                            <th rowspan=2 colspan=6>技术论坛5</th>
+                            <th rowspan=2 colspan=6>技术论坛8</th>
+                        </tr>
+-
                         <tr style="background-color:#D1EEEE;">
                             <th rowspan=2 colspan=12> <br><br>10月12日<br><br><br></th>
                             <th rowspan=2 colspan=4;> 特邀报告3</th>
@@ -287,7 +364,7 @@
                             <th rowspan=1 colspan=12></th>
                         </tr>
 
-
+-->
 
 <!-- 
                         <tr style="background-color:#D1EEEE;">
