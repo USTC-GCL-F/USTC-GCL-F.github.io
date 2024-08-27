@@ -1,0 +1,7 @@
+Name,Affiliation
+Renjie Chen,University of Science and Technology of China
+Tobias Ritschel,University College London
+Emily Whiting,Boston University
+Kellnhofer Petr,TU Delft
+Nico Pietroni,University of Technology Sydney
+Beibei Wang,Nanjing University
