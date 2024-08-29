@@ -1,7 +1,7 @@
-Name,Affiliation
-Renjie Chen,University of Science and Technology of China
-Tobias Ritschel,University College London
-Emily Whiting,Boston University
-Kellnhofer Petr,TU Delft
-Nico Pietroni,University of Technology Sydney
-Beibei Wang,Nanjing University
+Name,Affiliation,Webpage
+Renjie Chen,University of Science and Technology of China,http://staff.ustc.edu.cn/~renjiec/
+Tobias Ritschel,University College London,https://www.homepages.ucl.ac.uk/~ucactri/
+Emily Whiting,Boston University,https://www.bu.edu/cs/profiles/whiting/
+Kellnhofer Petr,TU Delft,https://kellnhofer.xyz/
+Nico Pietroni,University of Technology Sydney,https://www.nicopietroni.com/
+Beibei Wang,Nanjing University,https://wangningbei.github.io/

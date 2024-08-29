@@ -1,116 +1,116 @@
-Name,Affiliation
-Aigerman Noam,University of Montreal
-Aksoy Yagiz,Simon Fraser University
-Baek Seung-Hwan,POSTECH
-Batty Christopher,University of Waterloo
-Bessmeltsev Mikhail,Université de Montréal
-Bonneel Nicolas,CNRS / UNIV. LYON
-Cadik Martin,Brno University of Technology
-Cao Juan,Xiamen University
-Chen Bin,Max-Planck-Institut für Informatik
-Chen Xuejin,University of Science and Technology of China
-Chen Zhonggui,Xiamen University
-Cho Sunghyun,POSTECH
-Cordonnier Guillaume,Inria Université Côte d'Azur
-Dachsbacher Carsten,Karlsruhe Institute of Technology
-Digne Julie,LIRIS - CNRS
-Dischler Jean-Michel,ICUBE - Université de Strasbourg
-Dodgson Neil,Victoria University of Wellington
-Fang Qing,University of Science and Technology of China
-Faraj Noura,Université de Montpellier -- LIRMM
-Frisvad Jeppe Revall,Technical University of Denmark
-Fu Hongbo,City University of Hong Kong
-Gain James,University of Cape Town
-Galin Eric,LIRIS - Université Claude Bernard Lyon 1
-Gao Xifeng,Tencent America
-Giorgi Daniela,National Research Council of Italy – Institute of Information Science and Technologies
-Grittmann Pascal,Saarland University
-Gryaditskaya Yulia,CVSSP Surrey Institute for People-Centred AI
-Günther Tobias,FAU Erlangen-Nuremberg
-Guo Xiaohu,University of Texas at Dallas
-Han Xiaoguang,CUHK - Shenzhen
-Havran Vlastimil,Czech Technical University in Prague
-He Ying,Nanyang Technological University
-Herholz Sebastian,Intel Corporation
-Holden Daniel,Epic Games
-Jeschke Stefan,unaffiliated
-Jiang Caigui,Xi'an Jiaotong University
-Jorge Joaquim,INESC-ID
-Kellnhofer Petr,TU Delft
-Kim Young Min,Seoul National University
-Klein Reinhard,University of Bonn
-Kobbelt Leif,RWTH Aachen University
-Kuffner dos Anjos Rafael,University College London
-Kwon Taesoo,Hanyang University
-Lai Yu-Kun,Cardiff University
-Larsson Maria,The University of Tokyo
-Le Binh,SEED - Electronic Arts
-Lee Joo Ho,Sogang University
-Lee Yoonsang,Hanyang University
-Li Minchen,Carnegie Mellon University
-Li Xin,Texas A&M University
-Lin Wen-Chieh,National Yang Ming Chiao Tong University
-Liu Libin,Peking University
-Liu Tiantian,Taichi Graphics
-Liu Zheng,China University of Geosciences
-Lu Lin,Shandong University
-Marco Julio,Universidad Zaragoza
-Meng Xiaoxu,Tencent
-Meyer Alexandre,Université Lyon
-Michels Dominik L.,KAUST
-Montazeri Zahra,University of Manchester
-Nam Giljoo,Facebook
-Narain Rahul,Indian Institute of Technology Delhi
-Nguyen-Phuoc Thu,Reality Labs Research Meta
-Okabe Makoto,Shizuoka University
-Oliveira Manuel M.,Universidade Federal do Rio Grande do Sul
-Pan Hao,Microsoft Research Asia
-Parakkat Amal Dev,Institut Polytechnique de Paris
-Patane Giuseppe,CNR-IMATI
-Pellacini Fabio,University of Modena and Reggio Emilia
-Philip Julien,Netflix Eyeline Studios
-Pietroni Nico,University of Technology Sydney
-Piovarči Michal,ETH Zurich
-Popa Tiberiu,Concordia University
-Ren Bo,Nankai Univeristy
-Ren Jing,ETH Zurich
-Roessl Christian,University of Magdeburg
-Schreck Camille,Inria Nancy
-Sharp Nicholas,NVIDIA
-Singh Gurprit,Max-Planck Institute for Informatics Saarbrucken
-Song Peng,Singapore University of Technology and Design
-Su Wanchao,Monash University
-Subr Kartic,University of Edinburgh
-Sun Qi,New York University
-Tan Jianchao,George Mason University
-Tang Min,Zhejiang University
-Thiery Jean-Marc,Adobe Research
-Tursun Cara,University of Groningen
-Umetani Nobuyuki,The University of Tokyo
-Vaxman Amir,The University of Edinburgh
-Vouga Etienne,UT Austin
-Wang Beibei,Nanjing University
-Wang Miao,Beihang University
-Wang Yunhai,Shandong university
-Wu Hongzhi,Zhejiang University
-Wu Hsiang-Yun,The St. Pölten University of Applied Sciences
-Wu Kui,LightSpeed Studios
-Xia Shihong,Institute of Computing Technology Chinese Academy of Sciences
-Xiao Chunxia,Wuhan University
-Xin Shiqing,Shandong University
-Xu Feng,Tsinghua University
-Xu Kun,Tsinghua University
-Xu Pengfei,Shenzhen University
-Xu Weiwei,Zhejiang University
-Ye Hui,City University of Hong Kong
-Yue Yonghao,Aoyama Gakuin University
-Zhai Xiaoya,University of Science and Technology of China
-Zhang Fang-Lue,Victoria University of Wellington
-Zhang Lei,Beijing Institute of Technology
-Zhang Meng,Nanjng University of Science and Technology
-Zhang Yun,Communication University of Zhejiang
-Zhao Haisen,Shandong University
-Zhu Bo,Georgia Institute of Technology
-Zhu Chenyang,National University of Defense Technology
-Zhu Junqiu,UC Santa Barbara
-Zhu Zhe,Duke University
+Name,Affiliation,Webpage
+Aigerman Noam,University of Montreal,https://noamaig.github.io/
+Aksoy Yagiz,Simon Fraser University,https://yaksoy.github.io/
+Baek Seung-Hwan,POSTECH,https://sites.google.com/view/shbaek/
+Batty Christopher,University of Waterloo,https://cs.uwaterloo.ca/~c2batty/
+Bessmeltsev Mikhail,Université de Montréal,http://www-labs.iro.umontreal.ca/~bmpix/
+Bonneel Nicolas,CNRS / UNIV. LYON,https://perso.liris.cnrs.fr/nicolas.bonneel/
+Cadik Martin,Brno University of Technology,https://cadik.posvete.cz/
+Cao Juan,Xiamen University,https://graphics.xmu.edu.cn/~juancao/
+Chen Bin,Max-Planck-Institut für Informatik,https://binchen.me/
+Chen Xuejin,University of Science and Technology of China,http://staff.ustc.edu.cn/~xjchen99/
+Chen Zhonggui,Xiamen University,https://graphics.xmu.edu.cn/~zgchen/
+Cho Sunghyun,POSTECH,https://www.scho.pe.kr/
+Cordonnier Guillaume,Inria Université Côte d'Azur,https://www-sop.inria.fr/members/Guillaume.Cordonnier/
+Dachsbacher Carsten,Karlsruhe Institute of Technology,https://cg.ivd.kit.edu/dachsbacher/staff_index.php
+Digne Julie,LIRIS - CNRS,https://perso.liris.cnrs.fr/julie.digne/
+Dischler Jean-Michel,ICUBE - Université de Strasbourg,https://dpt-info.u-strasbg.fr/~dischler/
+Dodgson Neil,Victoria University of Wellington,http://www.neildodgson.com/
+Fang Qing,University of Science and Technology of China,http://home.ustc.edu.cn/~fq1208/
+Faraj Noura,Université de Montpellier -- LIRMM,https://www.lirmm.fr/~nfaraj/
+Frisvad Jeppe Revall,Technical University of Denmark,http://www.imm.dtu.dk/~jerf/
+Fu Hongbo,City University of Hong Kong,https://hongbofu.people.ust.hk/
+Gain James,University of Cape Town,https://people.cs.uct.ac.za/~jgain/index.htm
+Galin Eric,LIRIS - Université Claude Bernard Lyon 1,https://perso.liris.cnrs.fr/eric.galin/
+Gao Xifeng,Tencent America,https://gaoxifeng.github.io/
+Giorgi Daniela,National Research Council of Italy – Institute of Information Science and Technologies,https://vcgdata.isti.cnr.it/author/Daniela-Giorgi/
+Grittmann Pascal,Saarland University,https://graphics.cg.uni-saarland.de/people/grittmann.html
+Gryaditskaya Yulia,CVSSP Surrey Institute for People-Centred AI,https://www.surrey.ac.uk/people/yulia-gryaditskaya
+Günther Tobias,FAU Erlangen-Nuremberg,https://www.lgdv.tf.fau.de/
+Guo Xiaohu,University of Texas at Dallas,https://www.utdallas.edu/~xguo/
+Han Xiaoguang,CUHK - Shenzhen,https://sse.cuhk.edu.cn/en/faculty/hanxiaoguang
+Havran Vlastimil,Czech Technical University in Prague,https://dcgi.fel.cvut.cz/home/havran/
+He Ying,Nanyang Technological University,https://personal.ntu.edu.sg/yhe/
+Herholz Sebastian,Intel Corporation,https://www.intel.cn/content/www/cn/zh/developer/articles/community/rendering-researchers-sebastian-herholz.html
+Holden Daniel,Epic Games,https://theorangeduck.com/page/about
+Jeschke Stefan,unaffiliated,http://www.stefan-jeschke.com/
+Jiang Caigui,Xi'an Jiaotong University,https://caiguijiang.github.io/
+Jorge Joaquim,INESC-ID,https://www.inesc-id.pt/member/2b8f782d-9b82-451f-915d-f808e0a1492b/
+Kellnhofer Petr,TU Delft,https://kellnhofer.xyz/
+Kim Young Min,Seoul National University,https://scholar.google.com/citations?user=TjYQs-AAAAAJ
+Klein Reinhard,University of Bonn,https://cg.cs.uni-bonn.de/person/prof-dr-reinhard-klein
+Kobbelt Leif,RWTH Aachen University,https://www.graphics.rwth-aachen.de/person/3/
+Kuffner dos Anjos Rafael,University College London,http://www0.cs.ucl.ac.uk/people/R.KuffnerDosAnjos.html
+Kwon Taesoo,Hanyang University,http://calab.hanyang.ac.kr/cgi-bin/home.cgi?node=Taesoo
+Lai Yu-Kun,Cardiff University,https://profiles.cardiff.ac.uk/staff/laiy4
+Larsson Maria,The University of Tokyo,http://ma-la.com/
+Le Binh,AMD,https://binh.graphics/about.php
+Lee Joo Ho,Sogang University,https://sites.google.com/view/jooholee
+Lee Yoonsang,Hanyang University,https://cgrhyu.github.io/people/yoonsang-lee.html
+Li Minchen,Carnegie Mellon University,https://www.cs.cmu.edu/~minchenl/
+Li Xin,Texas A&M University,https://people.tamu.edu/~xinli/
+Lin Wen-Chieh,National Yang Ming Chiao Tong University,https://scholar.nycu.edu.tw/en/persons/wen-chieh-lin
+Liu Libin,Peking University,https://cfcs.pku.edu.cn/libinliu/
+Liu Tiantian,Taichi Graphics,https://tiantianliu.cn/
+Liu Zheng,China University of Geosciences,https://labzhengliu.github.io/
+Lu Lin,Shandong University,http://irc.cs.sdu.edu.cn/~lulin/
+Marco Julio,Universidad Zaragoza,http://webdiis.unizar.es/~juliom/
+Meng Xiaoxu,Tencent,https://xmeng525.github.io/xiaoxumeng.github.io/
+Meyer Alexandre,Université Lyon,https://perso.liris.cnrs.fr/ameyer/public_html/www/
+Michels Dominik L.,KAUST,https://www.kaust.edu.sa/en/study/faculty/dominik-michels
+Montazeri Zahra,University of Manchester,https://research.manchester.ac.uk/en/persons/zahra.montazeri
+Nam Giljoo,Facebook,https://sites.google.com/view/gjnam
+Narain Rahul,Indian Institute of Technology Delhi,https://www.cse.iitd.ac.in/~narain/
+Nguyen-Phuoc Thu,Reality Labs Research Meta,https://www.monkeyoverflow.com/about
+Okabe Makoto,Shizuoka University,https://tdb.shizuoka.ac.jp/RDB/public/Default2.aspx?id=11214&l=0
+Oliveira Manuel M.,Universidade Federal do Rio Grande do Sul,https://www.inf.ufrgs.br/~oliveira/
+Pan Hao,Microsoft Research Asia,https://www.microsoft.com/en-us/research/people/panhao/
+Parakkat Amal Dev,Institut Polytechnique de Paris,https://perso.telecom-paristech.fr/parakkat/
+Patane Giuseppe,CNR-IMATI,http://pers.ge.imati.cnr.it/patane/Home.html
+Pellacini Fabio,University of Modena and Reggio Emilia,https://xelatihy.github.io/
+Philip Julien,Netflix Eyeline Studios,https://julienphilip.com/
+Pietroni Nico,University of Technology Sydney,https://www.nicopietroni.com/
+Piovarči Michal,ETH Zurich,https://misop.github.io/
+Popa Tiberiu,Concordia University,https://users.encs.concordia.ca/~stpopa/
+Ren Bo,Nankai Univeristy,http://ren-bo.net/
+Ren Jing,ETH Zurich,https://ren-jing.com/
+Roessl Christian,University of Magdeburg,https://pages.vc.cs.ovgu.de/roessl/
+Schreck Camille,Inria Nancy,https://schreckc.github.io/
+Sharp Nicholas,NVIDIA,https://nmwsharp.com/
+Singh Gurprit,Max-Planck Institute for Informatics Saarbrucken,https://people.mpi-inf.mpg.de/~gsingh/
+Song Peng,Singapore University of Technology and Design,https://istd.sutd.edu.sg/people/faculty/peng-song/
+Su Wanchao,Monash University,https://research.monash.edu/en/persons/wanchao-su
+Subr Kartic,University of Edinburgh,https://homepages.inf.ed.ac.uk/ksubr/index.html
+Sun Qi,New York University,https://engineering.nyu.edu/faculty/qi-sun
+Tan Jianchao,George Mason University,https://cs.gmu.edu/~jtan8/
+Tang Min,Zhejiang University,https://person.zju.edu.cn/en/tangm
+Thiery Jean-Marc,Adobe Research,https://research.adobe.com/person/jean-thiery/
+Tursun Cara,University of Groningen,https://visualcomputing.nl/
+Umetani Nobuyuki,The University of Tokyo,http://www.nobuyuki-umetani.com/
+Vaxman Amir,The University of Edinburgh,https://www.ed.ac.uk/profile/dr-amir-vaxman
+Vouga Etienne,UT Austin,https://www.cs.utexas.edu/~evouga/
+Wang Beibei,Nanjing University,https://wangningbei.github.io/
+Wang Miao,Beihang University,http://miaowang.me/
+Wang Yunhai,Shandong university,http://www.yunhaiwang.net/
+Wu Hongzhi,Zhejiang University,https://person.zju.edu.cn/en/hwu
+Wu Hsiang-Yun,The St. Pölten University of Applied Sciences,https://www.fhstp.ac.at/en/about-us/staff-a-z/wu-hsiang-yun
+Wu Kui,LightSpeed Studios,https://kuiwuchn.github.io/
+Xia Shihong,Institute of Computing Technology Chinese Academy of Sciences,https://people.ucas.ac.cn/~xiashihong?language=en
+Xiao Chunxia,Wuhan University,http://graphvision.whu.edu.cn/
+Xin Shiqing,Shandong University,https://irc.cs.sdu.edu.cn/~shiqing/index.html
+Xu Feng,Tsinghua University,http://xufeng.site/
+Xu Kun,Tsinghua University,https://cg.cs.tsinghua.edu.cn/people/~kun/
+Xu Pengfei,Shenzhen University,https://pengfeixu.com/
+Xu Weiwei,Zhejiang University,http://www.cad.zju.edu.cn/home/weiweixu/weiweixu_en.htm
+Ye Hui,City University of Hong Kong,https://huiye19.github.io/
+Yue Yonghao,Aoyama Gakuin University,http://www.cg.it.aoyama.ac.jp/yonghao/
+Zhai Xiaoya,University of Science and Technology of China,https://xiaoyazhai.github.io/
+Zhang Fang-Lue,Victoria University of Wellington,https://people.wgtn.ac.nz/fanglue.zhang
+Zhang Lei,Beijing Institute of Technology,https://zhangleibit.github.io/
+Zhang Meng,Nanjng University of Science and Technology,https://mengzephyr.com/
+Zhang Yun,Communication University of Zhejiang,http://zhangyunnet.cn/academic/
+Zhao Haisen,Shandong University,https://haisenzhao.github.io/
+Zhu Bo,Georgia Institute of Technology,https://faculty.cc.gatech.edu/~bozhu/
+Zhu Chenyang,National University of Defense Technology,https://www.zhuchenyang.net/
+Zhu Junqiu,UC Santa Barbara,http://junqiuzhu.com/
+Zhu Zhe,Duke University,http://zhezhu.me/
