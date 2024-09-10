@@ -1,0 +1,183 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta http-equiv="Content-Language" content="zh-cn">
+
+<title>Stochastic Normal Orientation for Point Clouds</title>
+<style>
+<!--
+.thumbnailClass {
+	BORDER-RIGHT: white 0px outset; BORDER-TOP: white 0px outset; MARGIN: 0px 5px 0px 0px; BORDER-LEFT: white 0px outset; BORDER-BOTTOM: white 0px outset
+}
+.sectionClass {
+	BORDER-RIGHT: #286dc2 2px outset; PADDING-RIGHT: 0px; BORDER-TOP: #286dc2 2px outset; PADDING-LEFT: 0px; BACKGROUND: #286dc2; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #286dc2 2px outset; PADDING-TOP: 0px; BORDER-BOTTOM: #286dc2 2px outset
+}
+.section2Class {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 110%; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: white; TEXT-INDENT: 0.1in; PADDING-TOP: 0px; FONT-FAMILY: helvetica
+}
+.abstractClassCol {
+	COLOR: teal
+}
+.hindsightClassCol {
+	COLOR: darkred
+}
+.abstractClass {
+	COLOR: teal
+}
+.hindsightClass {
+	COLOR: darkred
+}
+
+-->
+</style>
+</head>
+
+<body>
+
+<p align="center"><b><font face="Arial" size="6">Stochastic Normal Orientation for Point Clouds</font></b></p>
+<table width="800" border="0" align="center">
+	<tbody>
+		<tr><td align="center" colspan="3"><span lang="EN-US" style="font-size:14.0pt;font-family:Arial;">
+			Guojin Huang&nbsp;&nbsp;&nbsp;&nbsp;
+			
+		<a href="https://qingfang1208.github.io/">Qing Fang</a><span lang="EN-US" style="font-size:14.0pt;font-family:Arial;">&nbsp;&nbsp;&nbsp;&nbsp;
+			Zheng Zhang&nbsp;&nbsp;&nbsp;&nbsp;
+		</span><a href="http://staff.ustc.edu.cn/~lgliu/">Ligang Liu</a><span lang="EN-US" style="font-size:14.0pt;font-family:Arial;">&nbsp;&nbsp;&nbsp;&nbsp; 
+		</span><a href="https://ustc-gcl-f.github.io/">Xiao-Ming Fu</a><span lang="EN-US" style="font-size:14.0pt;font-family:Arial;">&nbsp;&nbsp;&nbsp;&nbsp; 
+		</span></td></tr>
+	<tr>
+		<td width="495" align="center">
+		<span style="font-size: 14.0pt; font-family: Arial,sans-serif">
+		<a href="http://www.ustc.edu.cn/">University of Science and Technology of China</a></span></td>
+	</tr>
+	</tbody></table>
+<p align="center"><font face="Arial" size="4"><i>ACM Transactions on Graphics 
+</i>(Proc. SIGGRAPH Asia), 43(6), 2024. </font> </p>
+<p align="center">&nbsp;</p>
+<table width="1210" border="2" align="center" bordercolor="#FFFFFF" id="table2" style="border-collapse: collapse">
+	<tbody><tr>
+		<td align="center" colspan="2">
+		<hr>
+		<img border="0" src="figure/fig1.png" width="1000" height="438"><p align="center">
+		<span lang="en-us"><i><span style="font-family: Arial,sans-serif">Figure 1</span></i></span><i><span lang="EN-US" style="font-family:Arial,sans-serif">: </span></i>
+		<span lang="en-us"><i><span style="font-family: Arial,sans-serif">Starting from a set of completely random normals (a), we repeatedly optimize their directions (b,c) until
+			convergence (d). </span></i></span></p><hr>&nbsp;
+	</td>
+	</tr>
+	<tr>
+		<td width="10%" align="center" bgcolor="#CCFFCC">
+		<p align="left"><font face="Arial" color="#008080" size="4">Abstract</font></p></td>
+		<td width="89%">
+		<p align="justify"><font face="Arial" size="4">
+			We propose a simple yet effective method to orient normals for point clouds. Central to our approach is a novel optimization objective function defined from global and local perspectives. Globally, we introduce a signed uncertainty function that distinguishes the inside and outside of the underlying surface. Moreover, benefiting from the statistics of our global term, we present a local orientation term instead of a global one. The optimization problem can be solved by the commonly used numerical optimization solver, such as L-BFGS. The capability and feasibility of our approach are demonstrated over various complex point clouds. We achieve higher practical robustness and normal quality than the state-of-the-art methods.
+			<br>
+			<br></font></p></td>
+	</tr>
+	<tr>
+		<td width="10%" align="left" bgcolor="#FFFFCC">
+		<font face="Arial" size="4" color="#008080">Keywords</font></td>
+		<td width="89%" align="left">
+			<br>
+		<span lang="EN-US" style="font-size:13.5pt;font-family:Arial;">
+			Normal orientation, Gaussian processes, Surface reconstruction
+		<br></span><font face="Arial" size="4"><br></font></td>
+	</tr>
+	<tr>
+		<td width="10%" align="left" bgcolor="#CCFFCC">
+		<font face="Arial" size="4" color="#008080">Motivation</font></td>
+		<td width="89%" align="left">
+		<p align="justify"><font size="4">
+		<span style="font-family: Arial,sans-serif"><br>Reconstructing surfaces from point clouds is a challenging task. Since point clouds themselves do not define a surface and there are infinitely many surfaces that can approximate a given point cloud, this is an ill-posed problem. Therefore, adding additional assumptions and constraints is crucial. Consistent directional normals provide both the surface orientation and local geometric information at each point. We propose a simple and effective method for determining the normals of point clouds. The core of our method is to combine global and local information to define a new optimization objective function: globally, we introduce a signed uncertainty function to distinguish between the interior and exterior of the surface; leveraging the statistical uncertainty information from the global term, the directional estimation can be replaced with local estimates.<br><br></span></font></p>
+	</td></tr>
+	<tr>
+		<td width="10%" align="left" bgcolor="#FFFFCC">
+		<font face="Arial" size="4" color="#008080">Methods</font></td>
+		<td width="89%" align="left">
+		<span style="font-family: Arial,sans-serif">
+			<p align="justify"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif">
+				The method proposed in this paper involves optimizing a stochastic probability model where the variables are the distributions of point normals. By leveraging the SRSR probability model, we observe that if the normals are accurate and reliable, the probability of a point being inside the shape approaches 1 when the point is inside the surface and approaches 0 when the point is outside the surface. Conversely, if the normals are random or inconsistent, the probability tends to approach 0.5.</span></p>
+			<p align="center">
+			<img border="0" src="figure/fig2.png" width="704" height="300"></p>
+			<p align="justify"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif"><i>
+				Figure 2:  The probability that the point in space belongs to the interior of the surface tends to 1 or 0 if the normals are correct (a). The probability that the point in space far from point clouds belongs to the interior of the surface is close to 0.5 if the normals are random (b).
+				</span><br><br></p>
+
+			<p align="justify"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif">
+				This probability distribution can be used to measure spatial uncertainty and quantify the quality of normals, allowing us to define an uncertainty function for optimizing normal quality. However, the uncertainty function defined solely by the probability distribution lacks directional guidance. To address this, we introduce a local directional term, which yields a positive value outside the surface and a negative value inside the surface when the normals are correct and reliable, thereby creating a signed uncertainty function. By using L-BFGS to optimize this signed uncertainty function, we obtain consistent normal directions.</span></p>
+			<p align="center">
+				</span><br><br></p>
+		</td>
+			</tr>
+	<tr>
+		
+		<td width="10%" align="left" bgcolor="#CCFFCC">
+		<font face="Arial" size="4" color="#008080">Paper</font></td>
+		<td width="89%" align="left">
+		<font face="Arial" size="4">
+		<br>
+		<a href="https://rec.ustc.edu.cn/share/8eae6bc0-6eb9-11ef-959b-37105e8684e5">PDF</a></font><br><br></td>
+		
+		<!--
+		<td width="10%" align="left" bgcolor="#CCFFCC">
+		<font face="Arial" size="4" color="#008080">Paper</font></td>
+		<td width="89%" align="left">
+		<font face="Arial" size="4">
+		<br>
+		<a href="file/Paper.pdf">PDF</a> (261M)</font><br><br></td>
+		-->
+	</tr>
+	<tr>
+		<td width="10%" align="left" bgcolor="#FFFFCC">
+		<font face="Arial" size="4" color="#008080">Software</font></td>
+		<td width="89%" align="left">
+		<span style="font-size: 13.5pt; font-family: Arial,sans-serif">
+		<br>
+		<a href="https://github.com/mtm114/SNO">Code</a><br><br></span></td>
+	</tr>
+
+	<tr>
+		<td width="10%" align="left" bgcolor="#CCFFCC">
+		<font face="Arial" size="4" color="#008080">Ack</font></td>
+		<td width="89%" align="left">
+		<p align="justify"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif">
+		<br>
+		We would like to thank the anonymous reviewers for their constructive suggestions and comments. This work is partially supported by the National Natural Science Foundation of China (62272429, 62025207) and Xiaomi Foundation. Xiao-Ming Fu is a USTC Tang Scholar. </span><font face="Arial" size="4"><br><br></font></p></td>
+	</tr>
+	<tr>
+		<td width="10%" align="left" bgcolor="#FFFFCC">
+		<font face="Arial" size="4" color="#008080">BibTex</font></td>
+		<td width="89%" align="left"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif">
+			<br> @article {huang2024reconstruction,<br>
+			&nbsp;&nbsp;&nbsp; title = {Stochastic Normal Orientation for Point Clouds}, <br>
+  			&nbsp;&nbsp;&nbsp; author = {Huang, Guojin and Fang, Qing and Zhang, Zheng and Liu, Ligang and Fu, Xiao-Ming}<br>
+  			&nbsp;&nbsp;&nbsp; journal = {ACM Transactions on Graphics},<br>
+			&nbsp;&nbsp;&nbsp; volume={43},<br>
+			&nbsp;&nbsp;&nbsp; number={6},<br>
+			&nbsp;&nbsp;&nbsp; pages={1--11},
+			&nbsp;&nbsp;&nbsp; <br>
+			&nbsp;&nbsp;&nbsp; year = {2024}<br>}</span>
+		</td>
+
+	</tr>
+	</tbody>
+	</table>
+	<p><span style="font-size: 13.5pt; font-family: Arial,sans-serif">
+	<a href="https://ustc-gcl-f.github.io/">Back to Homepage</a></span></p>
+	<hr>
+	<table width="1120" id="table1">
+	<tbody><tr>
+		<td>
+		<p align="justify"><i><font face="Verdana">Copyright and disclaimer: <br>
+		Copyright &#169; Xiao-Ming Fu<br>
+		The SOFTWARE provided at this page is provided "as is", without any 
+		guarantee made as to its suitability or fitness for any particular use. 
+		It may contain bugs, so use of this tool is at your own risk. We take no 
+		responsibility for any damage that may unintentionally be caused through 
+		its use.</font></i></p></td>
+	</tr>
+	<tr>
+	  <td align="center">  
+	  <!--#include file="counter.asp"-->
+	  </td>
+  </tr>
+</tbody></table>
+
+</body></html>
