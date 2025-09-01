@@ -1,0 +1,215 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta http-equiv="Content-Language" content="zh-cn">
+
+<title>Field Smoothness-Controlled Partition for Quadrangulation</title>
+<style>
+<!--
+.thumbnailClass {
+	BORDER-RIGHT: white 0px outset; BORDER-TOP: white 0px outset; MARGIN: 0px 5px 0px 0px; BORDER-LEFT: white 0px outset; BORDER-BOTTOM: white 0px outset
+}
+.sectionClass {
+	BORDER-RIGHT: #286dc2 2px outset; PADDING-RIGHT: 0px; BORDER-TOP: #286dc2 2px outset; PADDING-LEFT: 0px; BACKGROUND: #286dc2; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #286dc2 2px outset; PADDING-TOP: 0px; BORDER-BOTTOM: #286dc2 2px outset
+}
+.section2Class {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 110%; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: white; TEXT-INDENT: 0.1in; PADDING-TOP: 0px; FONT-FAMILY: helvetica
+}
+.abstractClassCol {
+	COLOR: teal
+}
+.hindsightClassCol {
+	COLOR: darkred
+}
+.abstractClass {
+	COLOR: teal
+}
+.hindsightClass {
+	COLOR: darkred
+}
+
+-->
+</style>
+</head>
+
+<body>
+
+<p align="center"><b><font face="Arial" size="6">Field Smoothness-Controlled Partition for Quadrangulation</font></b></p>
+<table width="800" border="0" align="center">
+	<tbody>
+		<tr><td align="center" colspan="3">
+			<span lang="EN-US" style="font-size:14.0pt;font-family:Arial;">
+	
+			
+		<a href="https://anderliang.github.io/">Zhongxuan Liang</a>
+		<span lang="EN-US" style="font-size:14.0pt;font-family:Arial;">&nbsp;&nbsp;&nbsp;&nbsp;
+			Wei Du&nbsp;&nbsp;&nbsp;&nbsp;
+		</span><a href="https://ustc-gcl-f.github.io/">Xiao-Ming Fu</a><span lang="EN-US" style="font-size:14.0pt;font-family:Arial;">&nbsp;&nbsp;&nbsp;&nbsp; 
+		</span></td></tr>
+	<tr>
+		<td width="495" align="center">
+		<span style="font-size: 14.0pt; font-family: Arial,sans-serif">
+		<a href="http://www.ustc.edu.cn/">University of Science and Technology of China</a></span></td>
+	</tr>
+	</tbody></table>
+<p align="center"><font face="Arial" size="4"><i>ACM Transactions on Graphics 
+</i>(Proc. SIGGRAPH), 44(4), 2025. </font> </p>
+<p align="center">&nbsp;</p>
+<table width="1210" border="2" align="center" bordercolor="#FFFFFF" id="table2" style="border-collapse: collapse">
+	<tbody><tr>
+		<td align="center" colspan="2">
+		<hr>
+		<img border="0" src="figure/fig1.png" width="1000" height="438"><p align="center">
+		<span lang="en-us"><i><span style="font-family: Arial,sans-serif">Figure 1</span></i></span><i><span lang="EN-US" style="font-family:Arial,sans-serif">: </span></i>
+		<span lang="en-us"><i><span style="font-family: Arial,sans-serif"> Our generated high-quality quad meshes, with feature lines highlighted in red, show that our algorithm can handle models with various complex scenarios (such as high genus, varied geometries, and intricate features). </span></i></span></p><hr>&nbsp;
+	</td>
+	</tr>
+	<tr>
+		<td width="10%" align="center" bgcolor="#CCFFCC">
+		<p align="left"><font face="Arial" color="#008080" size="4">Abstract</font></p></td>
+		<td width="89%">
+		<p align="justify"><font face="Arial" size="4">
+			We propose a novel partition method for reliable feature-aligned quadrangulation. The core insight of the partition is that smooth streamlines distant from singularities are more suitable as patch boundaries. This allows singularities to be enclosed within patches, resulting in straighter patch boundaries and reducing the distorting influence of singularities. Accordingly, we introduce a new patch quality control mechanism that keeps the patch boundaries inside regions with high field smoothness. Combined with other common metrics (e.g., aligning boundaries with field and feature lines), we develop a practical partition algorithm that first iteratively traces paths in field smoothness-controlled regions to form patches and then removes redundant paths to simplify the patch layout. We demonstrate the effectiveness and practicability of our partitions by using them to generate quality quad meshes on a massive test data set. Compared with state-of-the-art methods, our approach produces quad meshes with significantly enhanced quality while maintaining similar reliability, validating the core insight. 
+			<br>
+			<br></font></p></td>
+	</tr>
+	<tr>
+		<td width="10%" align="left" bgcolor="#FFFFCC">
+		<font face="Arial" size="4" color="#008080">Keywords</font></td>
+		<td width="89%" align="left">
+			<br>
+		<span lang="EN-US" style="font-size:13.5pt;font-family:Arial;">
+			Quadrangulation, quad meshing, quad meshes, field smoothness-controlled partition
+		<br></span><font face="Arial" size="4"><br></font></td>
+	</tr>
+	<tr>
+		<td width="10%" align="left" bgcolor="#CCFFCC">
+		<font face="Arial" size="4" color="#008080">Motivation</font></td>
+		<td width="89%" align="left">
+
+			<span style="font-family: Arial,sans-serif">
+			<p align="justify"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif">
+				In this paper, we propose a novel method for reliable feature-aligned quadrangulation. 
+			We tackle the crucial partition problem: Given the cross field, how to find partition that improves downstream quad mesh quality? 
+			The key insight lies in a requirement for patches to improve the connection between partition and quantization. 
+			After constructing a feature- and curvature-aligned cross field, making the patch boundaries straight enough and away from field singularities is beneficial to improve quad mesh quality. 
+			To generate such boundaries, our new requirement is to regulate the traced paths inside regions with high field smoothness, which can be evaluated as the sum of the field rotations along each path.</span></p>
+			<p align="center">
+			<img border="0" src="figure/fig2.png" width="704" height="400"></p>
+			<p align="justify"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif"><i>
+				Figure 2:  Motivation. The paths rotate around the singular points and are not
+straight enough, usually resulting in distorted quads (left). If we restrict the
+paths to pass through regions with high field smoothness, this issue can be
+alleviated, thereby improving the quality of the quad mesh (right).
+				</span><br><br></p>	
+	</td></tr>
+	
+
+
+
+
+	<tr>
+		<td width="10%" align="left" bgcolor="#FFFFCC">
+		<font face="Arial" size="4" color="#008080">Methods</font></td>
+		<td width="89%" align="left">
+
+<span style="font-family: Arial,sans-serif">
+<p align="justify"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif">
+	As observed by [Campen et al. 2012], it is more likely
+for the quad meshing pipeline to generate a quality mesh from a
+cross field if the input surface is first partitioned into patches whose boundaries are straight and distant from field
+singularities. Therefore, one of our goals is to generate paths to
+construct such patch boundaries. To realize this goal, our approach
+introduces proxy metrics rather than imposing geometric restrictions
+(e.g., forbidding paths from passing through n-ring neighbors of the
+field singularities). The key for proxy metrics lies in the following
+observation: a path will become desired if we trace the path along
+the field in a surface region with very high field smoothness.
+Hence, proxy metrics are defined as measures of field smoothness
+on the path.
+Building upon the non-conforming polygonal patch layout framework, we introduce the concept of S<sub>p</sub>-standard patch, which refers to an ideal patch for tessellation.
+We define this concept and iteratively construct S<sub>p</sub>-standard patches on the surface.
+</span></p>
+
+<p align="center">
+<img border="0" src="figure/fig3.png" width="704" height="300"></p>
+<p align="justify"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif"><i>
+	Figure 3:  Several simple S<sub>p</sub>-standard patches examples with tessellation, where S<sub>p</sub> = ( &#8734;, 0, 0, 0, 0). The feature lines are drawn in red, the separatrices stemming from irregular vertices are drawn in dark black.
+	</span><br><br></p>	
+</td>
+			</tr>
+	<tr>
+		
+		<td width="10%" align="left" bgcolor="#CCFFCC">
+		<font face="Arial" size="4" color="#008080">Paper</font></td>
+		<td width="89%" align="left">
+		<font face="Arial" size="4">
+		<br>
+		<a href="https://rec.ustc.edu.cn/share/387fa310-2a24-11f0-b7d4-5b8b63fa958f">PDF</a></font><br><br></td>
+		
+		<!--
+		<td width="10%" align="left" bgcolor="#CCFFCC">
+		<font face="Arial" size="4" color="#008080">Paper</font></td>
+		<td width="89%" align="left">
+		<font face="Arial" size="4">
+		<br>
+		<a href="file/Paper.pdf">PDF</a> (261M)</font><br><br></td>
+		-->
+	</tr>
+	<tr>
+		<td width="10%" align="left" bgcolor="#FFFFCC">
+		<font face="Arial" size="4" color="#008080">Software</font></td>
+		<td width="89%" align="left">
+		<span style="font-size: 13.5pt; font-family: Arial,sans-serif">
+		<br>
+		<a href="https://github.com/AnderLiang/Field-Smoothness-Controlled-Quadrangulation">Code and data</a><br><br></span></td>
+	</tr>
+
+	<tr>
+		<td width="10%" align="left" bgcolor="#CCFFCC">
+		<font face="Arial" size="4" color="#008080">Ack</font></td>
+		<td width="89%" align="left">
+		<p align="justify"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif">
+		<br>
+		We would like to thank the anonymous reviewers for their constructive suggestions and comments. This work is partially supported by the National Natural Science Foundation of China (62272429). Xiao-Ming Fu is a USTC Tang Scholar. </span><font face="Arial" size="4"><br><br></font></p></td>
+	</tr>
+	<!--
+	<tr>
+		<td width="10%" align="left" bgcolor="#FFFFCC">
+		<font face="Arial" size="4" color="#008080">BibTex</font></td>
+		<td width="89%" align="left"><span lang="EN-US" style="font-size:13.5pt;font-family:Arial,sans-serif">
+			<br> @article {liang2025 SmoothControlPartition,<br>
+			&nbsp;&nbsp;&nbsp; title = {Stochastic Normal Orientation for Point Clouds}, <br>
+  			&nbsp;&nbsp;&nbsp; author = {Huang, Guojin and Fang, Qing and Zhang, Zheng and Liu, Ligang and Fu, Xiao-Ming}<br>
+  			&nbsp;&nbsp;&nbsp; journal = {ACM Transactions on Graphics},<br>
+			&nbsp;&nbsp;&nbsp; volume={43},<br>
+			&nbsp;&nbsp;&nbsp; number={6},<br>
+			&nbsp;&nbsp;&nbsp; pages={1--11},
+			&nbsp;&nbsp;&nbsp; <br>
+			&nbsp;&nbsp;&nbsp; year = {2024}<br>}</span>
+		</td>
+
+	</tr>
+	-->
+	</tbody>
+	</table>
+	<p><span style="font-size: 13.5pt; font-family: Arial,sans-serif">
+	<a href="https://ustc-gcl-f.github.io/">Back to Homepage</a></span></p>
+	<hr>
+	<table width="1120" id="table1">
+	<tbody><tr>
+		<td>
+		<p align="justify"><i><font face="Verdana">Copyright and disclaimer: <br>
+		Copyright &#169; Xiao-Ming Fu<br>
+		The SOFTWARE provided at this page is provided "as is", without any 
+		guarantee made as to its suitability or fitness for any particular use. 
+		It may contain bugs, so use of this tool is at your own risk. We take no 
+		responsibility for any damage that may unintentionally be caused through 
+		its use.</font></i></p></td>
+	</tr>
+	<tr>
+	  <td align="center">  
+	  <!--#include file="counter.asp"-->
+	  </td>
+  </tr>
+</tbody></table>
+
+</body></html>
